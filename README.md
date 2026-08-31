@@ -1,10 +1,8 @@
 <div align="center">
 
-🫀 Selective ECG Classification Under Signal Degradation
+Selective ECG Classification Under Signal Degradation
 
-Evaluating auxiliary reliability signals against output confidence
-
-Reproducible code and analysis pipeline for selective ECG classification on PTB-XL
+Can auxiliary reliability signals identify ECG prediction errors better than output confidence?
 
 
 
@@ -17,49 +15,79 @@ Institute of Management Sciences (IMSciences), Peshawar, Pakistan
 
 </div>
 
-What is this project about?
+Overview
 
-A medical classifier does not always need to make a prediction.
+Selective classification allows a model to defer cases it considers unreliable instead of forcing a prediction on every input.
 
-In selective classification, uncertain or unreliable cases can instead be deferred for manual review. The important question is therefore not only:
+For that to be useful, the ranking score must do more than react to noisy ECGs. It must identify which individual predictions are most likely to be wrong.
 
-How accurate is the classifier?
+This repository evaluates whether three auxiliary reliability signals — annotation support, waveform quality, and model uncertainty — can outperform the classifier's own output confidence for that task.
 
-but also:
+The study uses PTB-XL v1.0.3, a patient-disjoint evaluation protocol, a ResNet1D classifier, and controlled ECG signal degradation.
 
-Can we correctly identify which individual predictions are most likely to be wrong?
+Main result
 
-This repository investigates whether several auxiliary reliability signals can rank ECG prediction errors better than the classifier's own output confidence, particularly when ECG signals are degraded.
+Output confidence produced the strongest selective ranking.
 
-We evaluate:
+Across 13 evaluation conditions and 3 prespecified statistical contrasts, 38 of 39 patient-clustered bootstrap intervals favored confidence over the compared auxiliary rankings.
+
+Model uncertainty increased as corruption became more severe, but that did not translate into better case-level error ranking.
+
+What we tested
+
+The study asks a simple question:
+
+When an ECG classifier makes a mistake, which reliability score is best at placing that case near the top of the review queue?
+
+We compared four signals:
+
+Symbol
+
+Signal
+
+Meaning
+
+Available at inference time?
+
+C
 
 Output confidence
 
+How far predicted probabilities are from 0.5
+
+Yes
+
+L
+
 Annotation support
+
+Strength of the reference diagnostic annotation
+
+No
+
+Q
 
 Waveform quality
 
+Estimated artifact and signal-quality burden
+
+Yes
+
+U
+
 Model uncertainty
 
-Equal-weight combinations of the auxiliary signals
+MC-dropout disagreement across stochastic passes
 
-The experiments use PTB-XL, five diagnostic superclasses, patient-disjoint evaluation, and 12 controlled signal corruption conditions.
+Yes
 
-Main finding
+We also tested four equal-weight combinations:
 
-Output confidence provided the strongest selective ranking in our experiments.
+L + Q, L + U, Q + U, and L + Q + U.
 
-Across the three prespecified statistical comparisons and 13 evaluation conditions — clean ECGs plus 12 corrupted conditions — 38 of 39 patient-clustered bootstrap intervals favored confidence over the compared auxiliary rankings.
+Confidence was kept separate so it could serve as the baseline.
 
-The only exception was L + U under moderate amplitude clipping, where the interval crossed zero.
-
-An important secondary finding was that model uncertainty increased consistently as signal corruption became more severe.
-
-However, detecting that a cohort has become more degraded is not the same as correctly identifying which individual predictions are wrong.
-
-That distinction is central to this study.
-
-Study at a glance
+Study design
 
 Component
 
@@ -69,7 +97,7 @@ Dataset
 
 PTB-XL v1.0.3
 
-ECG recordings used
+ECG recordings
 
 21,388
 
@@ -77,19 +105,19 @@ Diagnostic targets
 
 5 superclasses
 
-Training fold
+Training folds
 
-PTB-XL folds 1–8
+1–8
 
 Validation fold
 
-Fold 9
+9
 
-Final test fold
+Test fold
 
-Fold 10
+10
 
-Test recordings
+Test ECGs
 
 2,158
 
@@ -101,11 +129,11 @@ Classifier
 
 ResNet1DWang
 
-Reliability signals
+Trainable parameters
 
-C, L, Q, U
+473,349
 
-Rankings evaluated
+Reliability rankings
 
 8
 
@@ -113,9 +141,13 @@ Corruption families
 
 4
 
-Corruption conditions
+Corruption severities
 
-12
+3 per family
+
+Total test conditions
+
+13
 
 Primary endpoint
 
@@ -125,23 +157,31 @@ Bootstrap replicates
 
 5,000
 
-Bootstrap unit
+Experimental workflow
 
-Patient
+flowchart LR
+    A[PTB-XL v1.0.3] --> B[Patient-disjoint folds]
+    B --> C[Train ResNet1DWang]
+    C --> D[Freeze validation-tuned thresholds]
+    D --> E[Compute C, L, Q, U]
+    D --> F[Generate 12 corruption conditions]
+    E --> G[Evaluate 8 rankings]
+    F --> G
+    G --> H[Risk-Coverage Curves]
+    H --> I[AURC]
+    I --> J[5,000-replicate patient-clustered bootstrap]
 
-Experimental design
+The pipeline is designed so that preprocessing, threshold selection, and test evaluation remain separated.
 
-Dataset
+1. Data
 
-We use PTB-XL v1.0.3, a large publicly available 12-lead ECG dataset.
-
-After applying the study's diagnostic-superclass selection procedure, the data are divided according to the recommended patient-disjoint PTB-XL folds:
+We use PTB-XL v1.0.3 and follow its recommended patient-disjoint fold structure.
 
 Split
 
 PTB-XL folds
 
-ECG recordings
+ECGs
 
 Training
 
@@ -155,7 +195,7 @@ Validation
 
 2,146
 
-Final test
+Test
 
 10
 
@@ -169,11 +209,11 @@ Total
 
 The final test set contains 2,158 ECGs from 1,877 patients.
 
-Raw PTB-XL waveform files are not included in this repository.
+The raw PTB-XL waveform files are not included in this repository.
 
-Classifier
+2. ECG classifier
 
-The ECG classifier is a ResNet1DWang model with 473,349 trainable parameters.
+The classifier is ResNet1DWang with 473,349 trainable parameters.
 
 Training uses:
 
@@ -181,134 +221,73 @@ AdamW optimization
 
 One-Cycle learning-rate scheduling
 
-50 training epochs
+50 epochs
 
-Patient-disjoint data partitions
+patient-disjoint data partitions
 
-Training-only normalization statistics
+normalization statistics computed from the training split only
 
-Class-specific decision thresholds are selected using the validation fold and frozen before final test evaluation.
+Class-specific thresholds are tuned using the validation fold and then frozen before final test evaluation.
 
-This prevents the held-out test fold from influencing model selection or threshold tuning.
+3. Reliability signals
 
-Reliability signals
+Output confidence — C
 
-Each ECG receives four reliability scores.
+Confidence measures how far each predicted class probability is from the decision boundary around 0.5, averaged across the five labels.
 
-Symbol
+Annotation support — L
 
-Reliability signal
+Annotation support measures the strength of the reference diagnostic annotation. Because it uses reference information, it is evaluated only as a retrospective research signal.
 
-Interpretation
+Waveform quality — Q
 
-Requires reference labels?
+Waveform quality summarizes signal degradation and artifact burden.
 
-C
+Model uncertainty — U
 
-Output confidence
+Model uncertainty is estimated using MC dropout across 30 stochastic forward passes.
 
-Extremeness of predicted probabilities relative to 0.5
+4. Signal degradation
 
-No
+Four controlled corruption families are applied to the raw waveform before normalization:
 
-L
+Corruption
 
-Annotation support
-
-Strength of the reference diagnostic annotation
-
-Yes
-
-Q
-
-Waveform quality
-
-Estimated artifact and signal-quality burden
-
-No
-
-U
-
-Model uncertainty
-
-MC-dropout disagreement across stochastic predictions
-
-No
-
-Important: Annotation support (L) uses reference information and is therefore evaluated as a retrospective research signal rather than a deployable inference-time score.
-
-Rankings compared
-
-Eight ranking strategies are evaluated:
-
-C
-L
-Q
-U
-L + Q
-L + U
-Q + U
-L + Q + U
-
-All combinations use fixed equal weighting.
-
-Output confidence is deliberately excluded from the combined scores.
-
-This keeps confidence as an independent baseline against which the auxiliary reliability signals are evaluated.
-
-Selective prediction metric
-
-The primary endpoint is the Area Under the Risk–Coverage Curve (AURC).
-
-As increasingly unreliable cases are deferred, coverage decreases and the error rate among retained predictions changes.
-
-The evaluation uses five-label Hamming error as the prediction risk.
-
-Interpretation
-
-Lower AURC = better error ranking
-
-A ranking is useful when incorrect predictions are removed earlier than correct ones as coverage decreases.
-
-Signal degradation experiments
-
-Reliability rankings are evaluated on the clean test set and under four controlled corruption families.
-
-Each corruption is applied at three severity levels.
-
-Corruption family
-
-Purpose
+What it simulates
 
 Baseline wander
 
-Simulates low-frequency baseline drift
+Low-frequency baseline drift
 
 White noise
 
-Adds broadband measurement noise
+Broadband measurement noise
 
 Amplitude clipping
 
-Simulates saturation or limited dynamic range
+Signal saturation / restricted dynamic range
 
 Lead masking
 
-Removes information from ECG leads
+Missing lead information
 
-This produces:
+Each corruption is evaluated at three severity levels:
 
 1 clean condition
-+
-4 corruption families × 3 severities
-=
-13 evaluation conditions
++ 4 corruption families × 3 severities
+= 13 total evaluation conditions
 
-Corruptions are applied to the waveform before normalization.
+5. Selective prediction evaluation
+
+The primary metric is Area Under the Risk-Coverage Curve (AURC) using five-label Hamming error.
+
+Lower AURC = better error ranking
+
+A useful ranking removes incorrect predictions earlier than correct ones.
 
 Key results
 
-Clean-test selective ranking
+Clean-test AURC
 
 Rank
 
@@ -364,11 +343,9 @@ Q
 
 0.132054
 
-Confidence achieved the lowest AURC on both the validation and held-out test sets.
+Confidence achieved the lowest AURC on the held-out clean test set.
 
 Held-out classifier performance
-
-Performance on PTB-XL fold 10:
 
 Metric
 
@@ -386,35 +363,19 @@ Full-coverage Hamming risk
 
 0.1190
 
-Test ECGs
+Statistical comparison
 
-2,158
+Three contrasts were prespecified:
 
-Test patients
+L + U      vs Confidence
+U          vs Confidence
+L + Q + U  vs Confidence
 
-1,877
-
-These metrics describe classifier discrimination and classification performance.
-
-The primary research question, however, concerns something different:
-
-How well can each reliability score rank individual prediction errors?
-
-Statistical analysis
-
-Three comparisons were defined before the final analysis:
-
-L + U     vs. Confidence
-U         vs. Confidence
-L + Q + U vs. Confidence
-
-Each comparison is evaluated across all 13 conditions.
-
-This gives:
+Across 13 conditions:
 
 3 contrasts × 13 conditions = 39 comparisons
 
-For every comparison, we use:
+Each comparison used:
 
 5,000 bootstrap replicates
 
@@ -428,60 +389,42 @@ Result
 
 38 of 39 intervals favored confidence.
 
-The remaining comparison — L + U under moderate amplitude clipping — crossed zero.
+The only exception was L + U under moderate amplitude clipping, where the interval crossed zero.
 
-Because these 39 intervals are statistically dependent and no multiplicity correction was applied, they are interpreted as condition-specific evidence, not as a single family-wise hypothesis test.
+Because the intervals are dependent and were not multiplicity-adjusted, they are interpreted as condition-specific evidence, not as a family-wise hypothesis test.
 
-An important negative result
+What the result means
 
-One of the most useful findings from this study is that:
+One of the most important observations is that detecting degradation is not the same as ranking errors.
 
-A reliability signal can respond strongly to corrupted inputs without becoming a better ranking signal for individual prediction errors.
+Model uncertainty increased consistently as corruption severity increased across all four corruption families.
 
-Model uncertainty (U) increased monotonically with corruption severity for all four degradation families.
+That means the uncertainty signal responded to degraded inputs at the group level.
 
-This shows that the uncertainty measure detects distributional or signal-quality deterioration at the cohort level.
+However, its AURC remained worse than confidence.
 
-But its AURC results show that this does not automatically translate into better case-level error ranking than output confidence.
+A score can recognize that a set of ECGs has become harder without being the best score for identifying which individual predictions are wrong.
+
+That distinction is the central result of this study.
 
 Repository structure
 
 selective-ecg-signal-degradation/
 │
-├── preprocessing/
-│   └── load_ptbxl.py
-│
-├── model/
-│   └── train.py
-│
-├── reliability_signals/
-│   └── compute_all.py
-│
-├── corruption/
-│   └── generate_all.py
-│
-├── evaluation/
-│   └── aurc.py
-│
-├── statistics/
-│   └── bootstrap_patient_clustered.py
-│
-├── results/
-│   └── Generated numerical results
-│
-├── figures/
-│   └── Generated manuscript figures
-│
-├── tests/
-│   └── Automated integrity and pipeline tests
-│
+├── preprocessing/              # PTB-XL loading and split preparation
+├── model/                      # ResNet1D training
+├── reliability_signals/        # C, L, Q, U computation
+├── corruption/                 # Controlled ECG degradation
+├── evaluation/                 # Risk-coverage and AURC
+├── statistics/                 # Patient-clustered bootstrap
+├── results/                    # Generated numerical outputs
+├── figures/                    # Generated figures
+├── tests/                      # Automated checks
 ├── requirements.txt
 ├── LICENSE
 └── README.md
 
-The raw PTB-XL dataset is intentionally excluded from the repository.
-
-Reproducing the study
+Reproduce the study
 
 1. Clone the repository
 
@@ -494,169 +437,99 @@ Download PTB-XL v1.0.3 from PhysioNet:
 
 https://physionet.org/content/ptb-xl/1.0.3/
 
-Keep the dataset outside the Git repository, for example:
+Keep the raw dataset outside the repository.
 
-~/datasets/ptbxl/
-
-Do not commit the raw ECG waveform files to this repository.
-
-3. Install dependencies
-
-Creating an isolated Python environment is recommended.
+3. Create an environment
 
 python -m venv .venv
-
-Activate it.
-
-macOS / Linux
-
 source .venv/bin/activate
+pip install -r requirements.txt
 
-Windows
+Windows:
 
 .venv\Scripts\activate
-
-Then install the required packages:
-
 pip install -r requirements.txt
 
 4. Prepare PTB-XL
 
-python preprocessing/load_ptbxl.py \
-    --data-dir /path/to/ptbxl
+python preprocessing/load_ptbxl.py --data-dir /path/to/ptbxl
 
-This stage loads the dataset, applies the study inclusion rules, and constructs the patient-disjoint train, validation, and test partitions.
-
-5. Train the ECG classifier
+5. Train the classifier
 
 python model/train.py --seed 20260826
-
-Seed 20260826 corresponds to the checkpoint used for the reported final test analysis.
 
 6. Compute reliability signals
 
 python reliability_signals/compute_all.py
 
-This computes:
-
-C — output confidence
-L — annotation support
-Q — waveform quality
-U — model uncertainty
-
-7. Generate corrupted ECG conditions
+7. Generate corruption conditions
 
 python corruption/generate_all.py
 
-The pipeline generates all 12 prespecified signal-degradation conditions.
-
-8. Evaluate selective classification
+8. Evaluate selective prediction
 
 python evaluation/aurc.py
 
-This computes risk–coverage curves and AURC for all eight rankings across the clean and corrupted conditions.
+9. Run the bootstrap analysis
 
-9. Run the statistical analysis
+python statistics/bootstrap_patient_clustered.py --seed 20260826
 
-python statistics/bootstrap_patient_clustered.py \
-    --seed 20260826
+Outputs are written to:
 
-This performs the 5,000-replicate paired patient-clustered bootstrap analysis used for the reported statistical comparisons.
+results/
+figures/
 
 Reproducibility safeguards
 
-Several controls were used to reduce information leakage and accidental test-set optimization.
+patient-disjoint PTB-XL folds
 
-Normalization statistics are calculated from the training split only.
+training-only normalization statistics
 
-Training, validation, and testing follow patient-disjoint PTB-XL folds.
+validation-only threshold tuning
 
-Decision thresholds are selected using the validation fold only.
+frozen thresholds before test evaluation
 
-Thresholds are frozen before final test evaluation.
+predefined corruption procedures
 
-Synthetic corruptions are applied using predefined procedures.
+patient-clustered bootstrap resampling
 
-Statistical comparisons use patient-level clustered resampling.
+three training seeds checked for validation stability
 
-Three training seeds were used to evaluate validation stability.
+one selected checkpoint used for final held-out evaluation
 
-Only the selected 20260826 checkpoint was evaluated on the final test fold.
+299 integrity checks passed
 
-The reported pipeline passed a 299-check integrity audit.
+118 automated tests passed
 
-The automated test suite passed 118 tests.
-
-Training seeds
-
-The following training seeds were used during model-development stability checks:
+Training seeds:
 
 20260826
 20260827
 20260828
 
-The final reported held-out evaluation uses:
+Reported held-out checkpoint:
 
 20260826
 
-Expected outputs
-
-The analysis scripts write generated artifacts to:
-
-results/
-figures/
-
-These outputs contain the numerical results and visualizations used to reproduce the study analyses, including:
-
-classifier performance
-
-reliability scores
-
-AURC measurements
-
-risk–coverage results
-
-corruption experiments
-
-bootstrap contrasts
-
-condition-level comparisons
-
-manuscript figures
-
 Data availability
 
-PTB-XL is distributed separately through PhysioNet and is not redistributed in this repository.
+PTB-XL is distributed separately through PhysioNet and is not redistributed here.
 
-Dataset:
-
-PTB-XL: A Large Publicly Available Electrocardiography Dataset
-
+Dataset: PTB-XL v1.0.3
 https://physionet.org/content/ptb-xl/1.0.3/
 
-Users should follow the dataset's own terms and citation requirements.
-
-The MIT license in this repository applies to the code provided here, not to PTB-XL itself.
+The MIT license in this repository applies to the code, not to PTB-XL.
 
 Manuscript
 
 Selective ECG Classification Under Signal Degradation: Evaluating Auxiliary Reliability Signals Against Output Confidence
 
-Authors:
-Muhammad Idrees
-Adnan Amin
-Salma Azizi
-
-Affiliation:
+Muhammad Idrees · Adnan Amin · Salma Azizi
 Institute of Management Sciences (IMSciences), Peshawar, Pakistan
 
 Status: Manuscript under review / not yet published.
 
-The final bibliographic citation and DOI will be added after publication.
-
 Citation
-
-Until the associated manuscript is published, please cite this repository if you use the implementation or analysis pipeline:
 
 @software{idrees2026selectiveecg,
   author  = {Idrees, Muhammad and Amin, Adnan and Azizi, Salma},
@@ -666,30 +539,18 @@ Until the associated manuscript is published, please cite this repository if you
   url     = {https://github.com/idrees118/selective-ecg-signal-degradation}
 }
 
-After publication, this section will be updated with the manuscript DOI and full citation.
+The article DOI and full citation will be added after publication.
 
 License
 
-This repository is released under the MIT License.
-
-See LICENSE for details.
+Released under the MIT License. See LICENSE.
 
 Contact
 
 Muhammad Idrees
-
 GitHub: @idrees118
 
 Dr. Adnan Amin
-
 Corresponding author
 Institute of Management Sciences (IMSciences), Peshawar, Pakistan
 Email: adnan.amin@imsciences.edu.pk
-
-<div align="center">
-
-Research code for reliable and selective ECG classification
-
-PTB-XL · Selective Prediction · Reliability · Signal Degradation · AURC · ECG
-
-</div>
