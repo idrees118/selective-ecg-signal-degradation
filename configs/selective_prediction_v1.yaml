@@ -1,0 +1,65 @@
+selective_prediction_id: ptbxl_selective_prediction_v1
+
+development_split: validation
+
+test_allowed: false
+
+prediction:
+  probabilities: deterministic_baseline_sigmoid
+  thresholds: frozen_validation_f1_thresholds
+
+risk:
+  primary: sample_hamming_error
+  number_of_labels: 5
+  range: [0.0, 1.0]
+  lower_is_better: true
+
+ordinary_confidence:
+  name: mean_bernoulli_confidence
+  formula: mean_k_max_p_or_1_minus_p
+  higher_is_more_reliable: true
+
+components:
+  L:
+    source: annotation_confidence
+    reliability: label_confidence
+    badness: 1_minus_label_confidence
+    deployment_status: retrospective_annotation_aware
+
+  Q:
+    source: ptbxl_signal_quality_metadata
+    reliability: signal_quality
+    badness: 1_minus_signal_quality
+    deployment_status: metadata_assisted
+
+  U:
+    source: mc_dropout
+    reliability: negative_mean_mutual_information
+    badness: mean_mutual_information
+    deployment_status: model_derived
+
+combination:
+  normalization: validation_empirical_midrank_percentile_of_badness
+  weights: equal
+  performance_labels_used_for_weight_fitting: false
+
+methods:
+  - confidence
+  - L
+  - Q
+  - U
+  - L+Q
+  - L+U
+  - Q+U
+  - L+Q+U
+
+aurc:
+  tie_handling: add_entire_equal_score_group
+  discrete_definition: right_continuous_grouped_risk_coverage
+  lower_is_better: true
+
+random_baseline:
+  definition: expected_random_ranking
+  expected_aurc_equals_full_coverage_mean_risk: true
+
+status: FROZEN

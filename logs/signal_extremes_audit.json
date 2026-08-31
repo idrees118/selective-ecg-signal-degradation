@@ -1,0 +1,609 @@
+{
+  "action_taken": "none",
+  "audit_timestamp_utc": "2026-08-26T11:53:38.317847+00:00",
+  "clipping_applied": false,
+  "per_lead_extremes": {
+    "AVF": {
+      "max_abs_z": 23.915956946449175,
+      "max_mV": 5.553,
+      "min_mV": -5.3
+    },
+    "AVL": {
+      "max_abs_z": 32.17677931569489,
+      "max_mV": 4.425,
+      "min_mV": -7.473
+    },
+    "AVR": {
+      "max_abs_z": 25.496337278723615,
+      "max_mV": 5.92,
+      "min_mV": -2.972
+    },
+    "I": {
+      "max_abs_z": 32.09926747378497,
+      "max_mV": 4.398,
+      "min_mV": -7.455
+    },
+    "II": {
+      "max_abs_z": 25.21363218412058,
+      "max_mV": 5.576,
+      "min_mV": -5.856
+    },
+    "III": {
+      "max_abs_z": 32.26139859208369,
+      "max_mV": 7.491,
+      "min_mV": -4.656
+    },
+    "V1": {
+      "max_abs_z": 76.75470084077668,
+      "max_mV": 10.547,
+      "min_mV": -17.825
+    },
+    "V2": {
+      "max_abs_z": 52.354190500510235,
+      "max_mV": 12.157,
+      "min_mV": -11.102
+    },
+    "V3": {
+      "max_abs_z": 70.27384961441963,
+      "max_mV": 8.505,
+      "min_mV": -16.32
+    },
+    "V4": {
+      "max_abs_z": 48.217424377608495,
+      "max_mV": 8.696,
+      "min_mV": -11.198
+    },
+    "V5": {
+      "max_abs_z": 74.1220994368789,
+      "max_mV": 17.212,
+      "min_mV": -13.055
+    },
+    "V6": {
+      "max_abs_z": 86.25851390162052,
+      "max_mV": 12.966,
+      "min_mV": -20.032
+    }
+  },
+  "records_checked": 21388,
+  "records_removed": 0,
+  "records_with_abs_z_above_10": 5591,
+  "status": "PASS",
+  "threshold_statistics": {
+    "test": {
+      "10.0": {
+        "fraction_of_records": 0.26135310472659873,
+        "fraction_of_scalar_values": 0.0007181804139635465,
+        "records_with_abs_z_above_threshold": 564,
+        "scalar_values_above_threshold": 18598
+      },
+      "20.0": {
+        "fraction_of_records": 0.015755329008341055,
+        "fraction_of_scalar_values": 3.112449799196787e-05,
+        "records_with_abs_z_above_threshold": 34,
+        "scalar_values_above_threshold": 806
+      },
+      "5.0": {
+        "fraction_of_records": 0.9253938832252085,
+        "fraction_of_scalar_values": 0.006813291628050664,
+        "records_with_abs_z_above_threshold": 1997,
+        "scalar_values_above_threshold": 176437
+      },
+      "50.0": {
+        "fraction_of_records": 0.0004633920296570899,
+        "fraction_of_scalar_values": 2.857584182885388e-06,
+        "records_with_abs_z_above_threshold": 1,
+        "scalar_values_above_threshold": 74
+      }
+    },
+    "train": {
+      "10.0": {
+        "fraction_of_records": 0.26041910559587916,
+        "fraction_of_scalar_values": 0.0007619312417076406,
+        "records_with_abs_z_above_threshold": 4449,
+        "scalar_values_above_threshold": 156202
+      },
+      "20.0": {
+        "fraction_of_records": 0.01650667291032545,
+        "fraction_of_scalar_values": 5.4012526340435494e-05,
+        "records_with_abs_z_above_threshold": 282,
+        "scalar_values_above_threshold": 11073
+      },
+      "5.0": {
+        "fraction_of_records": 0.9297003043783657,
+        "fraction_of_scalar_values": 0.0069066231561695154,
+        "records_with_abs_z_above_threshold": 15883,
+        "scalar_values_above_threshold": 1415913
+      },
+      "50.0": {
+        "fraction_of_records": 0.0006438773121048934,
+        "fraction_of_scalar_values": 4.8632248497619605e-06,
+        "records_with_abs_z_above_threshold": 11,
+        "scalar_values_above_threshold": 997
+      }
+    },
+    "validation": {
+      "10.0": {
+        "fraction_of_records": 0.26933830382106244,
+        "fraction_of_scalar_values": 0.0007580770425598012,
+        "records_with_abs_z_above_threshold": 578,
+        "scalar_values_above_threshold": 19522
+      },
+      "20.0": {
+        "fraction_of_records": 0.02096924510717614,
+        "fraction_of_scalar_values": 7.187791239515378e-05,
+        "records_with_abs_z_above_threshold": 45,
+        "scalar_values_above_threshold": 1851
+      },
+      "5.0": {
+        "fraction_of_records": 0.9291705498602051,
+        "fraction_of_scalar_values": 0.006734544889717304,
+        "records_with_abs_z_above_threshold": 1994,
+        "scalar_values_above_threshold": 173428
+      },
+      "50.0": {
+        "fraction_of_records": 0.0,
+        "fraction_of_scalar_values": 0.0,
+        "records_with_abs_z_above_threshold": 0,
+        "scalar_values_above_threshold": 0
+      }
+    }
+  },
+  "top_50_extreme_records": [
+    {
+      "ecg_id": 20045,
+      "filename_lr": "records100/20000/20045_lr",
+      "max_abs_z": 86.25851390162052,
+      "patient_id": 21331,
+      "raw_max_mV": 1.822,
+      "raw_min_mV": -20.032,
+      "split": "train"
+    },
+    {
+      "ecg_id": 9048,
+      "filename_lr": "records100/09000/09048_lr",
+      "max_abs_z": 76.75470084077668,
+      "patient_id": 9132,
+      "raw_max_mV": 2.072,
+      "raw_min_mV": -17.825,
+      "split": "train"
+    },
+    {
+      "ecg_id": 11036,
+      "filename_lr": "records100/11000/11036_lr",
+      "max_abs_z": 74.1220994368789,
+      "patient_id": 3529,
+      "raw_max_mV": 17.212,
+      "raw_min_mV": -1.941,
+      "split": "train"
+    },
+    {
+      "ecg_id": 10802,
+      "filename_lr": "records100/10000/10802_lr",
+      "max_abs_z": 70.27384961441963,
+      "patient_id": 15940,
+      "raw_max_mV": 4.539,
+      "raw_min_mV": -16.32,
+      "split": "train"
+    },
+    {
+      "ecg_id": 14716,
+      "filename_lr": "records100/14000/14716_lr",
+      "max_abs_z": 64.22792594544602,
+      "patient_id": 8924,
+      "raw_max_mV": 2.306,
+      "raw_min_mV": -14.916,
+      "split": "train"
+    },
+    {
+      "ecg_id": 21717,
+      "filename_lr": "records100/21000/21717_lr",
+      "max_abs_z": 63.405439178513,
+      "patient_id": 19705,
+      "raw_max_mV": 2.91,
+      "raw_min_mV": -14.725,
+      "split": "train"
+    },
+    {
+      "ecg_id": 14362,
+      "filename_lr": "records100/14000/14362_lr",
+      "max_abs_z": 56.21406273464838,
+      "patient_id": 5571,
+      "raw_max_mV": 3.319,
+      "raw_min_mV": -13.055,
+      "split": "train"
+    },
+    {
+      "ecg_id": 11124,
+      "filename_lr": "records100/11000/11124_lr",
+      "max_abs_z": 55.837917173017104,
+      "patient_id": 7686,
+      "raw_max_mV": 12.966,
+      "raw_min_mV": -5.091,
+      "split": "test"
+    },
+    {
+      "ecg_id": 21591,
+      "filename_lr": "records100/21000/21591_lr",
+      "max_abs_z": 54.79301229963321,
+      "patient_id": 9360,
+      "raw_max_mV": 3.703,
+      "raw_min_mV": -12.725,
+      "split": "train"
+    },
+    {
+      "ecg_id": 10381,
+      "filename_lr": "records100/10000/10381_lr",
+      "max_abs_z": 54.70688803084442,
+      "patient_id": 2223,
+      "raw_max_mV": 6.101,
+      "raw_min_mV": -12.705,
+      "split": "train"
+    },
+    {
+      "ecg_id": 19528,
+      "filename_lr": "records100/19000/19528_lr",
+      "max_abs_z": 52.80784790405142,
+      "patient_id": 17285,
+      "raw_max_mV": 4.33,
+      "raw_min_mV": -12.264,
+      "split": "train"
+    },
+    {
+      "ecg_id": 20014,
+      "filename_lr": "records100/20000/20014_lr",
+      "max_abs_z": 52.354190500510235,
+      "patient_id": 16435,
+      "raw_max_mV": 12.157,
+      "raw_min_mV": -2.475,
+      "split": "train"
+    },
+    {
+      "ecg_id": 17638,
+      "filename_lr": "records100/17000/17638_lr",
+      "max_abs_z": 49.15617890740639,
+      "patient_id": 1164,
+      "raw_max_mV": 3.877,
+      "raw_min_mV": -11.416,
+      "split": "test"
+    },
+    {
+      "ecg_id": 13665,
+      "filename_lr": "records100/13000/13665_lr",
+      "max_abs_z": 48.217424377608495,
+      "patient_id": 5743,
+      "raw_max_mV": 4.765,
+      "raw_min_mV": -11.198,
+      "split": "train"
+    },
+    {
+      "ecg_id": 421,
+      "filename_lr": "records100/00000/00421_lr",
+      "max_abs_z": 47.98488885187874,
+      "patient_id": 2490,
+      "raw_max_mV": 3.609,
+      "raw_min_mV": -11.144,
+      "split": "train"
+    },
+    {
+      "ecg_id": 710,
+      "filename_lr": "records100/00000/00710_lr",
+      "max_abs_z": 47.804027887422265,
+      "patient_id": 5542,
+      "raw_max_mV": 3.145,
+      "raw_min_mV": -11.102,
+      "split": "train"
+    },
+    {
+      "ecg_id": 6816,
+      "filename_lr": "records100/06000/06816_lr",
+      "max_abs_z": 46.55091977654526,
+      "patient_id": 20055,
+      "raw_max_mV": 1.304,
+      "raw_min_mV": -10.811,
+      "split": "validation"
+    },
+    {
+      "ecg_id": 7133,
+      "filename_lr": "records100/07000/07133_lr",
+      "max_abs_z": 46.35714017177046,
+      "patient_id": 17794,
+      "raw_max_mV": 3.666,
+      "raw_min_mV": -10.766,
+      "split": "train"
+    },
+    {
+      "ecg_id": 4171,
+      "filename_lr": "records100/04000/04171_lr",
+      "max_abs_z": 45.999724456296946,
+      "patient_id": 8459,
+      "raw_max_mV": 1.306,
+      "raw_min_mV": -10.683,
+      "split": "train"
+    },
+    {
+      "ecg_id": 4753,
+      "filename_lr": "records100/04000/04753_lr",
+      "max_abs_z": 45.42118686301201,
+      "patient_id": 2971,
+      "raw_max_mV": 10.547,
+      "raw_min_mV": -2.372,
+      "split": "train"
+    },
+    {
+      "ecg_id": 17787,
+      "filename_lr": "records100/17000/17787_lr",
+      "max_abs_z": 44.45810004497746,
+      "patient_id": 2976,
+      "raw_max_mV": 9.39,
+      "raw_min_mV": -10.325,
+      "split": "validation"
+    },
+    {
+      "ecg_id": 1572,
+      "filename_lr": "records100/01000/01572_lr",
+      "max_abs_z": 44.22125830580827,
+      "patient_id": 1614,
+      "raw_max_mV": 1.442,
+      "raw_min_mV": -10.27,
+      "split": "train"
+    },
+    {
+      "ecg_id": 8641,
+      "filename_lr": "records100/08000/08641_lr",
+      "max_abs_z": 44.09917933710396,
+      "patient_id": 429,
+      "raw_max_mV": 10.24,
+      "raw_min_mV": -9.027,
+      "split": "train"
+    },
+    {
+      "ecg_id": 3808,
+      "filename_lr": "records100/03000/03808_lr",
+      "max_abs_z": 41.62461160182602,
+      "patient_id": 1327,
+      "raw_max_mV": 3.517,
+      "raw_min_mV": -9.667,
+      "split": "train"
+    },
+    {
+      "ecg_id": 18767,
+      "filename_lr": "records100/18000/18767_lr",
+      "max_abs_z": 40.167606466895336,
+      "patient_id": 8649,
+      "raw_max_mV": 9.327,
+      "raw_min_mV": -6.985,
+      "split": "train"
+    },
+    {
+      "ecg_id": 1809,
+      "filename_lr": "records100/01000/01809_lr",
+      "max_abs_z": 40.065762336748776,
+      "patient_id": 361,
+      "raw_max_mV": 4.211,
+      "raw_min_mV": -9.305,
+      "split": "validation"
+    },
+    {
+      "ecg_id": 7470,
+      "filename_lr": "records100/07000/07470_lr",
+      "max_abs_z": 39.19870844302136,
+      "patient_id": 11665,
+      "raw_max_mV": 9.102,
+      "raw_min_mV": -6.154,
+      "split": "train"
+    },
+    {
+      "ecg_id": 20682,
+      "filename_lr": "records100/20000/20682_lr",
+      "max_abs_z": 38.64471190173361,
+      "patient_id": 20667,
+      "raw_max_mV": 1.533,
+      "raw_min_mV": -8.975,
+      "split": "train"
+    },
+    {
+      "ecg_id": 6076,
+      "filename_lr": "records100/06000/06076_lr",
+      "max_abs_z": 38.21839677122906,
+      "patient_id": 3382,
+      "raw_max_mV": 5.398,
+      "raw_min_mV": -8.876,
+      "split": "train"
+    },
+    {
+      "ecg_id": 8309,
+      "filename_lr": "records100/08000/08309_lr",
+      "max_abs_z": 38.07478673532754,
+      "patient_id": 1201,
+      "raw_max_mV": 8.841,
+      "raw_min_mV": -5.545,
+      "split": "train"
+    },
+    {
+      "ecg_id": 14490,
+      "filename_lr": "records100/14000/14490_lr",
+      "max_abs_z": 38.05476066053034,
+      "patient_id": 6041,
+      "raw_max_mV": 1.358,
+      "raw_min_mV": -8.838,
+      "split": "train"
+    },
+    {
+      "ecg_id": 20278,
+      "filename_lr": "records100/20000/20278_lr",
+      "max_abs_z": 37.54232126123699,
+      "patient_id": 18098,
+      "raw_max_mV": 1.0,
+      "raw_min_mV": -8.719,
+      "split": "train"
+    },
+    {
+      "ecg_id": 1426,
+      "filename_lr": "records100/01000/01426_lr",
+      "max_abs_z": 37.45038578660876,
+      "patient_id": 16997,
+      "raw_max_mV": 8.696,
+      "raw_min_mV": -4.733,
+      "split": "test"
+    },
+    {
+      "ecg_id": 7663,
+      "filename_lr": "records100/07000/07663_lr",
+      "max_abs_z": 37.14895084584796,
+      "patient_id": 3702,
+      "raw_max_mV": 8.626,
+      "raw_min_mV": -1.54,
+      "split": "train"
+    },
+    {
+      "ecg_id": 869,
+      "filename_lr": "records100/00000/00869_lr",
+      "max_abs_z": 37.08155642321693,
+      "patient_id": 6108,
+      "raw_max_mV": 6.457,
+      "raw_min_mV": -8.612,
+      "split": "train"
+    },
+    {
+      "ecg_id": 14904,
+      "filename_lr": "records100/14000/14904_lr",
+      "max_abs_z": 36.627899019675745,
+      "patient_id": 3249,
+      "raw_max_mV": 8.505,
+      "raw_min_mV": -1.12,
+      "split": "train"
+    },
+    {
+      "ecg_id": 2837,
+      "filename_lr": "records100/02000/02837_lr",
+      "max_abs_z": 36.495911395453106,
+      "patient_id": 843,
+      "raw_max_mV": 7.079,
+      "raw_min_mV": -8.476,
+      "split": "train"
+    },
+    {
+      "ecg_id": 11969,
+      "filename_lr": "records100/11000/11969_lr",
+      "max_abs_z": 36.25756466388391,
+      "patient_id": 5051,
+      "raw_max_mV": 8.419,
+      "raw_min_mV": -2.545,
+      "split": "validation"
+    },
+    {
+      "ecg_id": 6624,
+      "filename_lr": "records100/06000/06624_lr",
+      "max_abs_z": 36.10254098006407,
+      "patient_id": 17670,
+      "raw_max_mV": 8.383,
+      "raw_min_mV": -1.747,
+      "split": "train"
+    },
+    {
+      "ecg_id": 10144,
+      "filename_lr": "records100/10000/10144_lr",
+      "max_abs_z": 36.029335351593595,
+      "patient_id": 7529,
+      "raw_max_mV": 8.366,
+      "raw_min_mV": -2.934,
+      "split": "train"
+    },
+    {
+      "ecg_id": 14535,
+      "filename_lr": "records100/14000/14535_lr",
+      "max_abs_z": 35.930292442486476,
+      "patient_id": 3148,
+      "raw_max_mV": 8.343,
+      "raw_min_mV": -4.558,
+      "split": "train"
+    },
+    {
+      "ecg_id": 473,
+      "filename_lr": "records100/00000/00473_lr",
+      "max_abs_z": 35.8355557468188,
+      "patient_id": 2398,
+      "raw_max_mV": 8.321,
+      "raw_min_mV": -1.51,
+      "split": "test"
+    },
+    {
+      "ecg_id": 572,
+      "filename_lr": "records100/00000/00572_lr",
+      "max_abs_z": 35.516895952300246,
+      "patient_id": 2061,
+      "raw_max_mV": 8.247,
+      "raw_min_mV": -1.411,
+      "split": "train"
+    },
+    {
+      "ecg_id": 17652,
+      "filename_lr": "records100/17000/17652_lr",
+      "max_abs_z": 35.22557843081833,
+      "patient_id": 4354,
+      "raw_max_mV": 4.193,
+      "raw_min_mV": -8.181,
+      "split": "train"
+    },
+    {
+      "ecg_id": 18046,
+      "filename_lr": "records100/18000/18046_lr",
+      "max_abs_z": 35.148066588908414,
+      "patient_id": 4115,
+      "raw_max_mV": 7.454,
+      "raw_min_mV": -8.163,
+      "split": "train"
+    },
+    {
+      "ecg_id": 15832,
+      "filename_lr": "records100/15000/15832_lr",
+      "max_abs_z": 35.07486096043794,
+      "patient_id": 17904,
+      "raw_max_mV": 3.497,
+      "raw_min_mV": -8.146,
+      "split": "train"
+    },
+    {
+      "ecg_id": 6045,
+      "filename_lr": "records100/06000/06045_lr",
+      "max_abs_z": 35.00015033956746,
+      "patient_id": 4174,
+      "raw_max_mV": 8.127,
+      "raw_min_mV": -3.744,
+      "split": "train"
+    },
+    {
+      "ecg_id": 18118,
+      "filename_lr": "records100/18000/18118_lr",
+      "max_abs_z": 34.991537912688585,
+      "patient_id": 6076,
+      "raw_max_mV": 8.125,
+      "raw_min_mV": -3.106,
+      "split": "train"
+    },
+    {
+      "ecg_id": 8092,
+      "filename_lr": "records100/08000/08092_lr",
+      "max_abs_z": 34.909719857339226,
+      "patient_id": 512,
+      "raw_max_mV": 8.106,
+      "raw_min_mV": -5.521,
+      "split": "validation"
+    },
+    {
+      "ecg_id": 1367,
+      "filename_lr": "records100/01000/01367_lr",
+      "max_abs_z": 34.85955028846595,
+      "patient_id": 21233,
+      "raw_max_mV": 2.723,
+      "raw_min_mV": -8.096,
+      "split": "validation"
+    }
+  ],
+  "z_thresholds": [
+    5.0,
+    10.0,
+    20.0,
+    50.0
+  ]
+}

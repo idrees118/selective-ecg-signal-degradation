@@ -1,0 +1,14 @@
+condition,lowest_aurc_method,lowest_aurc,second_lowest_aurc_method,second_lowest_aurc
+clean,confidence,0.055157156439683004,L+U,0.060359525605234353
+baseline_wander_mild,confidence,0.054883810003530188,L+U,0.060216326689305252
+baseline_wander_moderate,confidence,0.055939504842431917,L+U,0.06065736102190486
+baseline_wander_severe,confidence,0.059175715830067123,L+U,0.06370736299912387
+additive_white_noise_mild,confidence,0.055714639989216663,L+U,0.062059814340094582
+additive_white_noise_moderate,confidence,0.062477218327092722,L+U,0.075398166248453316
+additive_white_noise_severe,confidence,0.11190300869930198,L+U,0.14756073295119149
+amplitude_clipping_mild,confidence,0.054891671252329528,L+U,0.059918565538818892
+amplitude_clipping_moderate,confidence,0.064465377564008344,L+U,0.066616414091031154
+amplitude_clipping_severe,confidence,0.095388849115605856,L+U,0.10558449074311335
+lead_masking_mild,confidence,0.064849409776810737,L+U,0.070360789853320144
+lead_masking_moderate,confidence,0.08897935080674553,L+U,0.1039815636562182
+lead_masking_severe,confidence,0.2023414335913383,U,0.22978501816096528

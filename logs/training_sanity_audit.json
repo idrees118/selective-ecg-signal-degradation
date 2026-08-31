@@ -1,0 +1,68 @@
+{
+  "audit_timestamp_utc": "2026-08-26T12:14:32.557952+00:00",
+  "cpu_single_step": {
+    "changed_parameter_tensors": 35,
+    "device": "cpu",
+    "gradient_elements": 473349,
+    "loss": 1.2509487867355347,
+    "maximum_absolute_gradient": 0.30081653594970703,
+    "parameters_with_gradient": 35,
+    "status": "PASS",
+    "unchanged_parameter_tensors": []
+  },
+  "model_trainable_parameters": 473349,
+  "mps_single_step": {
+    "changed_parameter_tensors": 35,
+    "device": "mps",
+    "gradient_elements": 473349,
+    "loss": 1.1639726161956787,
+    "maximum_absolute_gradient": 0.26927679777145386,
+    "parameters_with_gradient": 35,
+    "status": "PASS",
+    "unchanged_parameter_tensors": []
+  },
+  "purpose": "pre-training software sanity test",
+  "scientific_result": false,
+  "seed": 20260826,
+  "status": "PASS",
+  "test_records_used": 0,
+  "tiny_cpu_overfit": {
+    "binary_label_accuracy": 1.0,
+    "device": "cpu",
+    "exact_record_match_fraction": 1.0,
+    "final_eval_loss": 0.012397590093314648,
+    "initial_training_loss": 1.082236886024475,
+    "learning_rate": 0.001,
+    "loss_ratio": 0.01145552351191463,
+    "records": 16,
+    "seed": 20260826,
+    "status": "PASS",
+    "steps": 300
+  },
+  "tiny_subset_ecg_ids": [
+    1,
+    2,
+    22,
+    32,
+    45,
+    50,
+    54,
+    77,
+    96,
+    3,
+    4,
+    5,
+    6,
+    7,
+    11,
+    12
+  ],
+  "tiny_subset_positive_counts": {
+    "CD": 4,
+    "HYP": 2,
+    "MI": 2,
+    "NORM": 9,
+    "STTC": 2
+  },
+  "validation_records_used": 0
+}

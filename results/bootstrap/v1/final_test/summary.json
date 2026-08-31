@@ -1,0 +1,520 @@
+{
+  "bootstrap_id": "ptbxl_final_patient_bootstrap_v1",
+  "ci_method": "percentile_95",
+  "comparisons": {
+    "additive_white_noise_mild": {
+      "L+Q_signal+U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.02245592641568907,
+        "ci_95_percentile": [
+          0.01745205519510772,
+          0.027560490705782516
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "L+Q_signal+U",
+        "point_delta": 0.02238765453463945
+      },
+      "L+U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.006392063186020998,
+        "ci_95_percentile": [
+          0.0029125763937180873,
+          0.009829213112885139
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "L+U",
+        "point_delta": 0.006345174350877919
+      },
+      "U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.01096773110796056,
+        "ci_95_percentile": [
+          0.00843290574120878,
+          0.013604786233543033
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "U",
+        "point_delta": 0.010951445140233829
+      }
+    },
+    "additive_white_noise_moderate": {
+      "L+Q_signal+U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.02926106956384872,
+        "ci_95_percentile": [
+          0.02332874220385968,
+          0.03523907613836786
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "L+Q_signal+U",
+        "point_delta": 0.02922976130762662
+      },
+      "L+U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.012965001094416255,
+        "ci_95_percentile": [
+          0.00878324352356106,
+          0.017263840214477
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "L+U",
+        "point_delta": 0.012920947921360594
+      },
+      "U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.017467130925563762,
+        "ci_95_percentile": [
+          0.013882739232597956,
+          0.021124975671822182
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "U",
+        "point_delta": 0.01744737617109763
+      }
+    },
+    "additive_white_noise_severe": {
+      "L+Q_signal+U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.05046473876707368,
+        "ci_95_percentile": [
+          0.04247728420546498,
+          0.058521785841302826
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "L+Q_signal+U",
+        "point_delta": 0.05050156380636414
+      },
+      "L+U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.03568439669665987,
+        "ci_95_percentile": [
+          0.02836886382643762,
+          0.043205307239566046
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "L+U",
+        "point_delta": 0.03565772425188951
+      },
+      "U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.03721026168117378,
+        "ci_95_percentile": [
+          0.030275280936688485,
+          0.04452906908017873
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "U",
+        "point_delta": 0.0371773870722652
+      }
+    },
+    "amplitude_clipping_mild": {
+      "L+Q_signal+U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.019800980908358985,
+        "ci_95_percentile": [
+          0.0143991789170834,
+          0.02526182863873815
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "L+Q_signal+U",
+        "point_delta": 0.019753050413160896
+      },
+      "L+U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.005072527229754347,
+        "ci_95_percentile": [
+          0.0016936011814694706,
+          0.008407283760173656
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "L+U",
+        "point_delta": 0.005026894286489364
+      },
+      "U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.009757730554187164,
+        "ci_95_percentile": [
+          0.007531302546990017,
+          0.012075382160859054
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "U",
+        "point_delta": 0.009741719378348855
+      }
+    },
+    "amplitude_clipping_moderate": {
+      "L+Q_signal+U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.009458119579904398,
+        "ci_95_percentile": [
+          0.004212795977298494,
+          0.0151019976665607
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "L+Q_signal+U",
+        "point_delta": 0.009442122235881895
+      },
+      "L+U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.002185509129529605,
+        "ci_95_percentile": [
+          -0.0018777732305179536,
+          0.006165603524291912
+        ],
+        "conclusion": "inconclusive_ci_crosses_zero",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "L+U",
+        "point_delta": 0.0021510365270228093
+      },
+      "U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.0093907513909218,
+        "ci_95_percentile": [
+          0.006718464434362787,
+          0.012137818824549165
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "U",
+        "point_delta": 0.009401453598624918
+      }
+    },
+    "amplitude_clipping_severe": {
+      "L+Q_signal+U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.018463150282956635,
+        "ci_95_percentile": [
+          0.012377644300446806,
+          0.02482970224063458
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "L+Q_signal+U",
+        "point_delta": 0.018456931753081024
+      },
+      "L+U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.010201384429849787,
+        "ci_95_percentile": [
+          0.005189850923700835,
+          0.01534232188677419
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "L+U",
+        "point_delta": 0.010195641627507496
+      },
+      "U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.012165186956252152,
+        "ci_95_percentile": [
+          0.008173995312394957,
+          0.0160386908243065
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "U",
+        "point_delta": 0.012164551595838874
+      }
+    },
+    "baseline_wander_mild": {
+      "L+Q_signal+U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.01912353983801894,
+        "ci_95_percentile": [
+          0.01436082874372949,
+          0.02398545728867365
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "L+Q_signal+U",
+        "point_delta": 0.019038636289125076
+      },
+      "L+U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.005385179681075925,
+        "ci_95_percentile": [
+          0.0019200048345121663,
+          0.008777797581460498
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "L+U",
+        "point_delta": 0.005332516685775064
+      },
+      "U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.009552578281869567,
+        "ci_95_percentile": [
+          0.007208389857966982,
+          0.01190657314655288
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "U",
+        "point_delta": 0.009532582020340345
+      }
+    },
+    "baseline_wander_moderate": {
+      "L+Q_signal+U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.01765440576431626,
+        "ci_95_percentile": [
+          0.012939635996979561,
+          0.02254350200918938
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "L+Q_signal+U",
+        "point_delta": 0.017559591576916694
+      },
+      "L+U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.004768788734754668,
+        "ci_95_percentile": [
+          0.0011553695098292622,
+          0.00825807178003412
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "L+U",
+        "point_delta": 0.004717856179472943
+      },
+      "U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.009966584475639613,
+        "ci_95_percentile": [
+          0.007475332511394702,
+          0.012394667769751351
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "U",
+        "point_delta": 0.009947915845307895
+      }
+    },
+    "baseline_wander_severe": {
+      "L+Q_signal+U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.019812825425138993,
+        "ci_95_percentile": [
+          0.014806180615033486,
+          0.025049413455588438
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "L+Q_signal+U",
+        "point_delta": 0.019731672607027857
+      },
+      "L+U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.004560615631747354,
+        "ci_95_percentile": [
+          0.0007837006190230656,
+          0.008422134302208024
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "L+U",
+        "point_delta": 0.0045316471690567475
+      },
+      "U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.01057066491669577,
+        "ci_95_percentile": [
+          0.007933634736104265,
+          0.013387394751131132
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "U",
+        "point_delta": 0.010575409380614832
+      }
+    },
+    "clean": {
+      "L+Q_signal+U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.02408115737081508,
+        "ci_95_percentile": [
+          0.01897283392148288,
+          0.02934182751000925
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "L+Q_signal+U",
+        "point_delta": 0.023986437690607133
+      },
+      "L+U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.00525586513502062,
+        "ci_95_percentile": [
+          0.0018545168295758402,
+          0.008579834667853265
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "L+U",
+        "point_delta": 0.005202369165551349
+      },
+      "U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.009599268410489588,
+        "ci_95_percentile": [
+          0.007315077630829028,
+          0.011948963276134475
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "U",
+        "point_delta": 0.009576973564435341
+      }
+    },
+    "lead_masking_mild": {
+      "L+Q_signal+U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.008996162047049025,
+        "ci_95_percentile": [
+          0.004746449979887409,
+          0.013454258716341228
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "L+Q_signal+U",
+        "point_delta": 0.008990239205370232
+      },
+      "L+U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.005521803987691492,
+        "ci_95_percentile": [
+          0.001696333754958441,
+          0.00924734781332618
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "L+U",
+        "point_delta": 0.005511380076509406
+      },
+      "U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.010218661202421663,
+        "ci_95_percentile": [
+          0.007450008750697434,
+          0.013072888489829789
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "U",
+        "point_delta": 0.010222340333244082
+      }
+    },
+    "lead_masking_moderate": {
+      "L+Q_signal+U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.020293944814140413,
+        "ci_95_percentile": [
+          0.014820727487339983,
+          0.025574437006780262
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "L+Q_signal+U",
+        "point_delta": 0.020289524119563737
+      },
+      "L+U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.015003681986585542,
+        "ci_95_percentile": [
+          0.010094269100566447,
+          0.01980487013114556
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "L+U",
+        "point_delta": 0.015002212849472674
+      },
+      "U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.01653790488895234,
+        "ci_95_percentile": [
+          0.012522238437972035,
+          0.020493160261045796
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "U",
+        "point_delta": 0.016539710818129078
+      }
+    },
+    "lead_masking_severe": {
+      "L+Q_signal+U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.03523079236365759,
+        "ci_95_percentile": [
+          0.027497461273860897,
+          0.04295841660697602
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "L+Q_signal+U",
+        "point_delta": 0.03530806526491462
+      },
+      "L+U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.03259286657317584,
+        "ci_95_percentile": [
+          0.025009531945896005,
+          0.04041540485975599
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "L+U",
+        "point_delta": 0.0326169166465648
+      },
+      "U_vs_confidence": {
+        "baseline": "confidence",
+        "bootstrap_mean_delta": 0.027391826349839683,
+        "ci_95_percentile": [
+          0.020535095583075657,
+          0.03432686974639503
+        ],
+        "conclusion": "method_higher_aurc",
+        "delta_definition": "method_aurc_minus_confidence_aurc",
+        "method": "U",
+        "point_delta": 0.027443584569626978
+      }
+    }
+  },
+  "created_utc": "2026-08-26T17:59:19.760373+00:00",
+  "delta_definition": "method AURC minus ordinary-confidence AURC; negative favors method",
+  "evaluation_split": "test_fold_10",
+  "paired": true,
+  "random_seed": 20260826,
+  "records": 2158,
+  "replicates": 5000,
+  "replicates_sha256": "c740f6f73f4c36dce7941775fcca070e0aef58e3ac65dc71e4cefb498a35bb29",
+  "source_sha256": {
+    "condition_table": "16b2135ebde75caf5b93d021f41746fde331691d2dc1a7cdd2530347fb70ba6c",
+    "final_config": "3c86bcd6b29bbff6d9af5badeb0e92040587d226b369949a9327481471936759",
+    "final_summary": "2299470775783796d941da58d84fa187991b3533ba32c01c2723e8e146bfe6b8",
+    "script": "2675682d5debeb4fb23e77a5981415cc4d739ea158293fc652916d314fe48901",
+    "test_L": "7fe12d4065cc9f45b5b10139183601e75146ccfbee47c793841e15f0ca073849",
+    "validation_combination_reference": "4af99968ba9d2f1153cd4b1ddb4bfc06b35e3c6c7bc9208aa5d10305fefbe445"
+  },
+  "status": "FROZEN",
+  "summary_table_sha256": "cac91e4fe19a6f6aefa36d9a6c9aae2ebe44380b88f6b149094787433b09a857",
+  "unique_patients": 1877,
+  "unit": "patient"
+}

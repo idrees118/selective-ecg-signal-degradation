@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ptbxl-reliability"
+version = "0.1.0"
+description = "Auditable reliability-aware ECG experiments on PTB-XL"
+requires-python = ">=3.12,<3.13"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+markers = [
+    "integration: tests requiring the local PTB-XL dataset"
+]

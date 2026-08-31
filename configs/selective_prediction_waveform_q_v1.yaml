@@ -1,0 +1,53 @@
+selective_prediction_id: ptbxl_selective_prediction_waveform_q_v1
+
+development_split: validation
+test_allowed: false
+
+prediction:
+  probabilities: deterministic_baseline_sigmoid
+  thresholds: frozen_validation_f1_thresholds
+
+risk:
+  primary: sample_hamming_error
+  number_of_labels: 5
+  lower_is_better: true
+
+ordinary_confidence:
+  formula: mean_k_max_p_or_1_minus_p
+  higher_is_more_reliable: true
+
+components:
+  L:
+    reliability: label_confidence
+    badness: 1_minus_label_confidence
+
+  Q_signal:
+    reliability: waveform_signal_quality
+    badness: 1_minus_waveform_signal_quality
+    training_reference_only: true
+
+  U:
+    reliability: negative_mean_mutual_information
+    badness: mean_mutual_information
+
+combination:
+  normalization: validation_empirical_midrank_percentile_of_badness
+  weights: equal
+  labels_used_for_weight_fitting: false
+  prediction_errors_used_for_weight_fitting: false
+
+methods:
+  - confidence
+  - L
+  - Q_signal
+  - U
+  - L+Q_signal
+  - L+U
+  - Q_signal+U
+  - L+Q_signal+U
+
+aurc:
+  tie_handling: add_entire_equal_score_group
+  lower_is_better: true
+
+status: FROZEN

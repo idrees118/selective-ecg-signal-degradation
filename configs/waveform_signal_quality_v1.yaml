@@ -1,0 +1,73 @@
+signal_quality_id: ptbxl_waveform_signal_quality_v1
+
+source:
+  dataset: PTB-XL
+  version: 1.0.3
+  waveform: records100
+  sampling_frequency_hz: 100
+  signal_units: physical_mV
+  records_used_for_reference: training_only
+
+spectral_estimation:
+  method: periodogram
+  window: hann
+  detrend: constant
+  nfft: native_record_length
+  record_length_samples: 1000
+  zero_power_lead_handling:
+    spectral_ratio: exclude_lead
+    captured_by:
+      - lead_dropout_burden
+      - clipping_burden
+    all_zero_power_leads: error
+
+features:
+  baseline_burden:
+    numerator_hz: [0.1, 1.0]
+    denominator_hz: [0.1, 50.0]
+    per_record_aggregation: maximum_over_12_leads
+    direction: higher_is_worse
+
+  high_frequency_burden:
+    numerator_hz: [40.0, 50.0]
+    denominator_hz: [0.1, 50.0]
+    per_record_aggregation: maximum_over_12_leads
+    direction: higher_is_worse
+
+  lead_dropout_burden:
+    formula: 1_minus_min_lead_ac_rms_divided_by_median_lead_ac_rms
+    per_record_range: [0.0, 1.0]
+    direction: higher_is_worse
+
+  clipping_burden:
+    formula: maximum_over_leads_fraction_of_samples_at_exact_signal_extrema
+    constant_lead_value: 1.0
+    direction: higher_is_worse
+
+normalization:
+  method: training_empirical_midrank_percentile
+  labels_used: false
+  predictions_used: false
+  validation_performance_used: false
+
+composite:
+  badness: equal_mean_of_four_training_percentiles
+  signal_quality: 1_minus_badness
+  range: [0.0, 1.0]
+  direction: higher_is_better
+  weights:
+    baseline_burden: 0.25
+    high_frequency_burden: 0.25
+    lead_dropout_burden: 0.25
+    clipping_burden: 0.25
+
+interpretation:
+  type: relative_waveform_quality_score
+  calibrated_clinical_sqi: false
+  pathology_amplitude_reference_used: false
+  metadata_quality_fields_used: false
+
+development:
+  test_allowed: false
+
+status: FROZEN

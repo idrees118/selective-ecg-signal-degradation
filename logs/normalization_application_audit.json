@@ -1,0 +1,42 @@
+{
+  "audit_timestamp_utc": "2026-08-26T11:50:42.625689+00:00",
+  "float32_conversion": "PASS",
+  "frozen_mean_mV": -0.0008252533901116082,
+  "frozen_std_mV": 0.23222258117564865,
+  "manifest_sha256": "8f333e4094fc5e6b2b7e32731a9057182eec5e563f6ae07f6af1a142a539fa27",
+  "normalization_parameters_sha256": "0fec09e28aa9c4a7fcbb7801bcecf02c590ce2949c011f30dbd578ab7429d32b",
+  "split_statistics": {
+    "test": {
+      "max": 55.837917173017104,
+      "mean": 0.0014771555588462824,
+      "min": -49.15617890740639,
+      "records": 2158,
+      "scalar_values": 25896000,
+      "std": 0.9941099628932876,
+      "variance": 0.9882546183236937
+    },
+    "train": {
+      "max": 74.1220994368789,
+      "mean": 2.0952418741519187e-17,
+      "min": -86.25851390162052,
+      "records": 17084,
+      "scalar_values": 205008000,
+      "std": 1.0000000000000078,
+      "variance": 1.0000000000000155
+    },
+    "validation": {
+      "max": 40.43889791358005,
+      "mean": 0.00012901020530245802,
+      "min": -46.55091977654526,
+      "records": 2146,
+      "scalar_values": 25752000,
+      "std": 1.0124695386400004,
+      "variance": 1.0250945666738955
+    }
+  },
+  "status": "PASS",
+  "test_used_for_fit": false,
+  "training_mean_zero_check": "PASS",
+  "training_std_one_check": "PASS",
+  "validation_used_for_fit": false
+}

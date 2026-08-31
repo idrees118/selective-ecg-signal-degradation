@@ -1,0 +1,64 @@
+{
+  "created_utc": "2026-08-26T15:39:11.341340+00:00",
+  "decision_rule": "predict positive iff probability >= threshold",
+  "fit_split": "validation",
+  "optimization": "independent per-class maximum F1",
+  "records_used": 2146,
+  "seed": 20260826,
+  "source_prediction_sha256": "0fda3cbeb6f2c477a0ba20f21f7f3aa7d3ddea0949587a7115aa9f3f7831320e",
+  "status": "FROZEN",
+  "test_records_used": 0,
+  "thresholds": {
+    "CD": {
+      "fn": 92,
+      "fp": 137,
+      "selection_metric": "F1",
+      "selection_split": "validation",
+      "threshold": 0.512350857257843,
+      "tie_policy": "highest_threshold",
+      "tn": 1514,
+      "tp": 403
+    },
+    "HYP": {
+      "fn": 88,
+      "fp": 115,
+      "selection_metric": "F1",
+      "selection_split": "validation",
+      "threshold": 0.19139353930950165,
+      "tie_policy": "highest_threshold",
+      "tn": 1763,
+      "tp": 180
+    },
+    "MI": {
+      "fn": 102,
+      "fp": 166,
+      "selection_metric": "F1",
+      "selection_split": "validation",
+      "threshold": 0.34206557273864746,
+      "tie_policy": "highest_threshold",
+      "tn": 1440,
+      "tp": 438
+    },
+    "NORM": {
+      "fn": 113,
+      "fp": 173,
+      "selection_metric": "F1",
+      "selection_split": "validation",
+      "threshold": 0.5279295444488525,
+      "tie_policy": "highest_threshold",
+      "tn": 1018,
+      "tp": 842
+    },
+    "STTC": {
+      "fn": 109,
+      "fp": 159,
+      "selection_metric": "F1",
+      "selection_split": "validation",
+      "threshold": 0.4203625023365021,
+      "tie_policy": "highest_threshold",
+      "tn": 1459,
+      "tp": 419
+    }
+  },
+  "tie_policy": "highest threshold among equal maximum-F1 thresholds"
+}

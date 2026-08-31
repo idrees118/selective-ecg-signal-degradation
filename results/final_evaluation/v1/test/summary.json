@@ -1,0 +1,1201 @@
+{
+  "L_interpretation": "retrospective annotation-aware confidence/ambiguity; not a deployment-available selector",
+  "Q_interpretation": "training-referenced study-specific waveform quality score; not a clinically calibrated universal SQI",
+  "annotation_confidence": {
+    "artifact_sha256": "7fe12d4065cc9f45b5b10139183601e75146ccfbee47c793841e15f0ca073849",
+    "mean": 0.8803560395427865,
+    "mean_known_positive_superclass_fraction": 0.9965245597775718
+  },
+  "clean_plus_corruptions": "1+12",
+  "combination_scaling": "frozen_validation_empirical_midrank_ecdf",
+  "condition_results": {
+    "additive_white_noise_mild": {
+      "classification": {
+        "classwise": {
+          "CD": {
+            "auroc": 0.9239196362718839,
+            "average_precision": 0.855151928539333,
+            "f1": 0.7642436149312377
+          },
+          "HYP": {
+            "auroc": 0.899515251070957,
+            "average_precision": 0.6590119159887682,
+            "f1": 0.6010928961748634
+          },
+          "MI": {
+            "auroc": 0.9272953414744459,
+            "average_precision": 0.8487002027337612,
+            "f1": 0.7489063867016623
+          },
+          "NORM": {
+            "auroc": 0.9439321854212559,
+            "average_precision": 0.9248611386118366,
+            "f1": 0.85539090444558
+          },
+          "STTC": {
+            "auroc": 0.9319620531448263,
+            "average_precision": 0.8256396432685227,
+            "f1": 0.7533632286995515
+          }
+        },
+        "macro_auroc": 0.9253248934766738,
+        "macro_average_precision": 0.8226729658284443,
+        "macro_f1": 0.744599406190579
+      },
+      "condition": {
+        "name": "additive_white_noise_mild",
+        "severity": "mild",
+        "severity_index": 0,
+        "snr_db": 18.0,
+        "type": "additive_white_noise"
+      },
+      "full_hamming_risk": 0.12085264133456905,
+      "mean_L": 0.8803560395427865,
+      "mean_Q_signal": 0.4885494172175256,
+      "mean_U": 0.01315030207901807,
+      "mean_confidence": 0.8913469112469626,
+      "results_npz_sha256": "c46969e005ed9baca3b7c37ab825bdfe74cb53f79e3a2f2538572743751d012d",
+      "selective_prediction": {
+        "L": {
+          "aurc": 0.10377401020872148,
+          "unique_reliability_levels": 24
+        },
+        "L+Q_signal": {
+          "aurc": 0.11720818397595568,
+          "unique_reliability_levels": 1430
+        },
+        "L+Q_signal+U": {
+          "aurc": 0.07810229452385611,
+          "unique_reliability_levels": 1806
+        },
+        "L+U": {
+          "aurc": 0.06205981434009458,
+          "unique_reliability_levels": 1416
+        },
+        "Q_signal": {
+          "aurc": 0.13237978467731978,
+          "unique_reliability_levels": 2086
+        },
+        "Q_signal+U": {
+          "aurc": 0.09001050724195422,
+          "unique_reliability_levels": 1619
+        },
+        "U": {
+          "aurc": 0.06666608512945049,
+          "unique_reliability_levels": 2158
+        },
+        "confidence": {
+          "aurc": 0.05571463998921666,
+          "unique_reliability_levels": 2158
+        }
+      }
+    },
+    "additive_white_noise_moderate": {
+      "classification": {
+        "classwise": {
+          "CD": {
+            "auroc": 0.9194082139668491,
+            "average_precision": 0.8505140745780407,
+            "f1": 0.7549800796812749
+          },
+          "HYP": {
+            "auroc": 0.8994548587625213,
+            "average_precision": 0.6520868675781223,
+            "f1": 0.5694200351493849
+          },
+          "MI": {
+            "auroc": 0.9225305291723203,
+            "average_precision": 0.8393368784006021,
+            "f1": 0.7447552447552448
+          },
+          "NORM": {
+            "auroc": 0.9386158144223291,
+            "average_precision": 0.9174297254289119,
+            "f1": 0.8274743104380746
+          },
+          "STTC": {
+            "auroc": 0.9275393755488774,
+            "average_precision": 0.8165009478154068,
+            "f1": 0.7334963325183375
+          }
+        },
+        "macro_auroc": 0.9215097583745795,
+        "macro_average_precision": 0.8151736987602167,
+        "macro_f1": 0.7260252005084633
+      },
+      "condition": {
+        "name": "additive_white_noise_moderate",
+        "severity": "moderate",
+        "severity_index": 1,
+        "snr_db": 12.0,
+        "type": "additive_white_noise"
+      },
+      "full_hamming_risk": 0.1324374420759963,
+      "mean_L": 0.8803560395427865,
+      "mean_Q_signal": 0.4373570954748157,
+      "mean_U": 0.014046464359244573,
+      "mean_confidence": 0.8733527509308848,
+      "results_npz_sha256": "9407ade4f6f8b0e896cebd2647879e529b9eb91d28bd1afd508d188c313a1332",
+      "selective_prediction": {
+        "L": {
+          "aurc": 0.11549852047464444,
+          "unique_reliability_levels": 24
+        },
+        "L+Q_signal": {
+          "aurc": 0.1264596083017809,
+          "unique_reliability_levels": 1393
+        },
+        "L+Q_signal+U": {
+          "aurc": 0.09170697963471934,
+          "unique_reliability_levels": 1803
+        },
+        "L+U": {
+          "aurc": 0.07539816624845332,
+          "unique_reliability_levels": 1459
+        },
+        "Q_signal": {
+          "aurc": 0.14220937423750296,
+          "unique_reliability_levels": 2074
+        },
+        "Q_signal+U": {
+          "aurc": 0.10340411942390396,
+          "unique_reliability_levels": 1618
+        },
+        "U": {
+          "aurc": 0.07992459449819035,
+          "unique_reliability_levels": 2158
+        },
+        "confidence": {
+          "aurc": 0.06247721832709272,
+          "unique_reliability_levels": 2158
+        }
+      }
+    },
+    "additive_white_noise_severe": {
+      "classification": {
+        "classwise": {
+          "CD": {
+            "auroc": 0.9136909960793447,
+            "average_precision": 0.8372626758909152,
+            "f1": 0.7370441458733206
+          },
+          "HYP": {
+            "auroc": 0.883326086256321,
+            "average_precision": 0.613757987591046,
+            "f1": 0.5664335664335665
+          },
+          "MI": {
+            "auroc": 0.9103380823156944,
+            "average_precision": 0.8138921069622713,
+            "f1": 0.7209677419354839
+          },
+          "NORM": {
+            "auroc": 0.9231385532484347,
+            "average_precision": 0.8914962698551646,
+            "f1": 0.6403806934058464
+          },
+          "STTC": {
+            "auroc": 0.9085096678653546,
+            "average_precision": 0.7836511925140504,
+            "f1": 0.5991510006064281
+          }
+        },
+        "macro_auroc": 0.9078006771530298,
+        "macro_average_precision": 0.7880120465626895,
+        "macro_f1": 0.6527954296509291
+      },
+      "condition": {
+        "name": "additive_white_noise_severe",
+        "severity": "severe",
+        "severity_index": 2,
+        "snr_db": 6.0,
+        "type": "additive_white_noise"
+      },
+      "full_hamming_risk": 0.1907321594068582,
+      "mean_L": 0.8803560395427865,
+      "mean_Q_signal": 0.43880928456002927,
+      "mean_U": 0.016041397236953126,
+      "mean_confidence": 0.8276078339885768,
+      "results_npz_sha256": "27bb2e2bb56588101701fa4df291d6950ae1822c7d87eeb8fe289b8cf9a8460b",
+      "selective_prediction": {
+        "L": {
+          "aurc": 0.1812802877950018,
+          "unique_reliability_levels": 24
+        },
+        "L+Q_signal": {
+          "aurc": 0.181910445073085,
+          "unique_reliability_levels": 1366
+        },
+        "L+Q_signal+U": {
+          "aurc": 0.16240457250566612,
+          "unique_reliability_levels": 1749
+        },
+        "L+U": {
+          "aurc": 0.1475607329511915,
+          "unique_reliability_levels": 1352
+        },
+        "Q_signal": {
+          "aurc": 0.19251591784889,
+          "unique_reliability_levels": 2062
+        },
+        "Q_signal+U": {
+          "aurc": 0.17010362379302216,
+          "unique_reliability_levels": 1546
+        },
+        "U": {
+          "aurc": 0.14908039577156718,
+          "unique_reliability_levels": 2158
+        },
+        "confidence": {
+          "aurc": 0.11190300869930198,
+          "unique_reliability_levels": 2158
+        }
+      }
+    },
+    "amplitude_clipping_mild": {
+      "classification": {
+        "classwise": {
+          "CD": {
+            "auroc": 0.9252467392570163,
+            "average_precision": 0.8591186346276174,
+            "f1": 0.7637795275590551
+          },
+          "HYP": {
+            "auroc": 0.9003305472348373,
+            "average_precision": 0.6636915960281224,
+            "f1": 0.5909090909090909
+          },
+          "MI": {
+            "auroc": 0.928151289009498,
+            "average_precision": 0.8499949332833473,
+            "f1": 0.7482394366197183
+          },
+          "NORM": {
+            "auroc": 0.9461802161133487,
+            "average_precision": 0.9277768211603673,
+            "f1": 0.8567149276085871
+          },
+          "STTC": {
+            "auroc": 0.9331884902512321,
+            "average_precision": 0.8271215209649843,
+            "f1": 0.7644276253547777
+          }
+        },
+        "macro_auroc": 0.9266194563731865,
+        "macro_average_precision": 0.8255407012128877,
+        "macro_f1": 0.7448141216102458
+      },
+      "condition": {
+        "name": "amplitude_clipping_mild",
+        "quantile": 0.995,
+        "severity": "mild",
+        "severity_index": 0,
+        "type": "amplitude_clipping"
+      },
+      "full_hamming_risk": 0.11844300278035219,
+      "mean_L": 0.8803560395427865,
+      "mean_Q_signal": 0.36253972425733044,
+      "mean_U": 0.012928266648506548,
+      "mean_confidence": 0.8987936643207501,
+      "results_npz_sha256": "261427d27da898fdc72384e3e979702123ea584d5310f98b44a96a3525b4c7f0",
+      "selective_prediction": {
+        "L": {
+          "aurc": 0.10042945638256218,
+          "unique_reliability_levels": 24
+        },
+        "L+Q_signal": {
+          "aurc": 0.1143861202102142,
+          "unique_reliability_levels": 1260
+        },
+        "L+Q_signal+U": {
+          "aurc": 0.07464472166549042,
+          "unique_reliability_levels": 1817
+        },
+        "L+U": {
+          "aurc": 0.05991856553881889,
+          "unique_reliability_levels": 1488
+        },
+        "Q_signal": {
+          "aurc": 0.13129360347913577,
+          "unique_reliability_levels": 2090
+        },
+        "Q_signal+U": {
+          "aurc": 0.08692946291918616,
+          "unique_reliability_levels": 1614
+        },
+        "U": {
+          "aurc": 0.06463339063067838,
+          "unique_reliability_levels": 2158
+        },
+        "confidence": {
+          "aurc": 0.05489167125232953,
+          "unique_reliability_levels": 2158
+        }
+      }
+    },
+    "amplitude_clipping_moderate": {
+      "classification": {
+        "classwise": {
+          "CD": {
+            "auroc": 0.917025736578549,
+            "average_precision": 0.8447464666301503,
+            "f1": 0.7387387387387387
+          },
+          "HYP": {
+            "auroc": 0.8289931394337617,
+            "average_precision": 0.5383791831862101,
+            "f1": 0.39444444444444443
+          },
+          "MI": {
+            "auroc": 0.9217277250113071,
+            "average_precision": 0.8440100214402088,
+            "f1": 0.7440677966101695
+          },
+          "NORM": {
+            "auroc": 0.9347497577740411,
+            "average_precision": 0.9090679752778081,
+            "f1": 0.8517412935323383
+          },
+          "STTC": {
+            "auroc": 0.9274256428535415,
+            "average_precision": 0.8113608574504435,
+            "f1": 0.7229660144181257
+          }
+        },
+        "macro_auroc": 0.90598440033024,
+        "macro_average_precision": 0.7895129007969641,
+        "macro_f1": 0.6903916575487633
+      },
+      "condition": {
+        "name": "amplitude_clipping_moderate",
+        "quantile": 0.975,
+        "severity": "moderate",
+        "severity_index": 1,
+        "type": "amplitude_clipping"
+      },
+      "full_hamming_risk": 0.12761816496756254,
+      "mean_L": 0.8803560395427865,
+      "mean_Q_signal": 0.2785945146687284,
+      "mean_U": 0.013433564073668964,
+      "mean_confidence": 0.8921148920200164,
+      "results_npz_sha256": "7ca5818bb20d9303d6cec30c36fb7e0f41aa15c1e1443a5daf279fb7925a0251",
+      "selective_prediction": {
+        "L": {
+          "aurc": 0.10800124619183987,
+          "unique_reliability_levels": 24
+        },
+        "L+Q_signal": {
+          "aurc": 0.11950516151387966,
+          "unique_reliability_levels": 945
+        },
+        "L+Q_signal+U": {
+          "aurc": 0.07390749979989024,
+          "unique_reliability_levels": 1756
+        },
+        "L+U": {
+          "aurc": 0.06661641409103115,
+          "unique_reliability_levels": 1466
+        },
+        "Q_signal": {
+          "aurc": 0.13911406957062558,
+          "unique_reliability_levels": 2076
+        },
+        "Q_signal+U": {
+          "aurc": 0.08332469265438462,
+          "unique_reliability_levels": 1485
+        },
+        "U": {
+          "aurc": 0.07386683116263326,
+          "unique_reliability_levels": 2158
+        },
+        "confidence": {
+          "aurc": 0.06446537756400834,
+          "unique_reliability_levels": 2158
+        }
+      }
+    },
+    "amplitude_clipping_severe": {
+      "classification": {
+        "classwise": {
+          "CD": {
+            "auroc": 0.8877457687977951,
+            "average_precision": 0.7847932504139865,
+            "f1": 0.5888044229440221
+          },
+          "HYP": {
+            "auroc": 0.7648242986439915,
+            "average_precision": 0.3766481894361324,
+            "f1": 0.2689075630252101
+          },
+          "MI": {
+            "auroc": 0.8857892356399819,
+            "average_precision": 0.7840657237180028,
+            "f1": 0.6702702702702703
+          },
+          "NORM": {
+            "auroc": 0.9108330400552667,
+            "average_precision": 0.87594394762938,
+            "f1": 0.7806774014436424
+          },
+          "STTC": {
+            "auroc": 0.9101300656483877,
+            "average_precision": 0.7685112061444843,
+            "f1": 0.6327014218009479
+          }
+        },
+        "macro_auroc": 0.8718644817570846,
+        "macro_average_precision": 0.7179924634683972,
+        "macro_f1": 0.5882722158968186
+      },
+      "condition": {
+        "name": "amplitude_clipping_severe",
+        "quantile": 0.95,
+        "severity": "severe",
+        "severity_index": 2,
+        "type": "amplitude_clipping"
+      },
+      "full_hamming_risk": 0.18424467099165895,
+      "mean_L": 0.8803560395427865,
+      "mean_Q_signal": 0.2700169678949937,
+      "mean_U": 0.015811178652718777,
+      "mean_confidence": 0.8656262334470906,
+      "results_npz_sha256": "dc2cbcbe5fac9f2a7d5ec01e78e1e524e8213a9fef6ec1cecc346dc0ab7fef2a",
+      "selective_prediction": {
+        "L": {
+          "aurc": 0.16830058377495224,
+          "unique_reliability_levels": 24
+        },
+        "L+Q_signal": {
+          "aurc": 0.17796300298680454,
+          "unique_reliability_levels": 896
+        },
+        "L+Q_signal+U": {
+          "aurc": 0.11384578086868688,
+          "unique_reliability_levels": 1720
+        },
+        "L+U": {
+          "aurc": 0.10558449074311335,
+          "unique_reliability_levels": 1409
+        },
+        "Q_signal": {
+          "aurc": 0.19425487450462461,
+          "unique_reliability_levels": 2080
+        },
+        "Q_signal+U": {
+          "aurc": 0.11853721356199566,
+          "unique_reliability_levels": 1457
+        },
+        "U": {
+          "aurc": 0.10755340071144473,
+          "unique_reliability_levels": 2158
+        },
+        "confidence": {
+          "aurc": 0.09538884911560586,
+          "unique_reliability_levels": 2158
+        }
+      }
+    },
+    "baseline_wander_mild": {
+      "classification": {
+        "classwise": {
+          "CD": {
+            "auroc": 0.9251703155933387,
+            "average_precision": 0.858814876745616,
+            "f1": 0.7662082514734774
+          },
+          "HYP": {
+            "auroc": 0.9023697941830129,
+            "average_precision": 0.6654964822018816,
+            "f1": 0.5956678700361011
+          },
+          "MI": {
+            "auroc": 0.9280189959294436,
+            "average_precision": 0.8492716433101707,
+            "f1": 0.7484444444444445
+          },
+          "NORM": {
+            "auroc": 0.9463027411723303,
+            "average_precision": 0.9279987213213406,
+            "f1": 0.8577134298552171
+          },
+          "STTC": {
+            "auroc": 0.9331556601948464,
+            "average_precision": 0.8289119370878856,
+            "f1": 0.7688022284122563
+          }
+        },
+        "macro_auroc": 0.9270035014145943,
+        "macro_average_precision": 0.826098732133379,
+        "macro_f1": 0.7473672448442993
+      },
+      "condition": {
+        "frequency_hz": 0.2,
+        "name": "baseline_wander_mild",
+        "severity": "mild",
+        "severity_index": 0,
+        "snr_db": 18.0,
+        "type": "baseline_wander"
+      },
+      "full_hamming_risk": 0.1185356811862836,
+      "mean_L": 0.8803560395427865,
+      "mean_Q_signal": 0.5451942986180263,
+      "mean_U": 0.013016281166651055,
+      "mean_confidence": 0.8975130165569519,
+      "results_npz_sha256": "f8c670205f06712f01e2c35e54a2f0c6b02acf6c69a532b3db4bf6d4dfdbdfdc",
+      "selective_prediction": {
+        "L": {
+          "aurc": 0.1011706054134675,
+          "unique_reliability_levels": 24
+        },
+        "L+Q_signal": {
+          "aurc": 0.1143022932672937,
+          "unique_reliability_levels": 1416
+        },
+        "L+Q_signal+U": {
+          "aurc": 0.07392244629265526,
+          "unique_reliability_levels": 1848
+        },
+        "L+U": {
+          "aurc": 0.06021632668930525,
+          "unique_reliability_levels": 1464
+        },
+        "Q_signal": {
+          "aurc": 0.1305566933472743,
+          "unique_reliability_levels": 2096
+        },
+        "Q_signal+U": {
+          "aurc": 0.08525116960719206,
+          "unique_reliability_levels": 1698
+        },
+        "U": {
+          "aurc": 0.06441639202387053,
+          "unique_reliability_levels": 2158
+        },
+        "confidence": {
+          "aurc": 0.05488381000353019,
+          "unique_reliability_levels": 2158
+        }
+      }
+    },
+    "baseline_wander_moderate": {
+      "classification": {
+        "classwise": {
+          "CD": {
+            "auroc": 0.9245067641007725,
+            "average_precision": 0.8573645178783221,
+            "f1": 0.7696850393700787
+          },
+          "HYP": {
+            "auroc": 0.8999400103069539,
+            "average_precision": 0.661757105395364,
+            "f1": 0.59375
+          },
+          "MI": {
+            "auroc": 0.9254206241519675,
+            "average_precision": 0.8459629380183917,
+            "f1": 0.748653500897666
+          },
+          "NORM": {
+            "auroc": 0.9440321172069501,
+            "average_precision": 0.9238138203199813,
+            "f1": 0.8605697151424287
+          },
+          "STTC": {
+            "auroc": 0.9337594987319391,
+            "average_precision": 0.8308158007311857,
+            "f1": 0.7803992740471869
+          }
+        },
+        "macro_auroc": 0.9255318028997166,
+        "macro_average_precision": 0.823942836468649,
+        "macro_f1": 0.7506115058914721
+      },
+      "condition": {
+        "frequency_hz": 0.2,
+        "name": "baseline_wander_moderate",
+        "severity": "moderate",
+        "severity_index": 1,
+        "snr_db": 12.0,
+        "type": "baseline_wander"
+      },
+      "full_hamming_risk": 0.11760889712696942,
+      "mean_L": 0.8803560395427865,
+      "mean_Q_signal": 0.53817408838929,
+      "mean_U": 0.013206152632958905,
+      "mean_confidence": 0.8948249900340682,
+      "results_npz_sha256": "70aab1fb309700c157496bd8131b1f4ccf7e07eb4a4b4548dcf142fd424d5d7e",
+      "selective_prediction": {
+        "L": {
+          "aurc": 0.09941455259049913,
+          "unique_reliability_levels": 24
+        },
+        "L+Q_signal": {
+          "aurc": 0.11253836126054212,
+          "unique_reliability_levels": 1412
+        },
+        "L+Q_signal+U": {
+          "aurc": 0.07349909641934861,
+          "unique_reliability_levels": 1836
+        },
+        "L+U": {
+          "aurc": 0.06065736102190486,
+          "unique_reliability_levels": 1460
+        },
+        "Q_signal": {
+          "aurc": 0.13025435939956664,
+          "unique_reliability_levels": 2096
+        },
+        "Q_signal+U": {
+          "aurc": 0.08593404207330507,
+          "unique_reliability_levels": 1652
+        },
+        "U": {
+          "aurc": 0.06588742068773981,
+          "unique_reliability_levels": 2158
+        },
+        "confidence": {
+          "aurc": 0.05593950484243192,
+          "unique_reliability_levels": 2158
+        }
+      }
+    },
+    "baseline_wander_severe": {
+      "classification": {
+        "classwise": {
+          "CD": {
+            "auroc": 0.9215480765498234,
+            "average_precision": 0.853240150280129,
+            "f1": 0.7574879227053141
+          },
+          "HYP": {
+            "auroc": 0.8962601056462781,
+            "average_precision": 0.6584348067049486,
+            "f1": 0.5956006768189509
+          },
+          "MI": {
+            "auroc": 0.9208050655811849,
+            "average_precision": 0.8393994920400332,
+            "f1": 0.7449908925318761
+          },
+          "NORM": {
+            "auroc": 0.9403389859965154,
+            "average_precision": 0.9199508554982562,
+            "f1": 0.852312282446544
+          },
+          "STTC": {
+            "auroc": 0.9321039258884927,
+            "average_precision": 0.8258397072024961,
+            "f1": 0.7596491228070176
+          }
+        },
+        "macro_auroc": 0.9222112319324589,
+        "macro_average_precision": 0.8193730023451726,
+        "macro_f1": 0.7420081794619405
+      },
+      "condition": {
+        "frequency_hz": 0.2,
+        "name": "baseline_wander_severe",
+        "severity": "severe",
+        "severity_index": 2,
+        "snr_db": 6.0,
+        "type": "baseline_wander"
+      },
+      "full_hamming_risk": 0.12428174235403153,
+      "mean_L": 0.8803560395427865,
+      "mean_Q_signal": 0.5252755546979446,
+      "mean_U": 0.013886207071936107,
+      "mean_confidence": 0.889697749833998,
+      "results_npz_sha256": "60eacf502babb21f3e3f1cfd4ad6b9fcaddc97c291096a777b428073bbea2d4e",
+      "selective_prediction": {
+        "L": {
+          "aurc": 0.10456477555819324,
+          "unique_reliability_levels": 24
+        },
+        "L+Q_signal": {
+          "aurc": 0.11694683118706076,
+          "unique_reliability_levels": 1424
+        },
+        "L+Q_signal+U": {
+          "aurc": 0.07890738843709498,
+          "unique_reliability_levels": 1860
+        },
+        "L+U": {
+          "aurc": 0.06370736299912387,
+          "unique_reliability_levels": 1484
+        },
+        "Q_signal": {
+          "aurc": 0.1354246111730864,
+          "unique_reliability_levels": 2090
+        },
+        "Q_signal+U": {
+          "aurc": 0.09124154688782157,
+          "unique_reliability_levels": 1720
+        },
+        "U": {
+          "aurc": 0.06975112521068196,
+          "unique_reliability_levels": 2158
+        },
+        "confidence": {
+          "aurc": 0.05917571583006712,
+          "unique_reliability_levels": 2158
+        }
+      }
+    },
+    "clean": {
+      "classification": {
+        "classwise": {
+          "CD": {
+            "auroc": 0.9253025406622413,
+            "average_precision": 0.8586730819701163,
+            "f1": 0.7625615763546798
+          },
+          "HYP": {
+            "auroc": 0.9001473572325829,
+            "average_precision": 0.6627257863912686,
+            "f1": 0.5893186003683242
+          },
+          "MI": {
+            "auroc": 0.9282134780642244,
+            "average_precision": 0.8499043130423769,
+            "f1": 0.7493403693931399
+          },
+          "NORM": {
+            "auroc": 0.9460342288090303,
+            "average_precision": 0.9276567045191152,
+            "f1": 0.8565717141429285
+          },
+          "STTC": {
+            "auroc": 0.9330173049572211,
+            "average_precision": 0.8271678774313175,
+            "f1": 0.7660377358490567
+          }
+        },
+        "macro_auroc": 0.9265429819450599,
+        "macro_average_precision": 0.8252255526708389,
+        "macro_f1": 0.7447659992216258
+      },
+      "condition": {
+        "severity": "clean",
+        "type": "clean"
+      },
+      "full_hamming_risk": 0.11899907321594069,
+      "mean_L": 0.8803560395427865,
+      "mean_Q_signal": 0.49048983404576285,
+      "mean_U": 0.012984365712060509,
+      "mean_confidence": 0.8983605593184513,
+      "results_npz_sha256": "18332fbd10a6f82bbc14724e7ec11d21e915760ffb80499d959b1add2b1e8a53",
+      "selective_prediction": {
+        "L": {
+          "aurc": 0.10133941769224883,
+          "unique_reliability_levels": 24
+        },
+        "L+Q_signal": {
+          "aurc": 0.11780173910503804,
+          "unique_reliability_levels": 1465
+        },
+        "L+Q_signal+U": {
+          "aurc": 0.07914359413029014,
+          "unique_reliability_levels": 1831
+        },
+        "L+U": {
+          "aurc": 0.06035952560523435,
+          "unique_reliability_levels": 1482
+        },
+        "Q_signal": {
+          "aurc": 0.13205388960361603,
+          "unique_reliability_levels": 2111
+        },
+        "Q_signal+U": {
+          "aurc": 0.09088965042084152,
+          "unique_reliability_levels": 1688
+        },
+        "U": {
+          "aurc": 0.06473413000411835,
+          "unique_reliability_levels": 2158
+        },
+        "confidence": {
+          "aurc": 0.055157156439683004,
+          "unique_reliability_levels": 2158
+        }
+      }
+    },
+    "lead_masking_mild": {
+      "classification": {
+        "classwise": {
+          "CD": {
+            "auroc": 0.9084687123947053,
+            "average_precision": 0.8249681573623853,
+            "f1": 0.7119266055045872
+          },
+          "HYP": {
+            "auroc": 0.8876501755403099,
+            "average_precision": 0.6359366379891958,
+            "f1": 0.553014553014553
+          },
+          "MI": {
+            "auroc": 0.9182892356399818,
+            "average_precision": 0.8290089356915599,
+            "f1": 0.729064039408867
+          },
+          "NORM": {
+            "auroc": 0.9405093045182202,
+            "average_precision": 0.9186485981345476,
+            "f1": 0.8495934959349594
+          },
+          "STTC": {
+            "auroc": 0.9266236514761214,
+            "average_precision": 0.8127509578261065,
+            "f1": 0.7591911764705882
+          }
+        },
+        "macro_auroc": 0.9163082159138677,
+        "macro_average_precision": 0.804262657400759,
+        "macro_f1": 0.720557974066711
+      },
+      "condition": {
+        "name": "lead_masking_mild",
+        "number_of_leads": 1,
+        "severity": "mild",
+        "severity_index": 0,
+        "type": "lead_masking"
+      },
+      "full_hamming_risk": 0.1313253012048193,
+      "mean_L": 0.8803560395427865,
+      "mean_Q_signal": 0.23522187917782467,
+      "mean_U": 0.013705836380916457,
+      "mean_confidence": 0.8894648727405214,
+      "results_npz_sha256": "36f26f3c571d84ffcf0093dd03447c85071aa84ad7243a10f8304fe991449519",
+      "selective_prediction": {
+        "L": {
+          "aurc": 0.11470508801640994,
+          "unique_reliability_levels": 24
+        },
+        "L+Q_signal": {
+          "aurc": 0.12335672519076987,
+          "unique_reliability_levels": 767
+        },
+        "L+Q_signal+U": {
+          "aurc": 0.07383964898218097,
+          "unique_reliability_levels": 1770
+        },
+        "L+U": {
+          "aurc": 0.07036078985332014,
+          "unique_reliability_levels": 1478
+        },
+        "Q_signal": {
+          "aurc": 0.1410833338800017,
+          "unique_reliability_levels": 2068
+        },
+        "Q_signal+U": {
+          "aurc": 0.07994973822046932,
+          "unique_reliability_levels": 1480
+        },
+        "U": {
+          "aurc": 0.07507175011005482,
+          "unique_reliability_levels": 2158
+        },
+        "confidence": {
+          "aurc": 0.06484940977681074,
+          "unique_reliability_levels": 2158
+        }
+      }
+    },
+    "lead_masking_moderate": {
+      "classification": {
+        "classwise": {
+          "CD": {
+            "auroc": 0.8732871394743993,
+            "average_precision": 0.757638956385154,
+            "f1": 0.6410256410256411
+          },
+          "HYP": {
+            "auroc": 0.8387303926305281,
+            "average_precision": 0.5437491367648599,
+            "f1": 0.43116883116883115
+          },
+          "MI": {
+            "auroc": 0.8874875621890548,
+            "average_precision": 0.7652828541550967,
+            "f1": 0.6802621995630007
+          },
+          "NORM": {
+            "auroc": 0.9171183148894017,
+            "average_precision": 0.8850556927350661,
+            "f1": 0.7858744394618834
+          },
+          "STTC": {
+            "auroc": 0.9039908451042765,
+            "average_precision": 0.7599663168644325,
+            "f1": 0.7004366812227074
+          }
+        },
+        "macro_auroc": 0.8841228508575322,
+        "macro_average_precision": 0.7423385913809218,
+        "macro_f1": 0.6477535584884128
+      },
+      "condition": {
+        "name": "lead_masking_moderate",
+        "number_of_leads": 3,
+        "severity": "moderate",
+        "severity_index": 1,
+        "type": "lead_masking"
+      },
+      "full_hamming_risk": 0.16709916589434662,
+      "mean_L": 0.8803560395427865,
+      "mean_Q_signal": 0.24610267475174188,
+      "mean_U": 0.015428150604936314,
+      "mean_confidence": 0.8715225270126293,
+      "results_npz_sha256": "9a97794465a85fbc87da66555d5e3b58e135d7870ae4622223e04977247a33a1",
+      "selective_prediction": {
+        "L": {
+          "aurc": 0.15611488495924697,
+          "unique_reliability_levels": 24
+        },
+        "L+Q_signal": {
+          "aurc": 0.165796158406008,
+          "unique_reliability_levels": 822
+        },
+        "L+Q_signal+U": {
+          "aurc": 0.10926887492630927,
+          "unique_reliability_levels": 1753
+        },
+        "L+U": {
+          "aurc": 0.1039815636562182,
+          "unique_reliability_levels": 1437
+        },
+        "Q_signal": {
+          "aurc": 0.1807957984164305,
+          "unique_reliability_levels": 2063
+        },
+        "Q_signal+U": {
+          "aurc": 0.11265828721906056,
+          "unique_reliability_levels": 1458
+        },
+        "U": {
+          "aurc": 0.10551906162487461,
+          "unique_reliability_levels": 2158
+        },
+        "confidence": {
+          "aurc": 0.08897935080674553,
+          "unique_reliability_levels": 2158
+        }
+      }
+    },
+    "lead_masking_severe": {
+      "classification": {
+        "classwise": {
+          "CD": {
+            "auroc": 0.8134656069251971,
+            "average_precision": 0.6302665518522466,
+            "f1": 0.5512630014858841
+          },
+          "HYP": {
+            "auroc": 0.7710567848745451,
+            "average_precision": 0.40200813254340173,
+            "f1": 0.21122112211221122
+          },
+          "MI": {
+            "auroc": 0.8078448665762098,
+            "average_precision": 0.6273308177658163,
+            "f1": 0.5155601659751037
+          },
+          "NORM": {
+            "auroc": 0.8487102282355088,
+            "average_precision": 0.7976335641944539,
+            "f1": 0.4370139968895801
+          },
+          "STTC": {
+            "auroc": 0.8105400896026039,
+            "average_precision": 0.5752596957603848,
+            "f1": 0.5685823754789272
+          }
+        },
+        "macro_auroc": 0.810323515242813,
+        "macro_average_precision": 0.6064997524232606,
+        "macro_f1": 0.4567281323883412
+      },
+      "condition": {
+        "name": "lead_masking_severe",
+        "number_of_leads": 6,
+        "severity": "severe",
+        "severity_index": 2,
+        "type": "lead_masking"
+      },
+      "full_hamming_risk": 0.28396663577386466,
+      "mean_L": 0.8803560395427865,
+      "mean_Q_signal": 0.2727337677710463,
+      "mean_U": 0.019290686967622026,
+      "mean_confidence": 0.8436686738183258,
+      "results_npz_sha256": "bc3b8a1a9d9485f11b317e71e157d4246f56df0a60596d411bc2996df1258386",
+      "selective_prediction": {
+        "L": {
+          "aurc": 0.2818799595438103,
+          "unique_reliability_levels": 24
+        },
+        "L+Q_signal": {
+          "aurc": 0.2739917076174856,
+          "unique_reliability_levels": 915
+        },
+        "L+Q_signal+U": {
+          "aurc": 0.23764949885625292,
+          "unique_reliability_levels": 1659
+        },
+        "L+U": {
+          "aurc": 0.2349583502379031,
+          "unique_reliability_levels": 1245
+        },
+        "Q_signal": {
+          "aurc": 0.274681479949008,
+          "unique_reliability_levels": 2078
+        },
+        "Q_signal+U": {
+          "aurc": 0.23433015251873243,
+          "unique_reliability_levels": 1333
+        },
+        "U": {
+          "aurc": 0.22978501816096528,
+          "unique_reliability_levels": 2158
+        },
+        "confidence": {
+          "aurc": 0.2023414335913383,
+          "unique_reliability_levels": 2158
+        }
+      }
+    }
+  },
+  "condition_table_sha256": "16b2135ebde75caf5b93d021f41746fde331691d2dc1a7cdd2530347fb70ba6c",
+  "conditions": 13,
+  "created_utc": "2026-08-26T17:50:58.096501+00:00",
+  "deltas_vs_clean": {
+    "additive_white_noise_mild": {
+      "delta_full_hamming_risk_vs_clean": 0.001853568118628357,
+      "delta_macro_auroc_vs_clean": -0.0012180884683861137,
+      "delta_macro_average_precision_vs_clean": -0.0025525868423945663,
+      "delta_macro_f1_vs_clean": -0.00016659303104682444,
+      "delta_mean_Q_signal_vs_clean": -0.001940416828237257,
+      "delta_mean_U_vs_clean": 0.00016593636695756177,
+      "delta_mean_confidence_vs_clean": -0.007013648071488632
+    },
+    "additive_white_noise_moderate": {
+      "delta_full_hamming_risk_vs_clean": 0.013438368860055616,
+      "delta_macro_auroc_vs_clean": -0.005033223570480416,
+      "delta_macro_average_precision_vs_clean": -0.010051853910622133,
+      "delta_macro_f1_vs_clean": -0.018740798713162476,
+      "delta_mean_Q_signal_vs_clean": -0.053132738570947136,
+      "delta_mean_U_vs_clean": 0.0010620986471840642,
+      "delta_mean_confidence_vs_clean": -0.025007808387566444
+    },
+    "additive_white_noise_severe": {
+      "delta_full_hamming_risk_vs_clean": 0.0717330861909175,
+      "delta_macro_auroc_vs_clean": -0.018742304792030096,
+      "delta_macro_average_precision_vs_clean": -0.03721350610814933,
+      "delta_macro_f1_vs_clean": -0.09197056957069671,
+      "delta_mean_Q_signal_vs_clean": -0.051680549485733585,
+      "delta_mean_U_vs_clean": 0.003057031524892617,
+      "delta_mean_confidence_vs_clean": -0.07075272532987442
+    },
+    "amplitude_clipping_mild": {
+      "delta_full_hamming_risk_vs_clean": -0.0005560704355885016,
+      "delta_macro_auroc_vs_clean": 7.64744281266383e-05,
+      "delta_macro_average_precision_vs_clean": 0.0003151485420488376,
+      "delta_macro_f1_vs_clean": 4.812238862006435e-05,
+      "delta_mean_Q_signal_vs_clean": -0.1279501097884324,
+      "delta_mean_U_vs_clean": -5.609906355396113e-05,
+      "delta_mean_confidence_vs_clean": 0.0004331050022988725
+    },
+    "amplitude_clipping_moderate": {
+      "delta_full_hamming_risk_vs_clean": 0.008619091751621843,
+      "delta_macro_auroc_vs_clean": -0.020558581614819937,
+      "delta_macro_average_precision_vs_clean": -0.035712651873874734,
+      "delta_macro_f1_vs_clean": -0.05437434167286248,
+      "delta_mean_Q_signal_vs_clean": -0.21189531937703443,
+      "delta_mean_U_vs_clean": 0.0004491983616084546,
+      "delta_mean_confidence_vs_clean": -0.006245667298434898
+    },
+    "amplitude_clipping_severe": {
+      "delta_full_hamming_risk_vs_clean": 0.06524559777571826,
+      "delta_macro_auroc_vs_clean": -0.054678500187975265,
+      "delta_macro_average_precision_vs_clean": -0.10723308920244168,
+      "delta_macro_f1_vs_clean": -0.15649378332480723,
+      "delta_mean_Q_signal_vs_clean": -0.22047286615076916,
+      "delta_mean_U_vs_clean": 0.002826812940658268,
+      "delta_mean_confidence_vs_clean": -0.032734325871360714
+    },
+    "baseline_wander_mild": {
+      "delta_full_hamming_risk_vs_clean": -0.00046339202965708925,
+      "delta_macro_auroc_vs_clean": 0.0004605194695344039,
+      "delta_macro_average_precision_vs_clean": 0.0008731794625401745,
+      "delta_macro_f1_vs_clean": 0.002601245622673498,
+      "delta_mean_Q_signal_vs_clean": 0.05470446457226341,
+      "delta_mean_U_vs_clean": 3.191545459054618e-05,
+      "delta_mean_confidence_vs_clean": -0.0008475427614993425
+    },
+    "baseline_wander_moderate": {
+      "delta_full_hamming_risk_vs_clean": -0.0013901760889712678,
+      "delta_macro_auroc_vs_clean": -0.0010111790453433134,
+      "delta_macro_average_precision_vs_clean": -0.001282716202189893,
+      "delta_macro_f1_vs_clean": 0.00584550666984629,
+      "delta_mean_Q_signal_vs_clean": 0.04768425434352719,
+      "delta_mean_U_vs_clean": 0.0002217869208983956,
+      "delta_mean_confidence_vs_clean": -0.0035355692843830333
+    },
+    "baseline_wander_severe": {
+      "delta_full_hamming_risk_vs_clean": 0.005282669138090834,
+      "delta_macro_auroc_vs_clean": -0.004331750012600999,
+      "delta_macro_average_precision_vs_clean": -0.005852550325666228,
+      "delta_macro_f1_vs_clean": -0.002757819759685254,
+      "delta_mean_Q_signal_vs_clean": 0.03478572065218177,
+      "delta_mean_U_vs_clean": 0.0009018413598755985,
+      "delta_mean_confidence_vs_clean": -0.008662809484453304
+    },
+    "lead_masking_mild": {
+      "delta_full_hamming_risk_vs_clean": 0.012326227988878613,
+      "delta_macro_auroc_vs_clean": -0.010234766031192222,
+      "delta_macro_average_precision_vs_clean": -0.020962895270079884,
+      "delta_macro_f1_vs_clean": -0.024208025154914825,
+      "delta_mean_Q_signal_vs_clean": -0.2552679548679382,
+      "delta_mean_U_vs_clean": 0.0007214706688559482,
+      "delta_mean_confidence_vs_clean": -0.008895686577929829
+    },
+    "lead_masking_moderate": {
+      "delta_full_hamming_risk_vs_clean": 0.048100092678405926,
+      "delta_macro_auroc_vs_clean": -0.042420131087527735,
+      "delta_macro_average_precision_vs_clean": -0.08288696128991702,
+      "delta_macro_f1_vs_clean": -0.09701244073321302,
+      "delta_mean_Q_signal_vs_clean": -0.24438715929402097,
+      "delta_mean_U_vs_clean": 0.0024437848928758055,
+      "delta_mean_confidence_vs_clean": -0.026838032305821935
+    },
+    "lead_masking_severe": {
+      "delta_full_hamming_risk_vs_clean": 0.16496756255792397,
+      "delta_macro_auroc_vs_clean": -0.11621946670224692,
+      "delta_macro_average_precision_vs_clean": -0.21872580024757826,
+      "delta_macro_f1_vs_clean": -0.2880378668332846,
+      "delta_mean_Q_signal_vs_clean": -0.21775606627471655,
+      "delta_mean_U_vs_clean": 0.0063063212555615165,
+      "delta_mean_confidence_vs_clean": -0.05469188550012549
+    }
+  },
+  "evaluation_split": "test_fold_10",
+  "final_evaluation_id": "ptbxl_final_evaluation_v1",
+  "mc_passes_per_condition": 30,
+  "model_state_unchanged": true,
+  "patients": 1877,
+  "post_test_tuning_allowed": false,
+  "records": 2158,
+  "source_sha256": {
+    "checkpoint": "d63aed62cbf182b57bae2d43392c46d453cfe5522f3a25f8a24991e75144187b",
+    "corruption_config": "55b349937be321961fc573947d591401173c40e0978584f103309ce3bac6a6b6",
+    "final_config": "3c86bcd6b29bbff6d9af5badeb0e92040587d226b369949a9327481471936759",
+    "manifest": "8f333e4094fc5e6b2b7e32731a9057182eec5e563f6ae07f6af1a142a539fa27",
+    "normalization": "0fec09e28aa9c4a7fcbb7801bcecf02c590ce2949c011f30dbd578ab7429d32b",
+    "script": "a07d990b3d59f206309b543a44028cdcb368f8d04fe707b3e19a3e9510474533",
+    "thresholds": "3e3d891afa3201242cecfae6e014eef5fc998f67b7ede51adc835b5dd4469c2a",
+    "training_Q_reference": "0b17244f3d9a76afa85824455008f1153f1f8cb55d7086d4f84b92f183cf7978",
+    "validation_L": "8760498f6d684667bbb4a6bf83aa592c0cd0a0481b215929019cddbd28bb48a5",
+    "validation_combination_reference": "4af99968ba9d2f1153cd4b1ddb4bfc06b35e3c6c7bc9208aa5d10305fefbe445"
+  },
+  "status": "FROZEN",
+  "test_set_ecdf_fitting_used": false,
+  "thresholds_source": "frozen_validation_f1_thresholds"
+}

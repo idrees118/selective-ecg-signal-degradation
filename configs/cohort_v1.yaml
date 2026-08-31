@@ -1,0 +1,38 @@
+cohort_id: ptbxl_v103_superdiagnostic_v1
+
+dataset:
+  name: PTB-XL
+  version: "1.0.3"
+  sampling_rate_hz: 100
+
+source_sha256:
+  ptbxl_database.csv: "7600de9c1b27d181d850b3c6038a35d7c3ddb6bb33b702e3a20252a6859d216b"
+  scp_statements.csv: "ad05b0b1fcae83bb1230755ad9cfc7c96f303feddc08a4a9ad5bdc9ca63bac8f"
+
+task:
+  name: diagnostic_superclass
+  type: multilabel
+  superclass_order:
+    - NORM
+    - MI
+    - STTC
+    - CD
+    - HYP
+
+inclusion_rule:
+  minimum_diagnostic_superclasses: 1
+  use_scp_likelihood_for_target_presence: false
+
+split:
+  train_folds: [1, 2, 3, 4, 5, 6, 7, 8]
+  validation_folds: [9]
+  test_folds: [10]
+
+verified_expected_counts:
+  source_records: 21799
+  selected_records: 21388
+  excluded_records: 411
+  selected_patients: 18617
+  train_records: 17084
+  validation_records: 2146
+  test_records: 2158

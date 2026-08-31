@@ -1,0 +1,56 @@
+uncertainty_id: ptbxl_mc_dropout_uncertainty_v1
+
+source_model:
+  experiment_id: ptbxl_resnet1d_wang_baseline_v1
+  seed: 20260826
+  checkpoint_epoch: 26
+
+method:
+  name: monte_carlo_dropout
+  mc_passes: 30
+
+inference:
+  batchnorm_mode: eval
+  dropout_mode: train
+  gradients: disabled
+
+multilabel_definition:
+  per_class_distribution: Bernoulli
+
+  predictive_probability:
+    formula: mean_mc_probability
+
+  predictive_entropy:
+    formula: H(mean_probability)
+
+  expected_entropy:
+    formula: mean_mc_H_probability
+
+  epistemic_uncertainty:
+    name: mutual_information
+    formula: predictive_entropy_minus_expected_entropy
+
+sample_aggregation:
+  primary:
+    name: mean_classwise_mutual_information
+    number_of_classes: 5
+    direction: higher_means_more_uncertain
+
+  secondary:
+    - mean_classwise_predictive_entropy
+    - max_classwise_mutual_information
+    - classwise_mutual_information
+
+numerical:
+  logarithm: natural
+  entropy_epsilon: 1.0e-12
+  clamp_tiny_negative_mutual_information_to_zero: true
+
+random_seed: 20260826
+
+development_split:
+  validation_only: true
+
+test_allowed_during_development: false
+
+status: FROZEN

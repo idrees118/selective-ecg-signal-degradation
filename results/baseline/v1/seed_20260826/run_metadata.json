@@ -1,0 +1,37 @@
+{
+  "best_checkpoint_sha256": "d63aed62cbf182b57bae2d43392c46d453cfe5522f3a25f8a24991e75144187b",
+  "best_epoch": 26,
+  "best_validation_classwise_auroc": {
+    "CD": 0.9370384645975197,
+    "HYP": 0.9117630696358463,
+    "MI": 0.928812093538121,
+    "NORM": 0.9459058119139621,
+    "STTC": 0.9282644117316551
+  },
+  "best_validation_macro_auroc": 0.9303567702834208,
+  "best_validation_predictions_sha256": "0fda3cbeb6f2c477a0ba20f21f7f3aa7d3ddea0949587a7115aa9f3f7831320e",
+  "cache_metadata_sha256": "0dabfc12ce75112c9ae2055b0f47a8e595cf2e51bd9748e40e327b4e14fca71d",
+  "completed_utc": "2026-08-26T14:07:47.129237+00:00",
+  "config_sha256": "c89b3898d28454d585f560f8b5f8ab2d9dda7523ef3cc4445b1f8ec213c63d4f",
+  "device": "mps",
+  "epochs_completed": 50,
+  "experiment_id": "ptbxl_resnet1d_wang_baseline_v1",
+  "metrics_source_sha256": "82254e2245760d22065b0376b8071960f782661f3b52a32ccf9c2210bb0bee07",
+  "model_source_sha256": "2c0a1ab4091156d5e0300de286fc78cd2c8398104266a40a2a7bcde70d4c0318",
+  "python": "3.12.11 (main, Jun  3 2025, 15:41:47) [Clang 17.0.0 (clang-1700.0.13.3)]",
+  "reproduced_validation_macro_auroc": 0.9303567702834208,
+  "seed": 20260826,
+  "software_versions": {
+    "PyYAML": "6.0.3",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "scikit-learn": "1.9.0",
+    "torch": "2.13.0"
+  },
+  "started_utc": "2026-08-26T12:29:50.770377+00:00",
+  "status": "COMPLETE",
+  "test_records_used": 0,
+  "train_records": 17084,
+  "training_script_sha256": "057a5e37ea1be62d92949348772276b88cf22c5ae78e2fdad1c54ea429bff7ca",
+  "validation_records": 2146
+}

@@ -1,0 +1,25 @@
+\begin{table*}[h]
+\centering
+\scriptsize
+\caption{Complete fold-10 performance across clean and corrupted conditions.}
+\label{tab:condition_metrics}
+\begin{tabular}{lrrrrrr}
+\toprule
+Condition & Macro-AUROC & Macro-F1 & Hamming risk & Mean confidence & Mean $Q$ & Mean $U$ \\
+\midrule
+clean & 0.926543 & 0.744766 & 0.118999 & 0.898361 & 0.490490 & 0.012984 \\
+baseline wander mild & 0.927004 & 0.747367 & 0.118536 & 0.897513 & 0.545194 & 0.013016 \\
+baseline wander moderate & 0.925532 & 0.750612 & 0.117609 & 0.894825 & 0.538174 & 0.013206 \\
+baseline wander severe & 0.922211 & 0.742008 & 0.124282 & 0.889698 & 0.525276 & 0.013886 \\
+additive white noise mild & 0.925325 & 0.744599 & 0.120853 & 0.891347 & 0.488549 & 0.013150 \\
+additive white noise moderate & 0.921510 & 0.726025 & 0.132437 & 0.873353 & 0.437357 & 0.014046 \\
+additive white noise severe & 0.907801 & 0.652795 & 0.190732 & 0.827608 & 0.438809 & 0.016041 \\
+amplitude clipping mild & 0.926619 & 0.744814 & 0.118443 & 0.898794 & 0.362540 & 0.012928 \\
+amplitude clipping moderate & 0.905984 & 0.690392 & 0.127618 & 0.892115 & 0.278595 & 0.013434 \\
+amplitude clipping severe & 0.871864 & 0.588272 & 0.184245 & 0.865626 & 0.270017 & 0.015811 \\
+lead masking mild & 0.916308 & 0.720558 & 0.131325 & 0.889465 & 0.235222 & 0.013706 \\
+lead masking moderate & 0.884123 & 0.647754 & 0.167099 & 0.871523 & 0.246103 & 0.015428 \\
+lead masking severe & 0.810324 & 0.456728 & 0.283967 & 0.843669 & 0.272734 & 0.019291 \\
+\bottomrule
+\end{tabular}
+\end{table*}

@@ -1,0 +1,71 @@
+corruption_id: ptbxl_corruption_stress_v1
+
+source:
+  waveform: raw_100hz_physical_mV
+  shape: [12, 1000]
+  sampling_frequency_hz: 100
+
+application_order:
+  - load_raw_physical_waveform
+  - apply_corruption
+  - apply_frozen_global_training_normalization
+  - model_inference
+
+randomness:
+  base_seed: 20260826
+  deterministic_per_ecg: true
+  python_hash_used: false
+
+corruptions:
+
+  baseline_wander:
+    type: additive_sinusoidal
+    frequency_hz: 0.2
+    random_phase_per_lead: true
+    severity:
+      mild:
+        snr_db: 18.0
+      moderate:
+        snr_db: 12.0
+      severe:
+        snr_db: 6.0
+
+  additive_white_noise:
+    type: zero_mean_gaussian
+    severity:
+      mild:
+        snr_db: 18.0
+      moderate:
+        snr_db: 12.0
+      severe:
+        snr_db: 6.0
+
+  amplitude_clipping:
+    type: symmetric_per_lead_quantile_clipping
+    preserve_lead_mean: true
+    severity:
+      mild:
+        absolute_centered_quantile: 0.995
+      moderate:
+        absolute_centered_quantile: 0.975
+      severe:
+        absolute_centered_quantile: 0.950
+
+  lead_masking:
+    type: flat_zero_mV_leads
+    select_without_replacement: true
+    severity:
+      mild:
+        number_of_leads: 1
+      moderate:
+        number_of_leads: 3
+      severe:
+        number_of_leads: 6
+
+development:
+  split: validation
+  test_allowed: false
+
+labels_changed_by_corruption: false
+
+status: FROZEN

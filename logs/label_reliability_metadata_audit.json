@@ -1,0 +1,379 @@
+{
+  "audit_timestamp_utc": "2026-08-26T15:51:28.483425+00:00",
+  "classwise_likelihood_audit": {
+    "test": {
+      "CD": {
+        "contributing_code_entries": 577,
+        "known_likelihood_distribution": {
+          "count": 577,
+          "max": 100.0,
+          "mean": 99.20277296360486,
+          "median": 100.0,
+          "min": 50.0,
+          "q25": 100.0,
+          "q75": 100.0
+        },
+        "known_likelihood_entries": 577,
+        "positive_records": 496,
+        "records_with_all_likelihoods_unknown": 0,
+        "records_with_any_known_likelihood": 496,
+        "records_with_multiple_contributing_codes": 70,
+        "unknown_likelihood_entries": 0
+      },
+      "HYP": {
+        "contributing_code_entries": 280,
+        "known_likelihood_distribution": {
+          "count": 280,
+          "max": 100.0,
+          "mean": 73.21428571428571,
+          "median": 90.0,
+          "min": 15.0,
+          "q25": 50.0,
+          "q75": 100.0
+        },
+        "known_likelihood_entries": 280,
+        "positive_records": 262,
+        "records_with_all_likelihoods_unknown": 0,
+        "records_with_any_known_likelihood": 262,
+        "records_with_multiple_contributing_codes": 17,
+        "unknown_likelihood_entries": 0
+      },
+      "MI": {
+        "contributing_code_entries": 683,
+        "known_likelihood_distribution": {
+          "count": 683,
+          "max": 100.0,
+          "mean": 66.74963396778917,
+          "median": 80.0,
+          "min": 15.0,
+          "q25": 35.0,
+          "q75": 100.0
+        },
+        "known_likelihood_entries": 683,
+        "positive_records": 550,
+        "records_with_all_likelihoods_unknown": 0,
+        "records_with_any_known_likelihood": 550,
+        "records_with_multiple_contributing_codes": 126,
+        "unknown_likelihood_entries": 0
+      },
+      "NORM": {
+        "contributing_code_entries": 963,
+        "known_likelihood_distribution": {
+          "count": 963,
+          "max": 100.0,
+          "mean": 92.76739356178608,
+          "median": 100.0,
+          "min": 15.0,
+          "q25": 80.0,
+          "q75": 100.0
+        },
+        "known_likelihood_entries": 963,
+        "positive_records": 963,
+        "records_with_all_likelihoods_unknown": 0,
+        "records_with_any_known_likelihood": 963,
+        "records_with_multiple_contributing_codes": 0,
+        "unknown_likelihood_entries": 0
+      },
+      "STTC": {
+        "contributing_code_entries": 575,
+        "known_likelihood_distribution": {
+          "count": 550,
+          "max": 100.0,
+          "mean": 94.2,
+          "median": 100.0,
+          "min": 50.0,
+          "q25": 100.0,
+          "q75": 100.0
+        },
+        "known_likelihood_entries": 550,
+        "positive_records": 521,
+        "records_with_all_likelihoods_unknown": 15,
+        "records_with_any_known_likelihood": 506,
+        "records_with_multiple_contributing_codes": 51,
+        "unknown_likelihood_entries": 25
+      }
+    },
+    "train": {
+      "CD": {
+        "contributing_code_entries": 4607,
+        "known_likelihood_distribution": {
+          "count": 4607,
+          "max": 100.0,
+          "mean": 99.11004992402866,
+          "median": 100.0,
+          "min": 10.0,
+          "q25": 100.0,
+          "q75": 100.0
+        },
+        "known_likelihood_entries": 4607,
+        "positive_records": 3907,
+        "records_with_all_likelihoods_unknown": 0,
+        "records_with_any_known_likelihood": 3907,
+        "records_with_multiple_contributing_codes": 645,
+        "unknown_likelihood_entries": 0
+      },
+      "HYP": {
+        "contributing_code_entries": 2254,
+        "known_likelihood_distribution": {
+          "count": 2254,
+          "max": 100.0,
+          "mean": 75.76308784383319,
+          "median": 100.0,
+          "min": 15.0,
+          "q25": 50.0,
+          "q75": 100.0
+        },
+        "known_likelihood_entries": 2254,
+        "positive_records": 2119,
+        "records_with_all_likelihoods_unknown": 0,
+        "records_with_any_known_likelihood": 2119,
+        "records_with_multiple_contributing_codes": 134,
+        "unknown_likelihood_entries": 0
+      },
+      "MI": {
+        "contributing_code_entries": 5493,
+        "known_likelihood_distribution": {
+          "count": 5493,
+          "max": 100.0,
+          "mean": 70.30293100309484,
+          "median": 100.0,
+          "min": 14.0,
+          "q25": 50.0,
+          "q75": 100.0
+        },
+        "known_likelihood_entries": 5493,
+        "positive_records": 4379,
+        "records_with_all_likelihoods_unknown": 0,
+        "records_with_any_known_likelihood": 4379,
+        "records_with_multiple_contributing_codes": 1073,
+        "unknown_likelihood_entries": 0
+      },
+      "NORM": {
+        "contributing_code_entries": 7596,
+        "known_likelihood_distribution": {
+          "count": 7596,
+          "max": 100.0,
+          "mean": 93.18575566087415,
+          "median": 100.0,
+          "min": 15.0,
+          "q25": 100.0,
+          "q75": 100.0
+        },
+        "known_likelihood_entries": 7596,
+        "positive_records": 7596,
+        "records_with_all_likelihoods_unknown": 0,
+        "records_with_any_known_likelihood": 7596,
+        "records_with_multiple_contributing_codes": 0,
+        "unknown_likelihood_entries": 0
+      },
+      "STTC": {
+        "contributing_code_entries": 4623,
+        "known_likelihood_distribution": {
+          "count": 4454,
+          "max": 100.0,
+          "mean": 93.70116748989672,
+          "median": 100.0,
+          "min": 15.0,
+          "q25": 100.0,
+          "q75": 100.0
+        },
+        "known_likelihood_entries": 4454,
+        "positive_records": 4186,
+        "records_with_all_likelihoods_unknown": 99,
+        "records_with_any_known_likelihood": 4087,
+        "records_with_multiple_contributing_codes": 419,
+        "unknown_likelihood_entries": 169
+      }
+    },
+    "validation": {
+      "CD": {
+        "contributing_code_entries": 577,
+        "known_likelihood_distribution": {
+          "count": 577,
+          "max": 100.0,
+          "mean": 98.88214904679376,
+          "median": 100.0,
+          "min": 15.0,
+          "q25": 100.0,
+          "q75": 100.0
+        },
+        "known_likelihood_entries": 577,
+        "positive_records": 495,
+        "records_with_all_likelihoods_unknown": 0,
+        "records_with_any_known_likelihood": 495,
+        "records_with_multiple_contributing_codes": 75,
+        "unknown_likelihood_entries": 0
+      },
+      "HYP": {
+        "contributing_code_entries": 278,
+        "known_likelihood_distribution": {
+          "count": 278,
+          "max": 100.0,
+          "mean": 70.88129496402878,
+          "median": 100.0,
+          "min": 15.0,
+          "q25": 50.0,
+          "q75": 100.0
+        },
+        "known_likelihood_entries": 278,
+        "positive_records": 268,
+        "records_with_all_likelihoods_unknown": 0,
+        "records_with_any_known_likelihood": 268,
+        "records_with_multiple_contributing_codes": 10,
+        "unknown_likelihood_entries": 0
+      },
+      "MI": {
+        "contributing_code_entries": 687,
+        "known_likelihood_distribution": {
+          "count": 687,
+          "max": 100.0,
+          "mean": 69.98544395924309,
+          "median": 100.0,
+          "min": 15.0,
+          "q25": 50.0,
+          "q75": 100.0
+        },
+        "known_likelihood_entries": 687,
+        "positive_records": 540,
+        "records_with_all_likelihoods_unknown": 0,
+        "records_with_any_known_likelihood": 540,
+        "records_with_multiple_contributing_codes": 141,
+        "unknown_likelihood_entries": 0
+      },
+      "NORM": {
+        "contributing_code_entries": 955,
+        "known_likelihood_distribution": {
+          "count": 955,
+          "max": 100.0,
+          "mean": 92.20418848167539,
+          "median": 100.0,
+          "min": 15.0,
+          "q25": 80.0,
+          "q75": 100.0
+        },
+        "known_likelihood_entries": 955,
+        "positive_records": 955,
+        "records_with_all_likelihoods_unknown": 0,
+        "records_with_any_known_likelihood": 955,
+        "records_with_multiple_contributing_codes": 0,
+        "unknown_likelihood_entries": 0
+      },
+      "STTC": {
+        "contributing_code_entries": 573,
+        "known_likelihood_distribution": {
+          "count": 554,
+          "max": 100.0,
+          "mean": 93.40252707581227,
+          "median": 100.0,
+          "min": 15.0,
+          "q25": 100.0,
+          "q75": 100.0
+        },
+        "known_likelihood_entries": 554,
+        "positive_records": 528,
+        "records_with_all_likelihoods_unknown": 13,
+        "records_with_any_known_likelihood": 515,
+        "records_with_multiple_contributing_codes": 42,
+        "unknown_likelihood_entries": 19
+      }
+    }
+  },
+  "important_interpretation_rules": {
+    "likelihood_zero": "unknown/unavailable likelihood, not zero diagnostic confidence",
+    "second_opinion": "presence of second opinion; no assumed direction of reliability",
+    "validated_by": "cardiologist identifier, not confidence",
+    "validated_by_human": "conservative human-validation indicator, not continuous confidence"
+  },
+  "provenance_by_split": {
+    "test": {
+      "initial_autogenerated_report": {
+        "false": 1978,
+        "missing": 0,
+        "true": 180
+      },
+      "records": 2158,
+      "second_opinion": {
+        "false": 2090,
+        "missing": 0,
+        "true": 68
+      },
+      "unique_nonmissing_validated_by_ids": 10,
+      "validated_by_human": {
+        "false": 0,
+        "missing": 0,
+        "true": 2158
+      },
+      "validated_by_missing": 562,
+      "validated_by_nonmissing": 1596
+    },
+    "train": {
+      "initial_autogenerated_report": {
+        "false": 10909,
+        "missing": 0,
+        "true": 6175
+      },
+      "records": 17084,
+      "second_opinion": {
+        "false": 16665,
+        "missing": 0,
+        "true": 419
+      },
+      "unique_nonmissing_validated_by_ids": 11,
+      "validated_by_human": {
+        "false": 5493,
+        "missing": 0,
+        "true": 11591
+      },
+      "validated_by_missing": 7956,
+      "validated_by_nonmissing": 9128
+    },
+    "validation": {
+      "initial_autogenerated_report": {
+        "false": 1949,
+        "missing": 0,
+        "true": 197
+      },
+      "records": 2146,
+      "second_opinion": {
+        "false": 2078,
+        "missing": 0,
+        "true": 68
+      },
+      "unique_nonmissing_validated_by_ids": 12,
+      "validated_by_human": {
+        "false": 0,
+        "missing": 0,
+        "true": 2146
+      },
+      "validated_by_missing": 574,
+      "validated_by_nonmissing": 1572
+    }
+  },
+  "purpose": "inspect annotation metadata before defining label reliability",
+  "record_level_likelihood_coverage": {
+    "test": {
+      "records": 2158,
+      "records_with_any_known_diagnostic_likelihood": 2157,
+      "records_with_no_known_diagnostic_likelihood": 1
+    },
+    "train": {
+      "records": 17084,
+      "records_with_any_known_diagnostic_likelihood": 17073,
+      "records_with_no_known_diagnostic_likelihood": 11
+    },
+    "validation": {
+      "records": 2146,
+      "records_with_any_known_diagnostic_likelihood": 2145,
+      "records_with_no_known_diagnostic_likelihood": 1
+    }
+  },
+  "scientific_score_defined": false,
+  "source_sha256": {
+    "frozen_manifest": "8f333e4094fc5e6b2b7e32731a9057182eec5e563f6ae07f6af1a142a539fa27",
+    "ptbxl_database": "7600de9c1b27d181d850b3c6038a35d7c3ddb6bb33b702e3a20252a6859d216b",
+    "scp_statements": "ad05b0b1fcae83bb1230755ad9cfc7c96f303feddc08a4a9ad5bdc9ca63bac8f"
+  },
+  "status": "PASS",
+  "target_reconstruction_from_source_scp_codes": "PASS",
+  "validation_and_test_human_validation_constraint": "PASS"
+}

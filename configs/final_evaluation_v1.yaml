@@ -1,0 +1,78 @@
+final_evaluation_id: ptbxl_final_evaluation_v1
+
+status: FROZEN
+
+test_split:
+  strat_fold: 10
+  records_expected: 2158
+  patients_expected: 1877
+
+development_closed: true
+post_test_tuning_allowed: false
+
+prediction:
+  thresholds: frozen_validation_f1_thresholds
+  threshold_rule: probability_greater_than_or_equal_threshold
+
+risk:
+  primary: per_record_hamming_error
+  number_of_labels: 5
+  lower_is_better: true
+
+selective_metric:
+  primary: grouped_aurc
+  tie_handling: entire_exact_score_tie_group
+  lower_is_better: true
+
+selectors:
+  - confidence
+  - U
+  - L
+  - Q_signal
+  - L+U
+  - L+Q_signal
+  - Q_signal+U
+  - L+Q_signal+U
+
+ordinary_confidence:
+  definition: mean_k_max_p_or_1_minus_p
+
+uncertainty:
+  definition: mean_classwise_mc_dropout_mutual_information
+  mc_passes: 30
+
+combination_scaling:
+  method: frozen_validation_empirical_midrank_ecdf
+  test_set_ranking_used: false
+  weights: equal
+
+corruptions:
+  protocol: corruption_v1
+  use_exact_frozen_12_conditions: true
+  severity_retuning_allowed: false
+
+bootstrap:
+  unit: patient
+  paired: true
+  replicates: 5000
+  confidence_interval: percentile_95
+  random_seed: 20260826
+
+primary_auc_comparisons:
+  - L+U_vs_confidence
+  - U_vs_confidence
+  - L+Q_signal+U_vs_confidence
+
+reporting:
+  clean_test: true
+  corrupted_test: true
+  classwise_metrics: true
+  per_record_outputs_saved: true
+  negative_results_reported: true
+
+test_set_rules:
+  tune_thresholds_on_test: false
+  fit_ecdf_on_test: false
+  change_corruption_severity_after_test: false
+  redesign_Q_after_test: false
+  optimize_combination_weights_after_test: false

@@ -1,0 +1,52 @@
+{
+  "coverage_summary": {
+    "complete_coverage_records": 2133,
+    "incomplete_coverage_records": 13,
+    "mean": 0.997165268716993,
+    "min": 0.0
+  },
+  "created_utc": "2026-08-26T16:00:27.090481+00:00",
+  "definition": {
+    "ambiguity": "1 - label_confidence",
+    "per_positive_superclass": "maximum known constituent diagnostic likelihood divided by 100",
+    "record_aggregation": "mean across positive superclasses with known likelihood",
+    "zero_likelihood": "unavailable; not zero confidence"
+  },
+  "evaluation_split": "validation",
+  "label_ambiguity_summary": {
+    "max": 0.85,
+    "mean": 0.12138086362224294,
+    "median": 0.0,
+    "min": 0.0
+  },
+  "label_confidence_id": "ptbxl_annotation_confidence_v1",
+  "label_confidence_summary": {
+    "max": 1.0,
+    "mean": 0.878619136377757,
+    "median": 1.0,
+    "min": 0.15,
+    "q25": 0.8,
+    "q75": 1.0,
+    "std": 0.22195056935728721
+  },
+  "missingness": {
+    "imputation_strategy": "validation median",
+    "imputation_value": 1.0,
+    "imputed_ecg_ids": [
+      14286
+    ],
+    "records_with_no_known_superclass_likelihood": 1
+  },
+  "output_csv_sha256": "8760498f6d684667bbb4a6bf83aa592c0cd0a0481b215929019cddbd28bb48a5",
+  "records": 2146,
+  "saved_artifact_recheck": "PASS",
+  "source_sha256": {
+    "config": "a8b01dc4716f61f9d41ebb4cce9f78739738966b0c2a38f5e2b42e9b47c047b0",
+    "frozen_manifest": "8f333e4094fc5e6b2b7e32731a9057182eec5e563f6ae07f6af1a142a539fa27",
+    "ptbxl_database": "7600de9c1b27d181d850b3c6038a35d7c3ddb6bb33b702e3a20252a6859d216b",
+    "scp_statements": "ad05b0b1fcae83bb1230755ad9cfc7c96f303feddc08a4a9ad5bdc9ca63bac8f"
+  },
+  "status": "FROZEN",
+  "target_reconstruction": "PASS",
+  "test_records_used": 0
+}

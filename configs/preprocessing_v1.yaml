@@ -1,0 +1,25 @@
+preprocessing_id: ptbxl_v103_preprocessing_v1
+
+input:
+  sampling_rate_hz: 100
+  duration_seconds: 10
+  samples: 1000
+  leads: 12
+  physical_unit: mV
+
+signal_processing:
+  resample: false
+  bandpass_filter: false
+  notch_filter: false
+  detrend: false
+  baseline_correction: false
+  clipping: false
+
+normalization:
+  method: global_zscore
+  fit_split: train
+  aggregation: all_training_records_all_leads_all_timesteps
+  variance_ddof: 0
+  statistics_dtype: float64
+  model_dtype: float32
+  epsilon: null

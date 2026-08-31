@@ -1,0 +1,79 @@
+experiment_id: ptbxl_resnet1d_wang_baseline_v1
+
+task:
+  type: multilabel
+  classes:
+    - NORM
+    - MI
+    - STTC
+    - CD
+    - HYP
+
+model:
+  architecture: ResNet1DWang
+  input_shape: [12, 1000]
+  output_logits: 5
+  trainable_parameters: 473349
+
+loss:
+  name: BCEWithLogitsLoss
+  positive_class_weights: null
+
+training:
+  epochs: 50
+  batch_size: 128
+  optimizer: AdamW
+  max_learning_rate: 0.01
+  weight_decay: 0.01
+  adam_betas: [0.9, 0.999]
+  adam_epsilon: 1.0e-8
+  gradient_clipping: null
+
+scheduler:
+  name: OneCycleLR
+  step_frequency: batch
+  pct_start: 0.30
+  anneal_strategy: cos
+  div_factor: 25.0
+  final_div_factor: 10000.0
+  cycle_momentum: true
+  base_momentum: 0.85
+  max_momentum: 0.95
+  three_phase: false
+
+checkpoint_selection:
+  split: validation
+  metric: macro_auroc
+  mode: max
+  tie_policy: keep_earliest
+  test_allowed: false
+
+splits:
+  train: folds_1_to_8
+  validation: fold_9
+  test: fold_10
+
+seeds:
+  - 20260826
+  - 20260827
+  - 20260828
+
+data_loader:
+  num_workers: 0
+  drop_last: false
+  pin_memory: false
+
+augmentation:
+  enabled: false
+
+thresholds:
+  optimized_during_training: false
+
+precision:
+  model_dtype: float32
+
+device:
+  required: mps
+
+reproducibility:
+  deterministic_algorithms_warn_only: true

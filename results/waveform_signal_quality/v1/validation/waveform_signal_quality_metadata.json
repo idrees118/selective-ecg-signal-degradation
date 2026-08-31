@@ -1,0 +1,23 @@
+{
+  "created_utc": "2026-08-26T16:41:52.472970+00:00",
+  "evaluation_split": "validation",
+  "labels_used_to_define_score": false,
+  "output_csv_sha256": "c71a658b25140c00b6bc1522a0231b581fd39e4d4bd8a93a39501f374d38a2d9",
+  "prediction_errors_used_to_define_score": false,
+  "records": 2146,
+  "signal_quality_id": "ptbxl_waveform_signal_quality_v1",
+  "signal_quality_summary": {
+    "max": 0.8913383867946617,
+    "mean": 0.48582530936987417,
+    "median": 0.4842286642472489,
+    "min": 0.11736859049402948,
+    "q25": 0.3979820299695621,
+    "q75": 0.5729337391711543,
+    "std": 0.1302969812891782
+  },
+  "status": "FROZEN",
+  "test_records_used": 0,
+  "training_reference_metadata_sha256": "40f06fa163badce9e8c4140d929d6b369d18a8f25d6d09259a096a36c7fd8edd",
+  "training_reference_records": 17084,
+  "training_reference_sha256": "0b17244f3d9a76afa85824455008f1153f1f8cb55d7086d4f84b92f183cf7978"
+}

@@ -1,0 +1,31 @@
+{
+  "absolute_differences": {
+    "mean": 1.6263032587282567e-18,
+    "std": 3.3306690738754696e-16,
+    "variance": 1.5959455978986625e-16
+  },
+  "agreement_tolerance": {
+    "atol": 1e-12,
+    "rtol": 1e-10
+  },
+  "audit_timestamp_utc": "2026-08-26T11:42:02.222946+00:00",
+  "custom": {
+    "mean": -0.0008252533901116082,
+    "std": 0.23222258117564865,
+    "variance": 0.053927327207880724
+  },
+  "fit_records": 17084,
+  "fit_split": "train",
+  "manifest_sha256": "8f333e4094fc5e6b2b7e32731a9057182eec5e563f6ae07f6af1a142a539fa27",
+  "parameters_sha256": "0fec09e28aa9c4a7fcbb7801bcecf02c590ce2949c011f30dbd578ab7429d32b",
+  "scalar_values": 205008000,
+  "sklearn_independent_check": {
+    "mean": -0.0008252533901116066,
+    "n_samples_seen": 205008000,
+    "std": 0.2322225811756483,
+    "variance": 0.053927327207880564
+  },
+  "status": "PASS",
+  "test_records_used": 0,
+  "validation_records_used": 0
+}

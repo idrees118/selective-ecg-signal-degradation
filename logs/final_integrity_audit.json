@@ -1,0 +1,1509 @@
+{
+  "all_passed": true,
+  "audit_id": "ptbxl_final_integrity_audit_v1",
+  "bootstrap_outcome_counts": {
+    "alternative_lower_aurc_supported": 0,
+    "confidence_lower_aurc_supported": 38,
+    "inconclusive": 1
+  },
+  "checks": [
+    {
+      "detail": "",
+      "name": "final config frozen",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "development closed",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "post-test tuning forbidden",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "corruption protocol frozen",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "final evaluation frozen",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "test-set ECDF fitting absent",
+      "passed": true
+    },
+    {
+      "detail": "2158",
+      "name": "final record count",
+      "passed": true
+    },
+    {
+      "detail": "1877",
+      "name": "final patient count",
+      "passed": true
+    },
+    {
+      "detail": "13",
+      "name": "final condition count",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "final source hash: final_config",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "final source hash: corruption_config",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "final source hash: manifest",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "final source hash: normalization",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "final source hash: checkpoint",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "final source hash: thresholds",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "final source hash: validation_L",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "final source hash: training_Q_reference",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "final source hash: validation_combination_reference",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "final source hash: script",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "final condition-table hash",
+      "passed": true
+    },
+    {
+      "detail": "(13, 19)",
+      "name": "condition table shape",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "condition names unique",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "clean: artifact exists",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "clean: artifact hash",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "clean: ECG count",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "clean: probability shape",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "clean: MC shape",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "clean: finite probabilities",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "clean: finite MC probabilities",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "baseline_wander_mild: artifact exists",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "baseline_wander_mild: artifact hash",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "baseline_wander_mild: ECG count",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "baseline_wander_mild: probability shape",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "baseline_wander_mild: MC shape",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "baseline_wander_mild: finite probabilities",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "baseline_wander_mild: finite MC probabilities",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "baseline_wander_mild: ECG ordering",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "baseline_wander_mild: patient ordering",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "baseline_wander_mild: targets unchanged",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "baseline_wander_moderate: artifact exists",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "baseline_wander_moderate: artifact hash",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "baseline_wander_moderate: ECG count",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "baseline_wander_moderate: probability shape",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "baseline_wander_moderate: MC shape",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "baseline_wander_moderate: finite probabilities",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "baseline_wander_moderate: finite MC probabilities",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "baseline_wander_moderate: ECG ordering",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "baseline_wander_moderate: patient ordering",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "baseline_wander_moderate: targets unchanged",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "baseline_wander_severe: artifact exists",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "baseline_wander_severe: artifact hash",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "baseline_wander_severe: ECG count",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "baseline_wander_severe: probability shape",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "baseline_wander_severe: MC shape",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "baseline_wander_severe: finite probabilities",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "baseline_wander_severe: finite MC probabilities",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "baseline_wander_severe: ECG ordering",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "baseline_wander_severe: patient ordering",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "baseline_wander_severe: targets unchanged",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "additive_white_noise_mild: artifact exists",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "additive_white_noise_mild: artifact hash",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "additive_white_noise_mild: ECG count",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "additive_white_noise_mild: probability shape",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "additive_white_noise_mild: MC shape",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "additive_white_noise_mild: finite probabilities",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "additive_white_noise_mild: finite MC probabilities",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "additive_white_noise_mild: ECG ordering",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "additive_white_noise_mild: patient ordering",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "additive_white_noise_mild: targets unchanged",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "additive_white_noise_moderate: artifact exists",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "additive_white_noise_moderate: artifact hash",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "additive_white_noise_moderate: ECG count",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "additive_white_noise_moderate: probability shape",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "additive_white_noise_moderate: MC shape",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "additive_white_noise_moderate: finite probabilities",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "additive_white_noise_moderate: finite MC probabilities",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "additive_white_noise_moderate: ECG ordering",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "additive_white_noise_moderate: patient ordering",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "additive_white_noise_moderate: targets unchanged",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "additive_white_noise_severe: artifact exists",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "additive_white_noise_severe: artifact hash",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "additive_white_noise_severe: ECG count",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "additive_white_noise_severe: probability shape",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "additive_white_noise_severe: MC shape",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "additive_white_noise_severe: finite probabilities",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "additive_white_noise_severe: finite MC probabilities",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "additive_white_noise_severe: ECG ordering",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "additive_white_noise_severe: patient ordering",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "additive_white_noise_severe: targets unchanged",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "amplitude_clipping_mild: artifact exists",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "amplitude_clipping_mild: artifact hash",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "amplitude_clipping_mild: ECG count",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "amplitude_clipping_mild: probability shape",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "amplitude_clipping_mild: MC shape",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "amplitude_clipping_mild: finite probabilities",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "amplitude_clipping_mild: finite MC probabilities",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "amplitude_clipping_mild: ECG ordering",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "amplitude_clipping_mild: patient ordering",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "amplitude_clipping_mild: targets unchanged",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "amplitude_clipping_moderate: artifact exists",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "amplitude_clipping_moderate: artifact hash",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "amplitude_clipping_moderate: ECG count",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "amplitude_clipping_moderate: probability shape",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "amplitude_clipping_moderate: MC shape",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "amplitude_clipping_moderate: finite probabilities",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "amplitude_clipping_moderate: finite MC probabilities",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "amplitude_clipping_moderate: ECG ordering",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "amplitude_clipping_moderate: patient ordering",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "amplitude_clipping_moderate: targets unchanged",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "amplitude_clipping_severe: artifact exists",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "amplitude_clipping_severe: artifact hash",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "amplitude_clipping_severe: ECG count",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "amplitude_clipping_severe: probability shape",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "amplitude_clipping_severe: MC shape",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "amplitude_clipping_severe: finite probabilities",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "amplitude_clipping_severe: finite MC probabilities",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "amplitude_clipping_severe: ECG ordering",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "amplitude_clipping_severe: patient ordering",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "amplitude_clipping_severe: targets unchanged",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "lead_masking_mild: artifact exists",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "lead_masking_mild: artifact hash",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "lead_masking_mild: ECG count",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "lead_masking_mild: probability shape",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "lead_masking_mild: MC shape",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "lead_masking_mild: finite probabilities",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "lead_masking_mild: finite MC probabilities",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "lead_masking_mild: ECG ordering",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "lead_masking_mild: patient ordering",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "lead_masking_mild: targets unchanged",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "lead_masking_moderate: artifact exists",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "lead_masking_moderate: artifact hash",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "lead_masking_moderate: ECG count",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "lead_masking_moderate: probability shape",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "lead_masking_moderate: MC shape",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "lead_masking_moderate: finite probabilities",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "lead_masking_moderate: finite MC probabilities",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "lead_masking_moderate: ECG ordering",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "lead_masking_moderate: patient ordering",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "lead_masking_moderate: targets unchanged",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "lead_masking_severe: artifact exists",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "lead_masking_severe: artifact hash",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "lead_masking_severe: ECG count",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "lead_masking_severe: probability shape",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "lead_masking_severe: MC shape",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "lead_masking_severe: finite probabilities",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "lead_masking_severe: finite MC probabilities",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "lead_masking_severe: ECG ordering",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "lead_masking_severe: patient ordering",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "lead_masking_severe: targets unchanged",
+      "passed": true
+    },
+    {
+      "detail": "1877",
+      "name": "unique fold-10 patients in artifacts",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "test L record count",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "test L ECG ordering",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "test L hash",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap frozen",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap unit patient",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap paired",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap replicate count",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap source hash: final_config",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap source hash: final_summary",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap source hash: condition_table",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap source hash: test_L",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap source hash: validation_combination_reference",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap source hash: script",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap replicate artifact hash",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap summary-table hash",
+      "passed": true
+    },
+    {
+      "detail": "(39, 9)",
+      "name": "bootstrap table shape",
+      "passed": true
+    },
+    {
+      "detail": "(5000, 13, 3)",
+      "name": "bootstrap replicate array shape",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap replicates finite",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: clean/L+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: clean/L+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: clean/U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: clean/U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: clean/L+Q_signal+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: clean/L+Q_signal+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: baseline_wander_mild/L+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: baseline_wander_mild/L+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: baseline_wander_mild/U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: baseline_wander_mild/U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: baseline_wander_mild/L+Q_signal+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: baseline_wander_mild/L+Q_signal+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: baseline_wander_moderate/L+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: baseline_wander_moderate/L+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: baseline_wander_moderate/U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: baseline_wander_moderate/U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: baseline_wander_moderate/L+Q_signal+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: baseline_wander_moderate/L+Q_signal+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: baseline_wander_severe/L+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: baseline_wander_severe/L+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: baseline_wander_severe/U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: baseline_wander_severe/U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: baseline_wander_severe/L+Q_signal+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: baseline_wander_severe/L+Q_signal+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: additive_white_noise_mild/L+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: additive_white_noise_mild/L+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: additive_white_noise_mild/U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: additive_white_noise_mild/U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: additive_white_noise_mild/L+Q_signal+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: additive_white_noise_mild/L+Q_signal+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: additive_white_noise_moderate/L+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: additive_white_noise_moderate/L+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: additive_white_noise_moderate/U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: additive_white_noise_moderate/U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: additive_white_noise_moderate/L+Q_signal+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: additive_white_noise_moderate/L+Q_signal+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: additive_white_noise_severe/L+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: additive_white_noise_severe/L+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: additive_white_noise_severe/U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: additive_white_noise_severe/U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: additive_white_noise_severe/L+Q_signal+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: additive_white_noise_severe/L+Q_signal+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: amplitude_clipping_mild/L+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: amplitude_clipping_mild/L+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: amplitude_clipping_mild/U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: amplitude_clipping_mild/U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: amplitude_clipping_mild/L+Q_signal+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: amplitude_clipping_mild/L+Q_signal+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: amplitude_clipping_moderate/L+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: amplitude_clipping_moderate/L+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: amplitude_clipping_moderate/U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: amplitude_clipping_moderate/U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: amplitude_clipping_moderate/L+Q_signal+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: amplitude_clipping_moderate/L+Q_signal+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: amplitude_clipping_severe/L+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: amplitude_clipping_severe/L+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: amplitude_clipping_severe/U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: amplitude_clipping_severe/U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: amplitude_clipping_severe/L+Q_signal+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: amplitude_clipping_severe/L+Q_signal+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: lead_masking_mild/L+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: lead_masking_mild/L+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: lead_masking_mild/U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: lead_masking_mild/U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: lead_masking_mild/L+Q_signal+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: lead_masking_mild/L+Q_signal+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: lead_masking_moderate/L+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: lead_masking_moderate/L+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: lead_masking_moderate/U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: lead_masking_moderate/U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: lead_masking_moderate/L+Q_signal+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: lead_masking_moderate/L+Q_signal+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: lead_masking_severe/L+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: lead_masking_severe/L+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: lead_masking_severe/U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: lead_masking_severe/U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap point delta: lead_masking_severe/L+Q_signal+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap conclusion: lead_masking_severe/L+Q_signal+U_vs_confidence",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "bootstrap comparison accounting",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "seed 20260826: metadata seed",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "seed 20260826: 50 epochs completed",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "seed 20260826: no test records used",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "seed 20260826: checkpoint reproduction",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "seed 20260826: checkpoint hash",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "seed 20260827: metadata seed",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "seed 20260827: 50 epochs completed",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "seed 20260827: no test records used",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "seed 20260827: checkpoint reproduction",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "seed 20260827: checkpoint hash",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "seed 20260828: metadata seed",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "seed 20260828: 50 epochs completed",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "seed 20260828: no test records used",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "seed 20260828: checkpoint reproduction",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "seed 20260828: checkpoint hash",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "reporting status",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "report artifact hash: figures/reporting/v1/bootstrap_delta_lqu_vs_confidence.pdf",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "report artifact hash: figures/reporting/v1/bootstrap_delta_lqu_vs_confidence.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "report artifact hash: figures/reporting/v1/bootstrap_delta_lu_vs_confidence.pdf",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "report artifact hash: figures/reporting/v1/bootstrap_delta_lu_vs_confidence.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "report artifact hash: figures/reporting/v1/bootstrap_delta_u_vs_confidence.pdf",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "report artifact hash: figures/reporting/v1/bootstrap_delta_u_vs_confidence.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "report artifact hash: figures/reporting/v1/corruption_hamming_risk.pdf",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "report artifact hash: figures/reporting/v1/corruption_hamming_risk.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "report artifact hash: figures/reporting/v1/corruption_macro_auroc.pdf",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "report artifact hash: figures/reporting/v1/corruption_macro_auroc.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "report artifact hash: figures/reporting/v1/corruption_mean_confidence.pdf",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "report artifact hash: figures/reporting/v1/corruption_mean_confidence.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "report artifact hash: figures/reporting/v1/corruption_mean_q_signal.pdf",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "report artifact hash: figures/reporting/v1/corruption_mean_q_signal.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "report artifact hash: figures/reporting/v1/corruption_mean_uncertainty.pdf",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "report artifact hash: figures/reporting/v1/corruption_mean_uncertainty.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "report artifact hash: figures/reporting/v1/risk_coverage_additive_white_noise_severe.pdf",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "report artifact hash: figures/reporting/v1/risk_coverage_additive_white_noise_severe.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "report artifact hash: figures/reporting/v1/risk_coverage_amplitude_clipping_severe.pdf",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "report artifact hash: figures/reporting/v1/risk_coverage_amplitude_clipping_severe.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "report artifact hash: figures/reporting/v1/risk_coverage_baseline_wander_severe.pdf",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "report artifact hash: figures/reporting/v1/risk_coverage_baseline_wander_severe.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "report artifact hash: figures/reporting/v1/risk_coverage_clean.pdf",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "report artifact hash: figures/reporting/v1/risk_coverage_clean.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "report artifact hash: figures/reporting/v1/risk_coverage_lead_masking_severe.pdf",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "report artifact hash: figures/reporting/v1/risk_coverage_lead_masking_severe.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "report artifact hash: figures/reporting/v1/seed_reproducibility.pdf",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "report artifact hash: figures/reporting/v1/seed_reproducibility.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "report artifact hash: results/reporting/v1/tables/bootstrap_primary_aurc_comparisons.csv",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "report artifact hash: results/reporting/v1/tables/clean_test_classwise.csv",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "report artifact hash: results/reporting/v1/tables/clean_test_overall.csv",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "report artifact hash: results/reporting/v1/tables/corruption_test_performance.csv",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "report artifact hash: results/reporting/v1/tables/seed_reproducibility.csv",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "report artifact hash: results/reporting/v1/tables/selective_aurc_all_conditions.csv",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "report artifact hash: results/reporting/v1/tables/selective_aurc_rank_summary.csv",
+      "passed": true
+    },
+    {
+      "detail": "118 passed in 13.55s",
+      "name": "pytest suite",
+      "passed": true
+    }
+  ],
+  "checks_passed": 299,
+  "checks_total": 299,
+  "status": "PASS"
+}

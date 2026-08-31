@@ -1,0 +1,156 @@
+{
+  "bootstrap_primary_comparisons": {
+    "alternative_lower_aurc_supported": 0,
+    "confidence_lower_aurc_supported": 38,
+    "inconclusive": 1,
+    "total": 39
+  },
+  "clean_test": {
+    "aurc_L_plus_Q_signal_plus_U": 0.07914359413029014,
+    "aurc_L_plus_U": 0.06035952560523435,
+    "aurc_U": 0.06473413000411835,
+    "aurc_confidence": 0.055157156439683004,
+    "full_hamming_risk": 0.11899907321594069,
+    "macro_auroc": 0.9265429819450599,
+    "macro_average_precision": 0.8252255526708389,
+    "macro_f1": 0.7447659992216258
+  },
+  "generated_artifact_sha256": {
+    "figures/reporting/v1/bootstrap_delta_lqu_vs_confidence.pdf": "f4fc56328c87ce9e1c5e7ba3ef727a749f62ffaa788a39e7c9c0f45049a25e02",
+    "figures/reporting/v1/bootstrap_delta_lqu_vs_confidence.png": "0c901296201eca71b366b66e2c553eaa47c2502cec3135a2a939a64cbe40fc48",
+    "figures/reporting/v1/bootstrap_delta_lu_vs_confidence.pdf": "963f10d1a5a6d78914ff8aa6f5624c2bb568a37c75e5c55e67e9f017d3de7f92",
+    "figures/reporting/v1/bootstrap_delta_lu_vs_confidence.png": "c48799e0608f0ddf7ad7fa6487158c70c4a074e4e1efde197e6349f366188118",
+    "figures/reporting/v1/bootstrap_delta_u_vs_confidence.pdf": "7e03c9c71e8ae1b9f1eac2967ea6310046c10956a1e79947193a132d44b11bec",
+    "figures/reporting/v1/bootstrap_delta_u_vs_confidence.png": "4bb1e0e96cbcc3ec52e48eaa4e4979c047540066a4b184378ba50e39c6e748c6",
+    "figures/reporting/v1/corruption_hamming_risk.pdf": "cc1aed4f2a3fb0bcefe0ebf3eb1fc17975965d628c480c8a9b9bb5d86b755e00",
+    "figures/reporting/v1/corruption_hamming_risk.png": "0c884af3a66cc70fa7c611dd4cd1fc0efba90a8c1e1cdce7616ebbf681b83a6b",
+    "figures/reporting/v1/corruption_macro_auroc.pdf": "be17cad2669af4a90b66324f2a656eac640a8c47921d6710a3759316173faaca",
+    "figures/reporting/v1/corruption_macro_auroc.png": "c8c4760daa87f61c05df967713eb185969fd777439d0a1de0690688f24852474",
+    "figures/reporting/v1/corruption_mean_confidence.pdf": "31f41490eaa1eba89a0ce3017465bf5fba5da70bc009aac3ed6c44300c82a805",
+    "figures/reporting/v1/corruption_mean_confidence.png": "b5050bdab88a7b14cbf41520dbfbe2e76efab10c345ec1f98a00c2749e8f7f8d",
+    "figures/reporting/v1/corruption_mean_q_signal.pdf": "75612b221f28de1ec9e0fbe58c9319a74a61585d1a640b4c71ccca99b7a56eec",
+    "figures/reporting/v1/corruption_mean_q_signal.png": "19ec7ceca9cf88726c708783cd0bc11f095206f9ff334184627f53edd5d598d8",
+    "figures/reporting/v1/corruption_mean_uncertainty.pdf": "c4540a19d7fbcf9632a8e76837bb07adcf4e92d88df202575f367a484a2ee8df",
+    "figures/reporting/v1/corruption_mean_uncertainty.png": "a3862a75f0cd9b002987b17a0641e5372c48f55cd756a82d74b071b29c6df97f",
+    "figures/reporting/v1/risk_coverage_additive_white_noise_severe.pdf": "e9b7db4dfa1809d0b9c0a93240cf52f9a597f33bdff82bb7221d749e3c7bc526",
+    "figures/reporting/v1/risk_coverage_additive_white_noise_severe.png": "42c159cdb56fa44f48160c1f18c9641efc2b97012cab3133d5b787f19c676c36",
+    "figures/reporting/v1/risk_coverage_amplitude_clipping_severe.pdf": "caa223b88d5ef879a9faea7531039465e78fe8f1585049ce641a09254c9d7f5c",
+    "figures/reporting/v1/risk_coverage_amplitude_clipping_severe.png": "169b0ac7f94990c97a0b700b972c85676bce5b5fa5068eca5ff648364497006c",
+    "figures/reporting/v1/risk_coverage_baseline_wander_severe.pdf": "ffdca4818df6cdba600195150a3bbb74346197eeec501aa063fdcf0f0b555e2c",
+    "figures/reporting/v1/risk_coverage_baseline_wander_severe.png": "27d24a895c6c6401d383d352dc9202f14c506cca0fa9e4b6d24ea99bae5253bb",
+    "figures/reporting/v1/risk_coverage_clean.pdf": "9ecef817790cf457dd149d6465dbc4f1b2975dfaebe298000a113033a603c518",
+    "figures/reporting/v1/risk_coverage_clean.png": "ccaa29b2f081fa7a7fffbb44cce60b8d601a4d77813946a1d1a966d66ec4afe9",
+    "figures/reporting/v1/risk_coverage_lead_masking_severe.pdf": "b0ae9a0cf357c1cf1f5524ff2c4e66dbf51225c92a6f0799192187bc8f05818c",
+    "figures/reporting/v1/risk_coverage_lead_masking_severe.png": "ca80aba78d49fb13448ff8deb6f018beacdf4cc07bcf00562607297f9bd2c9d6",
+    "figures/reporting/v1/seed_reproducibility.pdf": "8b1315c3b4e26e065607a1b1c121f4412eb938a5dd71c8f60a9fcdc6e3e07348",
+    "figures/reporting/v1/seed_reproducibility.png": "7d93c5c7ab1ae3f16cc3ccb87e4ab0af44c79b2e3186a2320f02b70b1d4fe0fb",
+    "results/reporting/v1/tables/bootstrap_primary_aurc_comparisons.csv": "5cf6a45d0273da05759c046024df7d217a0db29c0ea94cfff5c73f33e37db69e",
+    "results/reporting/v1/tables/clean_test_classwise.csv": "5626dde4255de0ebf994d830973776b816212d716077c7cca0cfa4c1bc44e1f9",
+    "results/reporting/v1/tables/clean_test_overall.csv": "31fdcaa9fa6784febbb375ef53fc437d8729c049a3e9fc06d803eda51f86cba8",
+    "results/reporting/v1/tables/corruption_test_performance.csv": "d542c4343d8c5463b3e8a0a4a94ed7ba456631ad3c514086ecb22917c0f0b22f",
+    "results/reporting/v1/tables/seed_reproducibility.csv": "80275008a88bfbd29e1a910320d0a4e12a6a2b8a82007c080b75c7b3d535de97",
+    "results/reporting/v1/tables/selective_aurc_all_conditions.csv": "3f779540600a0812f10bfc63b24229e1910e908450bcea006dd3206764cbe5df",
+    "results/reporting/v1/tables/selective_aurc_rank_summary.csv": "2d71d37b46aaccf04b6b49f8617594af383bf3c845681e74574f4d3230221721"
+  },
+  "interpretation_constraints": {
+    "L": "Retrospective annotation-aware confidence/ambiguity; not available for a truly unlabeled deployment ECG.",
+    "Q_signal": "Study-specific training-referenced waveform quality score; not a clinically calibrated universal SQI.",
+    "U": "Mean classwise MC-dropout mutual information from the two existing head dropout modules."
+  },
+  "lowest_point_aurc_method_by_condition": {
+    "additive_white_noise_mild": {
+      "aurc": 0.05571463998921666,
+      "method": "confidence"
+    },
+    "additive_white_noise_moderate": {
+      "aurc": 0.06247721832709272,
+      "method": "confidence"
+    },
+    "additive_white_noise_severe": {
+      "aurc": 0.11190300869930198,
+      "method": "confidence"
+    },
+    "amplitude_clipping_mild": {
+      "aurc": 0.05489167125232953,
+      "method": "confidence"
+    },
+    "amplitude_clipping_moderate": {
+      "aurc": 0.06446537756400834,
+      "method": "confidence"
+    },
+    "amplitude_clipping_severe": {
+      "aurc": 0.09538884911560586,
+      "method": "confidence"
+    },
+    "baseline_wander_mild": {
+      "aurc": 0.05488381000353019,
+      "method": "confidence"
+    },
+    "baseline_wander_moderate": {
+      "aurc": 0.05593950484243192,
+      "method": "confidence"
+    },
+    "baseline_wander_severe": {
+      "aurc": 0.05917571583006712,
+      "method": "confidence"
+    },
+    "clean": {
+      "aurc": 0.055157156439683004,
+      "method": "confidence"
+    },
+    "lead_masking_mild": {
+      "aurc": 0.06484940977681074,
+      "method": "confidence"
+    },
+    "lead_masking_moderate": {
+      "aurc": 0.08897935080674553,
+      "method": "confidence"
+    },
+    "lead_masking_severe": {
+      "aurc": 0.2023414335913383,
+      "method": "confidence"
+    }
+  },
+  "patients": 1877,
+  "records": 2158,
+  "reporting_id": "ptbxl_final_reporting_v1",
+  "source_status": {
+    "bootstrap": "FROZEN",
+    "final_test": "FROZEN"
+  },
+  "status": "GENERATED_FROM_FROZEN_RESULTS",
+  "test_corruption_monotonicity": {
+    "additive_white_noise": {
+      "Q_signal_nonincreasing": false,
+      "U_nondecreasing": true,
+      "confidence_nonincreasing": true,
+      "risk_nondecreasing": true
+    },
+    "amplitude_clipping": {
+      "Q_signal_nonincreasing": true,
+      "U_nondecreasing": true,
+      "confidence_nonincreasing": true,
+      "risk_nondecreasing": true
+    },
+    "baseline_wander": {
+      "Q_signal_nonincreasing": true,
+      "U_nondecreasing": true,
+      "confidence_nonincreasing": true,
+      "risk_nondecreasing": false
+    },
+    "lead_masking": {
+      "Q_signal_nonincreasing": false,
+      "U_nondecreasing": true,
+      "confidence_nonincreasing": true,
+      "risk_nondecreasing": true
+    }
+  },
+  "three_seed_reproducibility": {
+    "max_validation_macro_auroc": 0.9309001292432073,
+    "mean_validation_macro_auroc": 0.9298606646206308,
+    "min_validation_macro_auroc": 0.9283250943352641,
+    "n_seeds": 3,
+    "range_validation_macro_auroc": 0.0025750349079431967,
+    "sample_sd_validation_macro_auroc": 0.00135731050823707
+  }
+}

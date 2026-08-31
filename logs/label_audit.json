@@ -1,0 +1,339 @@
+{
+  "all_selected_class_statistics": {
+    "CD": {
+      "positive_records": 4898,
+      "prevalence": 0.22900691976809426
+    },
+    "HYP": {
+      "positive_records": 2649,
+      "prevalence": 0.12385449784926127
+    },
+    "MI": {
+      "positive_records": 5469,
+      "prevalence": 0.2557041331587806
+    },
+    "NORM": {
+      "positive_records": 9514,
+      "prevalence": 0.4448288760052366
+    },
+    "STTC": {
+      "positive_records": 5235,
+      "prevalence": 0.24476341873948007
+    }
+  },
+  "all_selected_label_cardinality_distribution": {
+    "1": 16244,
+    "2": 4068,
+    "3": 919,
+    "4": 157
+  },
+  "all_selected_label_combinations": {
+    "CD": 1708,
+    "CD+HYP": 300,
+    "HYP": 535,
+    "MI": 2532,
+    "MI+CD": 1297,
+    "MI+CD+HYP": 117,
+    "MI+HYP": 183,
+    "MI+STTC": 599,
+    "MI+STTC+CD": 223,
+    "MI+STTC+CD+HYP": 156,
+    "MI+STTC+HYP": 361,
+    "NORM": 9069,
+    "NORM+CD": 407,
+    "NORM+CD+HYP": 2,
+    "NORM+HYP": 2,
+    "NORM+MI+CD+HYP": 1,
+    "NORM+STTC": 28,
+    "NORM+STTC+CD": 5,
+    "STTC": 2400,
+    "STTC+CD": 471,
+    "STTC+CD+HYP": 211,
+    "STTC+HYP": 781
+  },
+  "audit_timestamp_utc": "2026-08-26T11:22:49.959443+00:00",
+  "dataset": "PTB-XL",
+  "dataset_version": "1.0.3",
+  "excluded_record_scp_codes": [
+    {
+      "description": "normal functioning artificial pacemaker",
+      "diagnostic": false,
+      "form": false,
+      "record_count": 284,
+      "rhythm": true,
+      "scp_code": "PACE"
+    },
+    {
+      "description": "atrial fibrillation",
+      "diagnostic": false,
+      "form": false,
+      "record_count": 63,
+      "rhythm": true,
+      "scp_code": "AFIB"
+    },
+    {
+      "description": "atrial flutter",
+      "diagnostic": false,
+      "form": false,
+      "record_count": 49,
+      "rhythm": true,
+      "scp_code": "AFLT"
+    },
+    {
+      "description": "abnormal QRS",
+      "diagnostic": false,
+      "form": true,
+      "record_count": 17,
+      "rhythm": false,
+      "scp_code": "ABQRS"
+    },
+    {
+      "description": "paroxysmal supraventricular tachycardia",
+      "diagnostic": false,
+      "form": false,
+      "record_count": 15,
+      "rhythm": true,
+      "scp_code": "PSVT"
+    },
+    {
+      "description": "ventricular premature complex",
+      "diagnostic": false,
+      "form": true,
+      "record_count": 15,
+      "rhythm": false,
+      "scp_code": "PVC"
+    },
+    {
+      "description": "sinus rhythm",
+      "diagnostic": false,
+      "form": false,
+      "record_count": 14,
+      "rhythm": true,
+      "scp_code": "SR"
+    },
+    {
+      "description": "bigeminal pattern (unknown origin, SV or Ventricular)",
+      "diagnostic": false,
+      "form": false,
+      "record_count": 11,
+      "rhythm": true,
+      "scp_code": "BIGU"
+    },
+    {
+      "description": "sinus tachycardia",
+      "diagnostic": false,
+      "form": false,
+      "record_count": 8,
+      "rhythm": true,
+      "scp_code": "STACH"
+    },
+    {
+      "description": "supraventricular arrhythmia",
+      "diagnostic": false,
+      "form": false,
+      "record_count": 6,
+      "rhythm": true,
+      "scp_code": "SVARR"
+    },
+    {
+      "description": "supraventricular tachycardia",
+      "diagnostic": false,
+      "form": false,
+      "record_count": 5,
+      "rhythm": true,
+      "scp_code": "SVTAC"
+    },
+    {
+      "description": "non-specific ST depression",
+      "diagnostic": false,
+      "form": true,
+      "record_count": 5,
+      "rhythm": false,
+      "scp_code": "STD_"
+    },
+    {
+      "description": "low QRS voltages in the frontal and horizontal leads",
+      "diagnostic": false,
+      "form": true,
+      "record_count": 3,
+      "rhythm": false,
+      "scp_code": "LVOLT"
+    },
+    {
+      "description": "sinus bradycardia",
+      "diagnostic": false,
+      "form": false,
+      "record_count": 2,
+      "rhythm": true,
+      "scp_code": "SBRAD"
+    },
+    {
+      "description": "voltage criteria (QRS) for left ventricular hypertrophy",
+      "diagnostic": false,
+      "form": true,
+      "record_count": 2,
+      "rhythm": false,
+      "scp_code": "VCLVH"
+    },
+    {
+      "description": "non-specific ST elevation",
+      "diagnostic": false,
+      "form": true,
+      "record_count": 1,
+      "rhythm": false,
+      "scp_code": "STE_"
+    },
+    {
+      "description": "atrial premature complex",
+      "diagnostic": false,
+      "form": true,
+      "record_count": 1,
+      "rhythm": false,
+      "scp_code": "PAC"
+    },
+    {
+      "description": "premature complex(es)",
+      "diagnostic": false,
+      "form": true,
+      "record_count": 1,
+      "rhythm": false,
+      "scp_code": "PRC(S)"
+    }
+  ],
+  "excluded_records_by_split": {
+    "test": 40,
+    "train": 334,
+    "validation": 37
+  },
+  "excluded_zero_superclass_patients": 329,
+  "excluded_zero_superclass_records": 411,
+  "official_v103_superclass_counts_expected": {
+    "CD": 4898,
+    "HYP": 2649,
+    "MI": 5469,
+    "NORM": 9514,
+    "STTC": 5235
+  },
+  "official_v103_superclass_counts_observed": {
+    "CD": 4898,
+    "HYP": 2649,
+    "MI": 5469,
+    "NORM": 9514,
+    "STTC": 5235
+  },
+  "partition_integrity": "PASS",
+  "patient_fold_integrity_after_selection": "PASS",
+  "selected_patients": 18617,
+  "selected_records": 21388,
+  "selected_split_statistics": {
+    "test": {
+      "class_statistics": {
+        "CD": {
+          "positive_records": 496,
+          "prevalence": 0.22984244670991658
+        },
+        "HYP": {
+          "positive_records": 262,
+          "prevalence": 0.12140871177015755
+        },
+        "MI": {
+          "positive_records": 550,
+          "prevalence": 0.2548656163113994
+        },
+        "NORM": {
+          "positive_records": 963,
+          "prevalence": 0.4462465245597776
+        },
+        "STTC": {
+          "positive_records": 521,
+          "prevalence": 0.24142724745134383
+        }
+      },
+      "label_cardinality_distribution": {
+        "1": 1650,
+        "2": 398,
+        "3": 94,
+        "4": 16
+      },
+      "patients": 1877,
+      "records": 2158
+    },
+    "train": {
+      "class_statistics": {
+        "CD": {
+          "positive_records": 3907,
+          "prevalence": 0.22869351439943808
+        },
+        "HYP": {
+          "positive_records": 2119,
+          "prevalence": 0.12403418403184266
+        },
+        "MI": {
+          "positive_records": 4379,
+          "prevalence": 0.25632170451884806
+        },
+        "NORM": {
+          "positive_records": 7596,
+          "prevalence": 0.44462655115897914
+        },
+        "STTC": {
+          "positive_records": 4186,
+          "prevalence": 0.2450245844064622
+        }
+      },
+      "label_cardinality_distribution": {
+        "1": 12957,
+        "2": 3274,
+        "3": 730,
+        "4": 123
+      },
+      "patients": 14823,
+      "records": 17084
+    },
+    "validation": {
+      "class_statistics": {
+        "CD": {
+          "positive_records": 495,
+          "prevalence": 0.23066169617893756
+        },
+        "HYP": {
+          "positive_records": 268,
+          "prevalence": 0.12488350419384903
+        },
+        "MI": {
+          "positive_records": 540,
+          "prevalence": 0.2516309412861137
+        },
+        "NORM": {
+          "positive_records": 955,
+          "prevalence": 0.4450139794967381
+        },
+        "STTC": {
+          "positive_records": 528,
+          "prevalence": 0.24603914259086673
+        }
+      },
+      "label_cardinality_distribution": {
+        "1": 1637,
+        "2": 396,
+        "3": 95,
+        "4": 18
+      },
+      "patients": 1917,
+      "records": 2146
+    }
+  },
+  "source_patients": 18869,
+  "source_records": 21799,
+  "status": "PASS",
+  "superclass_order": [
+    "NORM",
+    "MI",
+    "STTC",
+    "CD",
+    "HYP"
+  ],
+  "target_definition": "Superclass presence is determined by presence of diagnostic SCP codes mapped through scp_statements.csv; SCP likelihood values are not thresholded for target construction.",
+  "task": "diagnostic_superclass",
+  "task_type": "multilabel"
+}

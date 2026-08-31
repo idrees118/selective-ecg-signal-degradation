@@ -1,0 +1,19 @@
+{
+  "created_utc": "2026-08-26T17:33:25.456890+00:00",
+  "definition": "mean strongest known positive diagnostic SCP likelihood per positive superclass",
+  "evaluation_split": "test",
+  "imputed_records": 1,
+  "no_known_likelihood_imputation": "validation_median",
+  "output_sha256": "7fe12d4065cc9f45b5b10139183601e75146ccfbee47c793841e15f0ca073849",
+  "records": 2158,
+  "retrospective_annotation_aware": true,
+  "source_sha256": {
+    "ptbxl_database": "7600de9c1b27d181d850b3c6038a35d7c3ddb6bb33b702e3a20252a6859d216b",
+    "scp_statements": "ad05b0b1fcae83bb1230755ad9cfc7c96f303feddc08a4a9ad5bdc9ca63bac8f",
+    "validation_L": "8760498f6d684667bbb4a6bf83aa592c0cd0a0481b215929019cddbd28bb48a5"
+  },
+  "status": "FROZEN",
+  "target_reconstruction_pass": true,
+  "validation_median_imputation_value": 1.0,
+  "zero_likelihood_handling": "unknown_not_zero_confidence"
+}

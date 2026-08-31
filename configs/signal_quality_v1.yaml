@@ -1,0 +1,37 @@
+signal_quality_id: ptbxl_metadata_signal_quality_v1
+
+source:
+  dataset: PTB-XL
+  version: 1.0.3
+  quality_fields:
+    - baseline_drift
+    - static_noise
+    - burst_noise
+    - electrodes_problems
+
+interpretation:
+  type: metadata_derived_relative_quality_proxy
+  calibrated_physical_sqi: false
+  empty_field_means: no_recorded_annotation
+  severity_text_parsed: false
+  lead_count_parsed: false
+  extra_beats_used: false
+  pacemaker_used: false
+
+artifact_burden:
+  formula: number_of_present_quality_fields_divided_by_4
+  field_weights: equal
+  direction: higher_means_more_recorded_artifact_categories
+
+signal_quality:
+  symbol: Q
+  formula: 1_minus_artifact_burden
+  range: [0.0, 1.0]
+  direction: higher_means_fewer_recorded_artifact_categories
+
+development_split:
+  validation_only: true
+
+test_allowed_during_development: false
+
+status: FROZEN

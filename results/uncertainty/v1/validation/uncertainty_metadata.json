@@ -1,0 +1,41 @@
+{
+  "batchnorm_state_unchanged": true,
+  "classes": [
+    "NORM",
+    "MI",
+    "STTC",
+    "CD",
+    "HYP"
+  ],
+  "config_sha256": "1ebd3bb6a266dd6b163030d10fb977bd67f89a3ea1e40e6d44047bc8a94b54a9",
+  "created_utc": "2026-08-26T15:48:05.065292+00:00",
+  "device": "mps",
+  "dropout_modules_activated": 2,
+  "entire_model_state_unchanged": true,
+  "evaluation_split": "validation",
+  "first_two_pass_mean_absolute_probability_difference": 0.04978875128425599,
+  "mc_passes": 30,
+  "mean_mutual_information_summary": {
+    "max": 0.1948502574395963,
+    "mean": 0.01311736799348214,
+    "median": 0.013628857670033039,
+    "min": 0.0010671649245373258,
+    "std": 0.007993453327827423
+  },
+  "mean_predictive_entropy_summary": {
+    "max": 0.6013096756779381,
+    "mean": 0.25953316592093906,
+    "median": 0.2708118229092499,
+    "min": 0.012187756876744647,
+    "std": 0.14354635675827504
+  },
+  "output_npz_sha256": "0d7bdfbe712fa1909220fe05092f3c80e6172f12592c11c143e774cad7728ac4",
+  "random_seed": 20260826,
+  "records": 2146,
+  "saved_artifact_recomputation": "PASS",
+  "script_sha256": "4ade499aecb99e67c1444e858b95d022d3a6e37cc747f96d52e92ca1dcb86095",
+  "source_checkpoint_sha256": "d63aed62cbf182b57bae2d43392c46d453cfe5522f3a25f8a24991e75144187b",
+  "status": "FROZEN",
+  "test_records_used": 0,
+  "uncertainty_id": "ptbxl_mc_dropout_uncertainty_v1"
+}

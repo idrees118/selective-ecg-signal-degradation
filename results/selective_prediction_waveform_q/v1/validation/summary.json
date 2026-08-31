@@ -1,0 +1,291 @@
+{
+  "Q_definition": "training-referenced waveform signal quality",
+  "combination_definition": "equal mean of validation midrank badness percentiles",
+  "combination_reference_sha256": "4af99968ba9d2f1153cd4b1ddb4bfc06b35e3c6c7bc9208aa5d10305fefbe445",
+  "created_utc": "2026-08-26T16:44:29.857848+00:00",
+  "evaluation_split": "validation",
+  "expected_random_ranking_aurc": 0.1168685927306617,
+  "full_coverage_hamming_risk": 0.1168685927306617,
+  "methods": {
+    "L": {
+      "aurc": 0.09938353595969641,
+      "relative_aurc_reduction_vs_expected_random": 0.14961296583130587,
+      "relative_difference_vs_confidence": 0.8835042299110367,
+      "risk_at_coverage": {
+        "0.50": {
+          "achieved_coverage": 0.6896551724137931,
+          "requested_coverage": 0.5,
+          "risk": 0.09702702702702705
+        },
+        "0.70": {
+          "achieved_coverage": 0.7050326188257223,
+          "requested_coverage": 0.7,
+          "risk": 0.09847984137475217
+        },
+        "0.80": {
+          "achieved_coverage": 0.8005591798695247,
+          "requested_coverage": 0.8,
+          "risk": 0.09767171129220026
+        },
+        "0.90": {
+          "achieved_coverage": 0.9436160298229264,
+          "requested_coverage": 0.9,
+          "risk": 0.10972839506172842
+        },
+        "1.00": {
+          "achieved_coverage": 1.0,
+          "requested_coverage": 1.0,
+          "risk": 0.11686859273066172
+        }
+      },
+      "unique_reliability_levels": 26
+    },
+    "L+Q_signal": {
+      "aurc": 0.10458577226652631,
+      "relative_aurc_reduction_vs_expected_random": 0.10509941274335949,
+      "relative_difference_vs_confidence": 0.9820963558028393,
+      "risk_at_coverage": {
+        "0.50": {
+          "achieved_coverage": 0.5,
+          "requested_coverage": 0.5,
+          "risk": 0.10493942218080203
+        },
+        "0.70": {
+          "achieved_coverage": 0.700838769804287,
+          "requested_coverage": 0.7,
+          "risk": 0.10478723404255337
+        },
+        "0.80": {
+          "achieved_coverage": 0.8000931966449207,
+          "requested_coverage": 0.8,
+          "risk": 0.10599883517763549
+        },
+        "0.90": {
+          "achieved_coverage": 0.9002795899347623,
+          "requested_coverage": 0.9,
+          "risk": 0.11066252587991716
+        },
+        "1.00": {
+          "achieved_coverage": 1.0,
+          "requested_coverage": 1.0,
+          "risk": 0.11686859273066147
+        }
+      },
+      "unique_reliability_levels": 2017
+    },
+    "L+Q_signal+U": {
+      "aurc": 0.07115550091716129,
+      "relative_aurc_reduction_vs_expected_random": 0.3911495017215785,
+      "relative_difference_vs_confidence": 0.34853007255912627,
+      "risk_at_coverage": {
+        "0.50": {
+          "achieved_coverage": 0.5,
+          "requested_coverage": 0.5,
+          "risk": 0.07343895619757704
+        },
+        "0.70": {
+          "achieved_coverage": 0.7003727865796832,
+          "requested_coverage": 0.7,
+          "risk": 0.09035262807717938
+        },
+        "0.80": {
+          "achieved_coverage": 0.8000931966449207,
+          "requested_coverage": 0.8,
+          "risk": 0.10017472335468834
+        },
+        "0.90": {
+          "achieved_coverage": 0.9002795899347623,
+          "requested_coverage": 0.9,
+          "risk": 0.10548654244306395
+        },
+        "1.00": {
+          "achieved_coverage": 1.0,
+          "requested_coverage": 1.0,
+          "risk": 0.11686859273066127
+        }
+      },
+      "unique_reliability_levels": 1857
+    },
+    "L+U": {
+      "aurc": 0.05716213450696704,
+      "relative_aurc_reduction_vs_expected_random": 0.5108854040990779,
+      "relative_difference_vs_confidence": 0.08332955851236891,
+      "risk_at_coverage": {
+        "0.50": {
+          "achieved_coverage": 0.5,
+          "requested_coverage": 0.5,
+          "risk": 0.061882572227399964
+        },
+        "0.70": {
+          "achieved_coverage": 0.7003727865796832,
+          "requested_coverage": 0.7,
+          "risk": 0.08822355289421212
+        },
+        "0.80": {
+          "achieved_coverage": 0.8000931966449207,
+          "requested_coverage": 0.8,
+          "risk": 0.0986604542807224
+        },
+        "0.90": {
+          "achieved_coverage": 0.9002795899347623,
+          "requested_coverage": 0.9,
+          "risk": 0.10600414078674936
+        },
+        "1.00": {
+          "achieved_coverage": 1.0,
+          "requested_coverage": 1.0,
+          "risk": 0.11686859273066129
+        }
+      },
+      "unique_reliability_levels": 2072
+    },
+    "Q_signal": {
+      "aurc": 0.12108583134940516,
+      "relative_aurc_reduction_vs_expected_random": -0.03608530333262942,
+      "relative_difference_vs_confidence": 1.2948033930025173,
+      "risk_at_coverage": {
+        "0.50": {
+          "achieved_coverage": 0.5,
+          "requested_coverage": 0.5,
+          "risk": 0.11761416589002867
+        },
+        "0.70": {
+          "achieved_coverage": 0.7003727865796832,
+          "requested_coverage": 0.7,
+          "risk": 0.11882900864936789
+        },
+        "0.80": {
+          "achieved_coverage": 0.8000931966449207,
+          "requested_coverage": 0.8,
+          "risk": 0.11799650553290596
+        },
+        "0.90": {
+          "achieved_coverage": 0.9002795899347623,
+          "requested_coverage": 0.9,
+          "risk": 0.11656314699792915
+        },
+        "1.00": {
+          "achieved_coverage": 1.0,
+          "requested_coverage": 1.0,
+          "risk": 0.1168685927306612
+        }
+      },
+      "unique_reliability_levels": 2094
+    },
+    "Q_signal+U": {
+      "aurc": 0.07967448894554809,
+      "relative_aurc_reduction_vs_expected_random": 0.3182557684324315,
+      "relative_difference_vs_confidence": 0.5099808584572559,
+      "risk_at_coverage": {
+        "0.50": {
+          "achieved_coverage": 0.5004659832246039,
+          "requested_coverage": 0.5,
+          "risk": 0.08621973929236529
+        },
+        "0.70": {
+          "achieved_coverage": 0.7003727865796832,
+          "requested_coverage": 0.7,
+          "risk": 0.09487691284098498
+        },
+        "0.80": {
+          "achieved_coverage": 0.8000931966449207,
+          "requested_coverage": 0.8,
+          "risk": 0.10087361677344214
+        },
+        "0.90": {
+          "achieved_coverage": 0.9002795899347623,
+          "requested_coverage": 0.9,
+          "risk": 0.1103519668737057
+        },
+        "1.00": {
+          "achieved_coverage": 1.0,
+          "requested_coverage": 1.0,
+          "risk": 0.11686859273066126
+        }
+      },
+      "unique_reliability_levels": 1745
+    },
+    "U": {
+      "aurc": 0.05971590953794524,
+      "relative_aurc_reduction_vs_expected_random": 0.48903372460753397,
+      "relative_difference_vs_confidence": 0.1317283805772155,
+      "risk_at_coverage": {
+        "0.50": {
+          "achieved_coverage": 0.5,
+          "requested_coverage": 0.5,
+          "risk": 0.06430568499534033
+        },
+        "0.70": {
+          "achieved_coverage": 0.7003727865796832,
+          "requested_coverage": 0.7,
+          "risk": 0.08995342648037305
+        },
+        "0.80": {
+          "achieved_coverage": 0.8000931966449207,
+          "requested_coverage": 0.8,
+          "risk": 0.1001747233546885
+        },
+        "0.90": {
+          "achieved_coverage": 0.9002795899347623,
+          "requested_coverage": 0.9,
+          "risk": 0.11055900621117987
+        },
+        "1.00": {
+          "achieved_coverage": 1.0,
+          "requested_coverage": 1.0,
+          "risk": 0.11686859273066114
+        }
+      },
+      "unique_reliability_levels": 2145
+    },
+    "confidence": {
+      "aurc": 0.05276523109501622,
+      "relative_aurc_reduction_vs_expected_random": 0.5485080305825167,
+      "relative_difference_vs_confidence": 0.0,
+      "risk_at_coverage": {
+        "0.50": {
+          "achieved_coverage": 0.5,
+          "requested_coverage": 0.5,
+          "risk": 0.053867660764212524
+        },
+        "0.70": {
+          "achieved_coverage": 0.7003727865796832,
+          "requested_coverage": 0.7,
+          "risk": 0.07930805056553611
+        },
+        "0.80": {
+          "achieved_coverage": 0.8000931966449207,
+          "requested_coverage": 0.8,
+          "risk": 0.09027373325567864
+        },
+        "0.90": {
+          "achieved_coverage": 0.9002795899347623,
+          "requested_coverage": 0.9,
+          "risk": 0.10124223602484442
+        },
+        "1.00": {
+          "achieved_coverage": 1.0,
+          "requested_coverage": 1.0,
+          "risk": 0.11686859273066118
+        }
+      },
+      "unique_reliability_levels": 2146
+    }
+  },
+  "oracle_hamming_ranking_aurc_diagnostic_only": 0.029906890089268442,
+  "record_scores_sha256": "ebbb4e8c659f554a8a642a0b99e4d67101f620e67142b89c2d2353bf4fcf5d23",
+  "records": 2146,
+  "risk_coverage_curves_sha256": "4df5b365203eef6ed35235d8dd5729d3ba670122ab5772066ef7fa5fdc22da1a",
+  "selective_prediction_id": "ptbxl_selective_prediction_waveform_q_v1",
+  "source_sha256": {
+    "L": "8760498f6d684667bbb4a6bf83aa592c0cd0a0481b215929019cddbd28bb48a5",
+    "Q_signal": "c71a658b25140c00b6bc1522a0231b581fd39e4d4bd8a93a39501f374d38a2d9",
+    "U": "0d7bdfbe712fa1909220fe05092f3c80e6172f12592c11c143e774cad7728ac4",
+    "baseline_predictions": "0fda3cbeb6f2c477a0ba20f21f7f3aa7d3ddea0949587a7115aa9f3f7831320e",
+    "config": "60c6fe69790f32e080605e46662060f4a297da8125ce793e79606ff045681e8b",
+    "script": "ce71a4432c0edc04e007d9cae6cb37c5b7185dcf55b139e37db6c47f312b8cda",
+    "thresholds": "3e3d891afa3201242cecfae6e014eef5fc998f67b7ede51adc835b5dd4469c2a"
+  },
+  "status": "FROZEN",
+  "test_records_used": 0
+}

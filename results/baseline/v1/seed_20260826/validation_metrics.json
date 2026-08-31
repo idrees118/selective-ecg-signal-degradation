@@ -1,0 +1,57 @@
+{
+  "checkpoint_epoch": 26,
+  "class_metrics": {
+    "CD": {
+      "auroc": 0.9370384645975197,
+      "average_precision": 0.8621774300316034,
+      "brier": 0.08289609859017422,
+      "validation_f1": 0.778743961352657,
+      "validation_precision": 0.7462962962962963,
+      "validation_recall": 0.8141414141414142
+    },
+    "HYP": {
+      "auroc": 0.9117630696358463,
+      "average_precision": 0.6686588913274176,
+      "brier": 0.06896600115647117,
+      "validation_f1": 0.6394316163410302,
+      "validation_precision": 0.6101694915254238,
+      "validation_recall": 0.6716417910447762
+    },
+    "MI": {
+      "auroc": 0.928812093538121,
+      "average_precision": 0.8396017455253544,
+      "brier": 0.08793817883914486,
+      "validation_f1": 0.7657342657342657,
+      "validation_precision": 0.7251655629139073,
+      "validation_recall": 0.8111111111111111
+    },
+    "NORM": {
+      "auroc": 0.9459058119139621,
+      "average_precision": 0.9323783169382923,
+      "brier": 0.09683784714334309,
+      "validation_f1": 0.8548223350253807,
+      "validation_precision": 0.8295566502463054,
+      "validation_recall": 0.881675392670157
+    },
+    "STTC": {
+      "auroc": 0.9282644117316551,
+      "average_precision": 0.7825510228239739,
+      "brier": 0.09176238564098357,
+      "validation_f1": 0.7576853526220615,
+      "validation_precision": 0.7249134948096886,
+      "validation_recall": 0.7935606060606061
+    }
+  },
+  "created_utc": "2026-08-26T15:39:11.332871+00:00",
+  "evaluation_split": "validation",
+  "experiment_id": "ptbxl_resnet1d_wang_baseline_v1",
+  "macro_auroc": 0.9303567702834208,
+  "macro_average_precision": 0.8170734813293284,
+  "macro_brier": 0.08568010227402337,
+  "macro_f1_at_validation_selected_thresholds": 0.759283506215079,
+  "prediction_sha256": "0fda3cbeb6f2c477a0ba20f21f7f3aa7d3ddea0949587a7115aa9f3f7831320e",
+  "records": 2146,
+  "seed": 20260826,
+  "status": "FROZEN",
+  "test_records_used": 0
+}

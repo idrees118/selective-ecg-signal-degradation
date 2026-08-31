@@ -1,0 +1,2385 @@
+{
+  "audit_timestamp_utc": "2026-08-26T16:05:00.471733+00:00",
+  "context_fields_not_used_for_Q": [
+    "extra_beats",
+    "pacemaker"
+  ],
+  "interpretation_rules": {
+    "extra_beats": "not treated as signal-quality degradation",
+    "metadata_absence": "no artifact annotation recorded; not proof of perfect signal",
+    "metadata_presence": "artifact annotation present; severity not assumed",
+    "pacemaker": "not treated as signal-quality degradation"
+  },
+  "purpose": "inspect PTB-XL signal-quality metadata before defining Q",
+  "quality_fields_considered": [
+    "baseline_drift",
+    "static_noise",
+    "burst_noise",
+    "electrodes_problems"
+  ],
+  "quality_score_defined": false,
+  "source_sha256": {
+    "frozen_manifest": "8f333e4094fc5e6b2b7e32731a9057182eec5e563f6ae07f6af1a142a539fa27",
+    "ptbxl_database": "7600de9c1b27d181d850b3c6038a35d7c3ddb6bb33b702e3a20252a6859d216b"
+  },
+  "splits": {
+    "test": {
+      "artifact_field_combinations": {
+        "baseline_drift": 175,
+        "baseline_drift+burst_noise": 5,
+        "baseline_drift+electrodes_problems": 1,
+        "baseline_drift+static_noise": 49,
+        "baseline_drift+static_noise+burst_noise": 1,
+        "burst_noise": 24,
+        "electrodes_problems": 1,
+        "none": 1645,
+        "static_noise": 249,
+        "static_noise+burst_noise": 8
+      },
+      "context_only_not_used_for_Q": {
+        "extra_beats": {
+          "fraction_with_annotation": 0.08897126969416126,
+          "parse_status_counts": {
+            "missing": 1966,
+            "raw_string": 192
+          },
+          "records": 2158,
+          "records_with_annotation": 192,
+          "records_without_annotation": 1966,
+          "tokens": {
+            "1,V4": 1,
+            "1ES": 62,
+            "1ES,SVES": 3,
+            "1VES": 1,
+            "2,I,II,AVL,AVR": 1,
+            "2,I,III-V1": 1,
+            "2ES": 31,
+            "2VES": 1,
+            "3ES": 14,
+            "3VES": 4,
+            "4ES": 2,
+            "4ES(2Typen)": 1,
+            "5ES": 2,
+            "5VES": 1,
+            "7,V5": 1,
+            "ES": 2,
+            "SVES": 37,
+            "VES": 18,
+            "VES,SVES": 3,
+            "VES,SVES1,alles": 1,
+            "VES1,alles": 5
+          },
+          "top_raw_values": [
+            {
+              "count": 62,
+              "value": "1ES"
+            },
+            {
+              "count": 37,
+              "value": "SVES"
+            },
+            {
+              "count": 31,
+              "value": "2ES"
+            },
+            {
+              "count": 18,
+              "value": "VES"
+            },
+            {
+              "count": 14,
+              "value": "3ES"
+            },
+            {
+              "count": 5,
+              "value": "VES1,alles"
+            },
+            {
+              "count": 4,
+              "value": "3VES"
+            },
+            {
+              "count": 3,
+              "value": "1ES,SVES"
+            },
+            {
+              "count": 3,
+              "value": "VES,SVES"
+            },
+            {
+              "count": 2,
+              "value": "4ES"
+            },
+            {
+              "count": 2,
+              "value": "5ES"
+            },
+            {
+              "count": 2,
+              "value": "ES"
+            },
+            {
+              "count": 1,
+              "value": "2,I,III-V1"
+            },
+            {
+              "count": 1,
+              "value": "4ES(2Typen)"
+            },
+            {
+              "count": 1,
+              "value": "VES,SVES1,alles"
+            },
+            {
+              "count": 1,
+              "value": "1,V4"
+            },
+            {
+              "count": 1,
+              "value": "5VES"
+            },
+            {
+              "count": 1,
+              "value": "1VES"
+            },
+            {
+              "count": 1,
+              "value": "2VES"
+            },
+            {
+              "count": 1,
+              "value": "2,I,II,AVL,AVR"
+            }
+          ]
+        },
+        "pacemaker": {
+          "fraction_with_annotation": 0.0009267840593141798,
+          "parse_status_counts": {
+            "missing": 2156,
+            "raw_string": 2
+          },
+          "records": 2158,
+          "records_with_annotation": 2,
+          "records_without_annotation": 2156,
+          "tokens": {
+            "PACE????, nan": 1,
+            "ja, pacemaker": 1
+          },
+          "top_raw_values": [
+            {
+              "count": 1,
+              "value": "PACE????, nan"
+            },
+            {
+              "count": 1,
+              "value": "ja, pacemaker"
+            }
+          ]
+        }
+      },
+      "fraction_with_any_quality_artifact": 0.23772011121408712,
+      "number_of_quality_fields_present": {
+        "0": 1645,
+        "1": 449,
+        "2": 63,
+        "3": 1
+      },
+      "quality_fields": {
+        "baseline_drift": {
+          "fraction_with_annotation": 0.10704355885078777,
+          "parse_status_counts": {
+            "missing": 1927,
+            "raw_string": 231
+          },
+          "records": 2158,
+          "records_with_annotation": 231,
+          "records_without_annotation": 1927,
+          "tokens": {
+            ", AVL-V4": 1,
+            ", AVR": 1,
+            ", AVR,AVF": 1,
+            ", I": 2,
+            ", I - AVL": 1,
+            ", I,II,AVF,V6": 1,
+            ", I,II,AVR,AVF": 1,
+            ", I,II,AVR,V6": 1,
+            ", I,II,III": 1,
+            ", I,II,III,AVL,AVR,AVF": 1,
+            ", I,II,V1,V5,V6": 1,
+            ", I,III,AVF": 1,
+            ", I,III,AVL": 3,
+            ", I,III,AVL,V5": 1,
+            ", I-AVF": 10,
+            ", I-AVF,V3": 1,
+            ", I-AVF,V5,V6": 1,
+            ", I-AVF,V6": 1,
+            ", I-AVL": 2,
+            ", I-AVR": 1,
+            ", I-V1": 3,
+            ", I-V2": 1,
+            ", II,III": 3,
+            ", II,III,AVF": 4,
+            ", II,III,AVL,AVF": 1,
+            ", II,III-AVF,V3": 1,
+            ", II-AVF": 4,
+            ", II-AVL": 1,
+            ", II-AVL,AVF": 2,
+            ", II-V1": 2,
+            ", II-V2": 1,
+            ", II-V6": 1,
+            ", III": 1,
+            ", III,AVF": 2,
+            ", III,AVF,V1-V6": 1,
+            ", III,AVL": 6,
+            ", III,AVL,V1-V4": 1,
+            ", III,AVL,V6": 1,
+            ", III,V1": 1,
+            ", III,V2": 1,
+            ", V1": 9,
+            ", V1,2": 1,
+            ", V1,V2": 2,
+            ", V1,V4-V6": 1,
+            ", V1,V5,V6": 1,
+            ", V1,V6": 1,
+            ", V1-V6": 3,
+            ", V2": 10,
+            ", V2,V3": 1,
+            ", V2,V4": 1,
+            ", V2-V6": 1,
+            ", V3": 15,
+            ", V3,V5": 1,
+            ", V3-V6": 1,
+            ", V4": 8,
+            ", V4 - V6": 1,
+            ", V4,V6": 2,
+            ", V4-V6": 1,
+            ", V5": 3,
+            ", V5 stark!": 1,
+            ", V5,6": 1,
+            ", V5,V6": 14,
+            ", V6": 40,
+            ", alles": 8,
+            ", drift": 2,
+            ", stark": 1,
+            ", v1": 3,
+            ", v1, v3": 1,
+            ", v1,2": 1,
+            ", v1,6": 2,
+            ", v1-6": 2,
+            ", v1-v6": 1,
+            ", v2": 1,
+            ", v2,4": 1,
+            ", v3": 2,
+            ", v4": 1,
+            ", v4-v6": 1,
+            ", v5": 1,
+            ", v6": 3,
+            "AVF,": 1,
+            "I-III,": 1,
+            "V2,": 1,
+            "v1,": 1,
+            "v2,": 1,
+            "v2,3,": 1,
+            "v3,": 1,
+            "v5-6,": 1,
+            "v6,": 2
+          },
+          "top_raw_values": [
+            {
+              "count": 40,
+              "value": ", V6"
+            },
+            {
+              "count": 15,
+              "value": ", V3"
+            },
+            {
+              "count": 14,
+              "value": ", V5,V6"
+            },
+            {
+              "count": 10,
+              "value": ", V2"
+            },
+            {
+              "count": 10,
+              "value": ", I-AVF"
+            },
+            {
+              "count": 9,
+              "value": ", V1"
+            },
+            {
+              "count": 8,
+              "value": ", alles"
+            },
+            {
+              "count": 8,
+              "value": ", V4"
+            },
+            {
+              "count": 6,
+              "value": ", III,AVL"
+            },
+            {
+              "count": 4,
+              "value": ", II,III,AVF"
+            },
+            {
+              "count": 4,
+              "value": ", II-AVF"
+            },
+            {
+              "count": 3,
+              "value": ", V5"
+            },
+            {
+              "count": 3,
+              "value": ", I,III,AVL"
+            },
+            {
+              "count": 3,
+              "value": ", V1-V6"
+            },
+            {
+              "count": 3,
+              "value": ", II,III"
+            },
+            {
+              "count": 3,
+              "value": ", I-V1"
+            },
+            {
+              "count": 3,
+              "value": ", v1"
+            },
+            {
+              "count": 3,
+              "value": ", v6"
+            },
+            {
+              "count": 2,
+              "value": ", III,AVF"
+            },
+            {
+              "count": 2,
+              "value": ", v1-6"
+            }
+          ]
+        },
+        "burst_noise": {
+          "fraction_with_annotation": 0.017608897126969416,
+          "parse_status_counts": {
+            "missing": 2120,
+            "raw_string": 38
+          },
+          "records": 2158,
+          "records_with_annotation": 38,
+          "records_without_annotation": 2120,
+          "tokens": {
+            "I,AVL": 1,
+            "I,II,AVL-V2": 1,
+            "I,III-AVF,V2": 1,
+            "I,III-AVL": 1,
+            "I,III-AVR": 1,
+            "I-AVF": 2,
+            "I-AVR": 3,
+            "I-V1": 2,
+            "I-V2": 2,
+            "I-V3": 1,
+            "II": 1,
+            "V1,V2": 1,
+            "V2": 2,
+            "V3": 1,
+            "V4": 2,
+            "V5": 1,
+            "alles": 3,
+            "ja": 1,
+            "v1": 1,
+            "v1-6": 1,
+            "v2,3": 1,
+            "v3": 2,
+            "v3-4": 1,
+            "v4": 1,
+            "v5, v6": 1,
+            "v5-6": 1,
+            "v6": 2
+          },
+          "top_raw_values": [
+            {
+              "count": 3,
+              "value": "I-AVR"
+            },
+            {
+              "count": 3,
+              "value": "alles"
+            },
+            {
+              "count": 2,
+              "value": "I-V1"
+            },
+            {
+              "count": 2,
+              "value": "V2"
+            },
+            {
+              "count": 2,
+              "value": "I-AVF"
+            },
+            {
+              "count": 2,
+              "value": "v6"
+            },
+            {
+              "count": 2,
+              "value": "v3"
+            },
+            {
+              "count": 2,
+              "value": "I-V2"
+            },
+            {
+              "count": 2,
+              "value": "V4"
+            },
+            {
+              "count": 1,
+              "value": "V5"
+            },
+            {
+              "count": 1,
+              "value": "v2,3"
+            },
+            {
+              "count": 1,
+              "value": "II"
+            },
+            {
+              "count": 1,
+              "value": "v3-4"
+            },
+            {
+              "count": 1,
+              "value": "v5-6"
+            },
+            {
+              "count": 1,
+              "value": "v4"
+            },
+            {
+              "count": 1,
+              "value": "V3"
+            },
+            {
+              "count": 1,
+              "value": "v1-6"
+            },
+            {
+              "count": 1,
+              "value": "I-V3"
+            },
+            {
+              "count": 1,
+              "value": "ja"
+            },
+            {
+              "count": 1,
+              "value": "v5, v6"
+            }
+          ]
+        },
+        "electrodes_problems": {
+          "fraction_with_annotation": 0.0009267840593141798,
+          "parse_status_counts": {
+            "missing": 2156,
+            "raw_string": 2
+          },
+          "records": 2158,
+          "records_with_annotation": 2,
+          "records_without_annotation": 2156,
+          "tokens": {
+            "V4": 1,
+            "V6": 1
+          },
+          "top_raw_values": [
+            {
+              "count": 1,
+              "value": "V4"
+            },
+            {
+              "count": 1,
+              "value": "V6"
+            }
+          ]
+        },
+        "static_noise": {
+          "fraction_with_annotation": 0.1422613531047266,
+          "parse_status_counts": {
+            "missing": 1851,
+            "raw_string": 307
+          },
+          "records": 2158,
+          "records_with_annotation": 307,
+          "records_without_annotation": 1851,
+          "tokens": {
+            ", AVL,": 1,
+            ", I - AVF,": 2,
+            ", I - AVR,": 1,
+            ", I - V1,": 1,
+            ", I --AVL,": 1,
+            ", I,": 3,
+            ", I,AVL,": 1,
+            ", I,II,AVL,": 1,
+            ", I,II,AVL,AVR,": 1,
+            ", I,II,AVL-AVF,": 1,
+            ", I,III,": 1,
+            ", I,III,AVL,": 2,
+            ", I,III,AVL,AVF,V6,": 1,
+            ", I,III-AVR,": 3,
+            ", I-AVF,": 41,
+            ", I-AVF,V5,V6,": 1,
+            ", I-AVF,V6,": 1,
+            ", I-AVL,": 10,
+            ", I-AVR,": 81,
+            ", I-AVR,V5,": 1,
+            ", I-AVR,V6,": 1,
+            ", I-III,": 1,
+            ", I-V1,": 29,
+            ", I-V2,": 15,
+            ", I-V2,V6,": 1,
+            ", I-V3,": 1,
+            ", V1,": 2,
+            ", V2,": 1,
+            ", V2,V3,": 1,
+            ", alles,": 72,
+            ", alles, noisy recording,": 5,
+            ", leicht,": 5,
+            ", mittel,": 5,
+            ", mittel, noisy recording,": 2,
+            ", stark,": 5,
+            ", stark, noisy recording,": 1,
+            "leicht,  ,": 3,
+            "mittel,  ,": 2
+          },
+          "top_raw_values": [
+            {
+              "count": 81,
+              "value": ", I-AVR,"
+            },
+            {
+              "count": 72,
+              "value": ", alles,"
+            },
+            {
+              "count": 41,
+              "value": ", I-AVF,"
+            },
+            {
+              "count": 29,
+              "value": ", I-V1,"
+            },
+            {
+              "count": 15,
+              "value": ", I-V2,"
+            },
+            {
+              "count": 10,
+              "value": ", I-AVL,"
+            },
+            {
+              "count": 5,
+              "value": ", mittel,"
+            },
+            {
+              "count": 5,
+              "value": ", alles, noisy recording,"
+            },
+            {
+              "count": 5,
+              "value": ", leicht,"
+            },
+            {
+              "count": 5,
+              "value": ", stark,"
+            },
+            {
+              "count": 3,
+              "value": ", I,III-AVR,"
+            },
+            {
+              "count": 3,
+              "value": "leicht,  ,"
+            },
+            {
+              "count": 3,
+              "value": ", I,"
+            },
+            {
+              "count": 2,
+              "value": ", V1,"
+            },
+            {
+              "count": 2,
+              "value": "mittel,  ,"
+            },
+            {
+              "count": 2,
+              "value": ", I - AVF,"
+            },
+            {
+              "count": 2,
+              "value": ", mittel, noisy recording,"
+            },
+            {
+              "count": 2,
+              "value": ", I,III,AVL,"
+            },
+            {
+              "count": 1,
+              "value": ", I,II,AVL,AVR,"
+            },
+            {
+              "count": 1,
+              "value": ", I,III,"
+            }
+          ]
+        }
+      },
+      "records": 2158,
+      "records_with_any_quality_artifact": 513
+    },
+    "train": {
+      "artifact_field_combinations": {
+        "baseline_drift": 874,
+        "baseline_drift+burst_noise": 46,
+        "baseline_drift+electrodes_problems": 4,
+        "baseline_drift+static_noise": 189,
+        "baseline_drift+static_noise+burst_noise": 7,
+        "baseline_drift+static_noise+electrodes_problems": 2,
+        "burst_noise": 358,
+        "electrodes_problems": 11,
+        "none": 13213,
+        "static_noise": 2291,
+        "static_noise+burst_noise": 84,
+        "static_noise+electrodes_problems": 5
+      },
+      "context_only_not_used_for_Q": {
+        "extra_beats": {
+          "fraction_with_annotation": 0.08797705455396862,
+          "parse_status_counts": {
+            "missing": 15581,
+            "raw_string": 1503
+          },
+          "records": 17084,
+          "records_with_annotation": 1503,
+          "records_without_annotation": 15581,
+          "tokens": {
+            "1,I,II,V6": 1,
+            "1,I,III-AVF": 1,
+            "1,I-AVF": 8,
+            "1,I-AVF,V3-V6": 1,
+            "1,I-AVR": 1,
+            "1,I-V1": 2,
+            "1,I-V1,V6": 1,
+            "1,I-V2": 1,
+            "1,I-V3": 1,
+            "1,II-V4": 1,
+            "1,II-V6": 1,
+            "1,III-AVF": 1,
+            "1,V1": 16,
+            "1,V1,V2": 4,
+            "1,V1,V2,V4": 1,
+            "1,V1,V3": 1,
+            "1,V1-V3": 1,
+            "1,V1-V5": 1,
+            "1,V1-V6": 1,
+            "1,V2": 5,
+            "1,V3": 6,
+            "1,V4": 4,
+            "1,V4,V6": 1,
+            "1,V5": 1,
+            "1,V6": 5,
+            "1,alles": 52,
+            "10ES": 1,
+            "1;V5": 1,
+            "1ES": 277,
+            "1ES,SVES": 1,
+            "1Es": 1,
+            "1SVES": 2,
+            "1VES": 6,
+            "2,I-AVR": 2,
+            "2,V1": 5,
+            "2,V1,V2": 1,
+            "2,V1,V5": 1,
+            "2,V1-V3": 1,
+            "2,V1-V3,V5": 1,
+            "2,V1-V5": 1,
+            "2,V1;V2": 1,
+            "2,V2": 1,
+            "2,V2,V3": 1,
+            "2,V3": 1,
+            "2,V4": 4,
+            "2,V5": 2,
+            "2,V5,V6": 1,
+            "2,V6": 1,
+            "2,alles": 11,
+            "2ES": 117,
+            "2ES(2Typen)": 1,
+            "2ES,SVES": 2,
+            "2SVES": 1,
+            "2VES": 1,
+            "3,I-V4": 1,
+            "3,V1": 1,
+            "3,V1-V3": 1,
+            "3,alles": 2,
+            "3ES": 49,
+            "3ES,SVES": 4,
+            "3VES": 4,
+            "4,V1": 2,
+            "4,V5": 1,
+            "4,alles": 2,
+            "4ES": 19,
+            "4ES,SVES": 1,
+            "4VES": 2,
+            "5ES": 12,
+            "5VES": 1,
+            "6ES": 3,
+            "7ES": 1,
+            "8ES": 1,
+            "ES": 36,
+            "I-AVR": 1,
+            "SVES": 305,
+            "SVES,1ES": 1,
+            "SVES1,I-AVF": 1,
+            "SVES1,V1": 1,
+            "SVES1,V5": 1,
+            "SVES1,alles": 8,
+            "SVES2,V1,V2": 1,
+            "SVES2,alles": 1,
+            "SVES3,alles": 2,
+            "SVES;alles": 1,
+            "V1,2,3,4,6": 1,
+            "VES": 113,
+            "VES,SVES": 22,
+            "VES,SVES1,II-V6": 1,
+            "VES,SVES1,V6": 1,
+            "VES,SVES1,alles": 12,
+            "VES,SVES2,II-V6": 1,
+            "VES,SVES2,V2,V3": 1,
+            "VES,SVES2,alles": 11,
+            "VES,SVES3,alles": 5,
+            "VES,SVES4,alles": 1,
+            "VES,SVES5,alles": 1,
+            "VES,SVES6,V1,V2": 1,
+            "VES1,I-AVF": 1,
+            "VES1,I-AVL": 1,
+            "VES1,II-AVF": 1,
+            "VES1,II-AVF,V4-V3": 1,
+            "VES1,II-V6": 3,
+            "VES1,V3-V6": 1,
+            "VES1,alles": 144,
+            "VES2,II-AVF": 1,
+            "VES2,II-V6": 1,
+            "VES2,III-V4": 1,
+            "VES2,V1-V4": 2,
+            "VES2,alles": 70,
+            "VES3,II,AVL": 1,
+            "VES3,II-AVF": 1,
+            "VES3,II-V3": 1,
+            "VES3,V1-V4": 1,
+            "VES3,V5,V6": 1,
+            "VES3,alles": 40,
+            "VES4,alles": 20,
+            "VES5,alles": 5,
+            "VES6,alles": 3,
+            "period.": 1
+          },
+          "top_raw_values": [
+            {
+              "count": 305,
+              "value": "SVES"
+            },
+            {
+              "count": 277,
+              "value": "1ES"
+            },
+            {
+              "count": 144,
+              "value": "VES1,alles"
+            },
+            {
+              "count": 117,
+              "value": "2ES"
+            },
+            {
+              "count": 113,
+              "value": "VES"
+            },
+            {
+              "count": 70,
+              "value": "VES2,alles"
+            },
+            {
+              "count": 52,
+              "value": "1,alles"
+            },
+            {
+              "count": 49,
+              "value": "3ES"
+            },
+            {
+              "count": 40,
+              "value": "VES3,alles"
+            },
+            {
+              "count": 36,
+              "value": "ES"
+            },
+            {
+              "count": 22,
+              "value": "VES,SVES"
+            },
+            {
+              "count": 20,
+              "value": "VES4,alles"
+            },
+            {
+              "count": 19,
+              "value": "4ES"
+            },
+            {
+              "count": 16,
+              "value": "1,V1"
+            },
+            {
+              "count": 12,
+              "value": "5ES"
+            },
+            {
+              "count": 12,
+              "value": "VES,SVES1,alles"
+            },
+            {
+              "count": 11,
+              "value": "VES,SVES2,alles"
+            },
+            {
+              "count": 11,
+              "value": "2,alles"
+            },
+            {
+              "count": 8,
+              "value": "SVES1,alles"
+            },
+            {
+              "count": 8,
+              "value": "1,I-AVF"
+            }
+          ]
+        },
+        "pacemaker": {
+          "fraction_with_annotation": 0.0005853430110044487,
+          "parse_status_counts": {
+            "missing": 17074,
+            "raw_string": 10
+          },
+          "records": 17084,
+          "records_with_annotation": 10,
+          "records_without_annotation": 17074,
+          "tokens": {
+            "?, nan": 1,
+            "PACE????, nan": 1,
+            "ja, nan": 3,
+            "ja, pacemaker": 5
+          },
+          "top_raw_values": [
+            {
+              "count": 5,
+              "value": "ja, pacemaker"
+            },
+            {
+              "count": 3,
+              "value": "ja, nan"
+            },
+            {
+              "count": 1,
+              "value": "PACE????, nan"
+            },
+            {
+              "count": 1,
+              "value": "?, nan"
+            }
+          ]
+        }
+      },
+      "fraction_with_any_quality_artifact": 0.22658627955982205,
+      "number_of_quality_fields_present": {
+        "0": 13213,
+        "1": 3534,
+        "2": 328,
+        "3": 9
+      },
+      "quality_fields": {
+        "baseline_drift": {
+          "fraction_with_annotation": 0.06567548583469913,
+          "parse_status_counts": {
+            "missing": 15962,
+            "raw_string": 1122
+          },
+          "records": 17084,
+          "records_with_annotation": 1122,
+          "records_without_annotation": 15962,
+          "tokens": {
+            ", 1": 1,
+            ", 2": 1,
+            ", AVF": 2,
+            ", AVL": 3,
+            ", AVL,V2": 1,
+            ", AVL,V2,V5,V6": 1,
+            ", AVR": 3,
+            ", AVR,AVF": 1,
+            ", AVR,V1": 1,
+            ", AVR,V4": 1,
+            ", Drift": 1,
+            ", I": 1,
+            ", I - AVF": 2,
+            ", I - AVF,V3": 1,
+            ", I,AVL": 3,
+            ", I,AVL,V3": 3,
+            ", I,AVR": 2,
+            ", I,II": 1,
+            ", I,II,AVL": 1,
+            ", I,II,AVL,AVR;V5,V6": 1,
+            ", I,II,AVL-AVF": 1,
+            ", I,II,AVL-AVF,V5,V6": 1,
+            ", I,II,AVL-V2": 1,
+            ", I,II,AVR": 5,
+            ", I,II,AVR,V1": 1,
+            ", I,II,AVR,V2-V6": 1,
+            ", I,II,V2,V3": 1,
+            ", I,II,V3": 1,
+            ", I,III": 2,
+            ", I,III,AVL": 16,
+            ", I,III,AVL,AVF": 1,
+            ", I,III,AVL,V3": 1,
+            ", I,III,AVL,V3,V6": 1,
+            ", I,III,AVL,V5": 1,
+            ", I,III,AVL,V5,V6": 2,
+            ", I,III,V1-V6": 1,
+            ", I,III-AVF": 1,
+            ", I,III-AVR": 2,
+            ", I,III-V1": 2,
+            ", I-AVF": 31,
+            ", I-AVF,V4-V6": 1,
+            ", I-AVF,V5,V6": 1,
+            ", I-AVF,V6": 2,
+            ", I-AVL": 5,
+            ", I-AVL,AVF": 2,
+            ", I-AVL,V4,V5": 1,
+            ", I-AVL,V6": 1,
+            ", I-AVR": 19,
+            ", I-AVR,V&": 1,
+            ", I-AVR,V1,V3-V6": 1,
+            ", I-AVR,V5": 1,
+            ", I-III,AVF": 1,
+            ", I-V1": 12,
+            ", I-V1,V6": 1,
+            ", I-V2": 2,
+            ", I-V3": 1,
+            ", I-V5": 1,
+            ", I-V6": 2,
+            ", II, III": 1,
+            ", II, V1 - V6": 1,
+            ", II,AVF": 3,
+            ", II,AVF,V3-V6": 1,
+            ", II,III": 8,
+            ", II,III, V3 - V5": 1,
+            ", II,III,AVF": 15,
+            ", II,III,AVF,V6": 1,
+            ", II,III,AVF-V6": 1,
+            ", II,III,AVR,AVF": 1,
+            ", II,III,V5,V6": 1,
+            ", II,III,V6": 1,
+            ", II,III.AVF,V3": 1,
+            ", II-AVF": 44,
+            ", II-AVF,V4-V6": 1,
+            ", II-AVF,V5,V6": 1,
+            ", II-AVF,V6": 2,
+            ", II-AVL": 4,
+            ", II-AVL,AVF": 2,
+            ", II-AVL,V6": 2,
+            ", II-AVR": 1,
+            ", II-Avf": 2,
+            ", II-V1": 3,
+            ", II-V2": 1,
+            ", II-V4": 1,
+            ", II-V6": 14,
+            ", III": 7,
+            ", III,AVF": 13,
+            ", III,AVF,V1": 1,
+            ", III,AVF,V2,V4-V6": 1,
+            ", III,AVF,V4": 2,
+            ", III,AVF,V5,V6": 1,
+            ", III,AVL": 9,
+            ", III,AVL,AVF": 4,
+            ", III,AVL,V1": 1,
+            ", III,AVL,V1,V2,V4": 1,
+            ", III,AVL,V3": 1,
+            ", III,AVL,V4": 1,
+            ", III,AVL,V5,V6": 1,
+            ", III,AVL,V6": 1,
+            ", III,AVR,AVF": 1,
+            ", III,V1-V3": 1,
+            ", III,V2": 1,
+            ", III,V3": 2,
+            ", III,V3,V6": 1,
+            ", III,V3-V6": 2,
+            ", III,V4": 3,
+            ", III,V5": 1,
+            ", III,V5,V6": 2,
+            ", III,V6": 1,
+            ", III-AVF": 1,
+            ", III-AVL": 1,
+            ", III-V2": 1,
+            ", V1": 69,
+            ", V1 stark": 2,
+            ", V1,2,3,4,5,6": 1,
+            ", V1,3,4,6": 1,
+            ", V1,3,5": 1,
+            ", V1,4": 2,
+            ", V1,4,5,6": 1,
+            ", V1,6": 1,
+            ", V1,V2": 5,
+            ", V1,V2,V3": 1,
+            ", V1,V2;V6": 1,
+            ", V1,V3": 1,
+            ", V1,V4": 1,
+            ", V1,V5,V6": 2,
+            ", V1,V6": 5,
+            ", V1-6": 1,
+            ", V1-V3": 3,
+            ", V1-V4": 1,
+            ", V1-V6": 4,
+            ", V1V6": 1,
+            ", V2": 39,
+            ", V2,3": 2,
+            ", V2,3,4": 1,
+            ", V2,5": 1,
+            ", V2,V3": 7,
+            ", V2,V4": 1,
+            ", V2,V5": 2,
+            ", V2,V5,V6": 1,
+            ", V2-V4": 2,
+            ", V2-V5": 1,
+            ", V2-V6": 3,
+            ", V3": 37,
+            ", V3 stark": 1,
+            ", V3,5,6": 1,
+            ", V3,V4": 4,
+            ", V3,V5": 1,
+            ", V3,V6": 5,
+            ", V3-V4": 1,
+            ", V3-V6": 3,
+            ", V4": 24,
+            ", V4 stark": 2,
+            ", V4,5,V6": 1,
+            ", V4,V5": 4,
+            ", V4,V6": 1,
+            ", V4-V6": 11,
+            ", V5": 36,
+            ", V5,6": 3,
+            ", V5,V6": 35,
+            ", V5;V6": 1,
+            ", V6": 148,
+            ", V7": 1,
+            ", alle": 1,
+            ", alles": 37,
+            ", drift": 3,
+            ", i-iii, avl": 1,
+            ", stark": 2,
+            ", v1": 18,
+            ", v1, v4": 1,
+            ", v1,3": 1,
+            ", v1,6": 1,
+            ", v1-2, i-ii": 1,
+            ", v1-6": 4,
+            ", v1-v3": 1,
+            ", v1-v4": 1,
+            ", v2": 8,
+            ", v2, v6": 3,
+            ", v2,3": 1,
+            ", v2,4": 1,
+            ", v2-3": 1,
+            ", v3": 13,
+            ", v3, 5": 1,
+            ", v3, v6": 1,
+            ", v3,4,6": 1,
+            ", v3-4": 1,
+            ", v3-v6": 1,
+            ", v4": 10,
+            ", v4, v6": 1,
+            ", v4-6": 4,
+            ", v4-v6": 2,
+            ", v5": 6,
+            ", v5, v6": 1,
+            ", v5,6": 1,
+            ", v5-6": 4,
+            ", v5-v6": 1,
+            ", v6": 33,
+            "AVL,": 1,
+            "AVL,AVF,": 1,
+            "I, III, avf,": 1,
+            "I,II,": 1,
+            "I,III,AVL,V3,V4,": 1,
+            "I,III,V3,V4,": 1,
+            "I,V1,": 1,
+            "I,V1,V2,V4-V6,": 1,
+            "I,V1-V4,": 1,
+            "I-AVF,": 1,
+            "I-AVR,V4,": 1,
+            "I-III,V1-V3,": 1,
+            "II,III,": 1,
+            "II,III,AVF,V1-V3, V6": 1,
+            "II,III,AVF,V4,V5,V6,": 1,
+            "II-V6,": 1,
+            "III-AVL,V2-V5,": 1,
+            "V,V3,": 1,
+            "V1,II,": 1,
+            "V1,V2,": 1,
+            "V1,V2,V4,": 1,
+            "V1-V3, V6": 1,
+            "V1-V5,": 1,
+            "V2 - V4,": 1,
+            "V2,": 1,
+            "V2, V2": 1,
+            "V3,": 1,
+            "V3, V1": 1,
+            "V3,V4,": 1,
+            "V3-V5,": 1,
+            "V4,": 2,
+            "V4,5,": 1,
+            "V4-V6,": 2,
+            "V5,": 2,
+            "V6, V6": 1,
+            "alle Abl.,": 1,
+            "alle, I,II": 1,
+            "alle, v3": 1,
+            "alles,": 8,
+            "alles, alles": 1,
+            "napf,": 1,
+            "stufe v3,": 1,
+            "stufen v5,": 1,
+            "v1,": 12,
+            "v1,2,": 1,
+            "v1,6,": 2,
+            "v1-2,": 1,
+            "v1-6,": 3,
+            "v1-6, v1-6": 1,
+            "v2,": 9,
+            "v2,3,": 1,
+            "v2,6,": 1,
+            "v2-3,": 1,
+            "v3,": 9,
+            "v3, avf,": 1,
+            "v3, v1-6": 1,
+            "v3,6,": 1,
+            "v3-4,": 1,
+            "v4,": 3,
+            "v4, v4": 1,
+            "v4, v5,": 1,
+            "v4,5,": 2,
+            "v4-6,": 2,
+            "v4-6, v4-6": 1,
+            "v5,": 4,
+            "v5, v6,": 1,
+            "v5-6,": 6,
+            "v6,": 16,
+            "v6, v6": 1
+          },
+          "top_raw_values": [
+            {
+              "count": 148,
+              "value": ", V6"
+            },
+            {
+              "count": 69,
+              "value": ", V1"
+            },
+            {
+              "count": 44,
+              "value": ", II-AVF"
+            },
+            {
+              "count": 39,
+              "value": ", V2"
+            },
+            {
+              "count": 37,
+              "value": ", V3"
+            },
+            {
+              "count": 37,
+              "value": ", alles"
+            },
+            {
+              "count": 36,
+              "value": ", V5"
+            },
+            {
+              "count": 35,
+              "value": ", V5,V6"
+            },
+            {
+              "count": 33,
+              "value": ", v6"
+            },
+            {
+              "count": 31,
+              "value": ", I-AVF"
+            },
+            {
+              "count": 24,
+              "value": ", V4"
+            },
+            {
+              "count": 19,
+              "value": ", I-AVR"
+            },
+            {
+              "count": 18,
+              "value": ", v1"
+            },
+            {
+              "count": 16,
+              "value": "v6,"
+            },
+            {
+              "count": 16,
+              "value": ", I,III,AVL"
+            },
+            {
+              "count": 15,
+              "value": ", II,III,AVF"
+            },
+            {
+              "count": 14,
+              "value": ", II-V6"
+            },
+            {
+              "count": 13,
+              "value": ", III,AVF"
+            },
+            {
+              "count": 13,
+              "value": ", v3"
+            },
+            {
+              "count": 12,
+              "value": "v1,"
+            }
+          ]
+        },
+        "burst_noise": {
+          "fraction_with_annotation": 0.028974479044720208,
+          "parse_status_counts": {
+            "missing": 16589,
+            "raw_string": 495
+          },
+          "records": 17084,
+          "records_with_annotation": 495,
+          "records_without_annotation": 16589,
+          "tokens": {
+            "AVL": 2,
+            "AVL,AVR": 1,
+            "I": 2,
+            "I,AVL": 2,
+            "I,AVR,V1": 1,
+            "I,II": 2,
+            "I,II,AVL,AVR": 1,
+            "I,II,AVL-AVR": 1,
+            "I,II,AVL-V6": 1,
+            "I,II,AVR": 1,
+            "I,II,AVR,V2": 1,
+            "I,II,III": 1,
+            "I,II,V1": 1,
+            "I,III,AVL": 1,
+            "I,III,AVL,AVF;V6": 1,
+            "I-ALF": 2,
+            "I-AVF": 40,
+            "I-AVL": 2,
+            "I-AVR": 18,
+            "I-Avf": 1,
+            "I-V1": 17,
+            "I-V2": 17,
+            "I-V3": 4,
+            "I-V4": 1,
+            "I-V5": 3,
+            "II": 2,
+            "II, III, avf": 1,
+            "II,III,V1,V2": 2,
+            "II,V1,V2": 1,
+            "II,V2": 2,
+            "II-AVF": 3,
+            "II-AVL": 1,
+            "II-AVL,V1,V2": 1,
+            "II-V1": 2,
+            "II-V2": 1,
+            "III,V1": 1,
+            "V1": 40,
+            "V1,V2": 22,
+            "V1,V2,V5": 1,
+            "V1,V3": 1,
+            "V1,V4": 1,
+            "V1,V5": 2,
+            "V1,V6": 1,
+            "V1-V3": 3,
+            "V1-V4": 2,
+            "V1-V5": 2,
+            "V1-V6": 3,
+            "V2": 19,
+            "V2,3": 1,
+            "V2,4": 1,
+            "V2,V3": 1,
+            "V2,V4": 1,
+            "V2-V6": 2,
+            "V3": 11,
+            "V3-V5": 1,
+            "V3-V6": 3,
+            "V4": 9,
+            "V4,5,6": 1,
+            "V4,V5": 1,
+            "V4-V6": 1,
+            "V5": 12,
+            "V5,6": 1,
+            "V5,V6": 2,
+            "V6": 7,
+            "alle": 2,
+            "alle Abl.": 1,
+            "alles": 116,
+            "v1": 6,
+            "v1,2": 1,
+            "v1-2": 1,
+            "v1-6": 4,
+            "v2": 8,
+            "v2,3": 2,
+            "v2-3": 1,
+            "v3": 11,
+            "v3,6": 1,
+            "v3-4": 4,
+            "v3-5": 1,
+            "v4": 7,
+            "v4, v5": 1,
+            "v4,5": 1,
+            "v4,6": 2,
+            "v4-5": 2,
+            "v4-6": 1,
+            "v5": 10,
+            "v5,6": 4,
+            "v5-6": 4,
+            "v6": 11
+          },
+          "top_raw_values": [
+            {
+              "count": 116,
+              "value": "alles"
+            },
+            {
+              "count": 40,
+              "value": "I-AVF"
+            },
+            {
+              "count": 40,
+              "value": "V1"
+            },
+            {
+              "count": 22,
+              "value": "V1,V2"
+            },
+            {
+              "count": 19,
+              "value": "V2"
+            },
+            {
+              "count": 18,
+              "value": "I-AVR"
+            },
+            {
+              "count": 17,
+              "value": "I-V2"
+            },
+            {
+              "count": 17,
+              "value": "I-V1"
+            },
+            {
+              "count": 12,
+              "value": "V5"
+            },
+            {
+              "count": 11,
+              "value": "v6"
+            },
+            {
+              "count": 11,
+              "value": "v3"
+            },
+            {
+              "count": 11,
+              "value": "V3"
+            },
+            {
+              "count": 10,
+              "value": "v5"
+            },
+            {
+              "count": 9,
+              "value": "V4"
+            },
+            {
+              "count": 8,
+              "value": "v2"
+            },
+            {
+              "count": 7,
+              "value": "v4"
+            },
+            {
+              "count": 7,
+              "value": "V6"
+            },
+            {
+              "count": 6,
+              "value": "v1"
+            },
+            {
+              "count": 4,
+              "value": "v5-6"
+            },
+            {
+              "count": 4,
+              "value": "v5,6"
+            }
+          ]
+        },
+        "electrodes_problems": {
+          "fraction_with_annotation": 0.0012877546242097868,
+          "parse_status_counts": {
+            "missing": 17062,
+            "raw_string": 22
+          },
+          "records": 17084,
+          "records_with_annotation": 22,
+          "records_without_annotation": 17062,
+          "tokens": {
+            "Elektroden vertauscht???": 1,
+            "I???": 1,
+            "Kontaktprobleme aVL ???": 1,
+            "V1": 4,
+            "V1???": 1,
+            "V3,V4-V6": 1,
+            "V4": 2,
+            "V5": 2,
+            "V5,V6": 1,
+            "V6": 5,
+            "aVL???": 1,
+            "v4, v5": 1,
+            "v6????": 1
+          },
+          "top_raw_values": [
+            {
+              "count": 5,
+              "value": "V6"
+            },
+            {
+              "count": 4,
+              "value": "V1"
+            },
+            {
+              "count": 2,
+              "value": "V5"
+            },
+            {
+              "count": 2,
+              "value": "V4"
+            },
+            {
+              "count": 1,
+              "value": "V5,V6"
+            },
+            {
+              "count": 1,
+              "value": "V1???"
+            },
+            {
+              "count": 1,
+              "value": "Kontaktprobleme aVL ???"
+            },
+            {
+              "count": 1,
+              "value": "I???"
+            },
+            {
+              "count": 1,
+              "value": "aVL???"
+            },
+            {
+              "count": 1,
+              "value": "v6????"
+            },
+            {
+              "count": 1,
+              "value": "Elektroden vertauscht???"
+            },
+            {
+              "count": 1,
+              "value": "v4, v5"
+            },
+            {
+              "count": 1,
+              "value": "V3,V4-V6"
+            }
+          ]
+        },
+        "static_noise": {
+          "fraction_with_annotation": 0.15090142823694686,
+          "parse_status_counts": {
+            "missing": 14506,
+            "raw_string": 2578
+          },
+          "records": 17084,
+          "records_with_annotation": 2578,
+          "records_without_annotation": 14506,
+          "tokens": {
+            ", 3ES,": 1,
+            ", AVF,": 1,
+            ", AVL,": 2,
+            ", AVL,V2,": 1,
+            ", I ,": 1,
+            ", I - AVF,": 4,
+            ", I - AVF,V5,V6,": 1,
+            ", I - AVR,": 3,
+            ", I - V1,": 2,
+            ", I - V2,": 1,
+            ", I - V2,V5,V6,": 1,
+            ", I -AVF,": 1,
+            ", I -V1,": 1,
+            ", I -V2,": 1,
+            ", I,": 5,
+            ", I,AVL,": 5,
+            ", I,AVL,V1,": 2,
+            ", I,AVL,V3,": 1,
+            ", I,AVL,V6,": 1,
+            ", I,AVR,": 2,
+            ", I,II,": 18,
+            ", I,II,AVF,": 1,
+            ", I,II,AVL,": 2,
+            ", I,II,AVL,AVR,": 2,
+            ", I,II,AVL,V2,": 1,
+            ", I,II,AVL-AVF,": 1,
+            ", I,II,AVL-V1,": 1,
+            ", I,II,AVR,": 10,
+            ", I,II,AVR,AVL.AVF,V1,": 1,
+            ", I,II,AVR,V1,": 1,
+            ", I,II,AVR,V6,": 1,
+            ", I,II,III,AVR,AVL,AVF,": 1,
+            ", I,II,V5,": 1,
+            ", I,II-AVR,": 1,
+            ", I,III,": 1,
+            ", I,III,AVL,": 7,
+            ", I,III,AVL,V1,": 2,
+            ", I,III,AVL-V2,": 1,
+            ", I,III,V5,": 1,
+            ", I,III-AVF,": 1,
+            ", I,III-V2,": 1,
+            ", I,III-V6,": 1,
+            ", I,V4,": 1,
+            ", I-ALF,": 1,
+            ", I-AVF,": 824,
+            ", I-AVF, noisy recording,": 1,
+            ", I-AVF,V4-V6,": 1,
+            ", I-AVF,V6,": 2,
+            ", I-AVL,": 65,
+            ", I-AVL,V5,V6,": 1,
+            ", I-AVR,": 778,
+            ", I-AVR, noisy recording,": 1,
+            ", I-AVR,V5,V6,": 2,
+            ", I-AVR,V6,": 2,
+            ", I-Avf,": 1,
+            ", I-Avl,": 1,
+            ", I-Avr,": 2,
+            ", I-III,": 5,
+            ", I-V1,": 108,
+            ", I-V1, noisy recording,": 2,
+            ", I-V1,V5,": 1,
+            ", I-V1,V5,V6,": 1,
+            ", I-V1,V6,": 1,
+            ", I-V2,": 103,
+            ", I-V2, noisy recording,": 1,
+            ", I-V2,V5,V6,": 2,
+            ", I-V2,V6,": 1,
+            ", I-V3,": 4,
+            ", I-V4,": 1,
+            ", I-v2,": 1,
+            ", I.II,": 1,
+            ", II,III,AVF,": 1,
+            ", III,AVL,": 1,
+            ", III-AVL,": 1,
+            ", Stark, noisy recording,": 1,
+            ", V1,": 10,
+            ", V1,V2,": 3,
+            ", V2,": 9,
+            ", V2,V3,": 1,
+            ", V3,": 3,
+            ", V4,": 2,
+            ", V5,": 4,
+            ", V5,V6,": 1,
+            ", V6,": 6,
+            ", alle,": 1,
+            ", alles,": 352,
+            ", alles, noisy recording,": 11,
+            ", avl-iii, Stark,": 1,
+            ", leicht,": 33,
+            ", mittel I,": 1,
+            ", mittel,": 58,
+            ", mittel, noisy recording,": 3,
+            ", noise,": 9,
+            ", noise, noisy recording,": 1,
+            ", noisy recording,": 19,
+            ", stark,": 18,
+            ", stark, noisy recording,": 3,
+            ", v2 mittel,": 1,
+            ", v3,": 1,
+            "I stark,  ,": 1,
+            "I,II,III.AVR,AVL,  ,": 1,
+            "I,III,AVF,AVL,V2,  ,": 1,
+            "V1,  ,": 1,
+            "leicht,  ,": 7,
+            "leicht, leicht,": 2,
+            "mittel,  ,": 1
+          },
+          "top_raw_values": [
+            {
+              "count": 824,
+              "value": ", I-AVF,"
+            },
+            {
+              "count": 778,
+              "value": ", I-AVR,"
+            },
+            {
+              "count": 352,
+              "value": ", alles,"
+            },
+            {
+              "count": 108,
+              "value": ", I-V1,"
+            },
+            {
+              "count": 103,
+              "value": ", I-V2,"
+            },
+            {
+              "count": 65,
+              "value": ", I-AVL,"
+            },
+            {
+              "count": 58,
+              "value": ", mittel,"
+            },
+            {
+              "count": 33,
+              "value": ", leicht,"
+            },
+            {
+              "count": 19,
+              "value": ", noisy recording,"
+            },
+            {
+              "count": 18,
+              "value": ", stark,"
+            },
+            {
+              "count": 18,
+              "value": ", I,II,"
+            },
+            {
+              "count": 11,
+              "value": ", alles, noisy recording,"
+            },
+            {
+              "count": 10,
+              "value": ", I,II,AVR,"
+            },
+            {
+              "count": 10,
+              "value": ", V1,"
+            },
+            {
+              "count": 9,
+              "value": ", V2,"
+            },
+            {
+              "count": 9,
+              "value": ", noise,"
+            },
+            {
+              "count": 7,
+              "value": ", I,III,AVL,"
+            },
+            {
+              "count": 7,
+              "value": "leicht,  ,"
+            },
+            {
+              "count": 6,
+              "value": ", V6,"
+            },
+            {
+              "count": 5,
+              "value": ", I-III,"
+            }
+          ]
+        }
+      },
+      "records": 17084,
+      "records_with_any_quality_artifact": 3871
+    },
+    "validation": {
+      "artifact_field_combinations": {
+        "baseline_drift": 167,
+        "baseline_drift+burst_noise": 7,
+        "baseline_drift+static_noise": 50,
+        "baseline_drift+static_noise+burst_noise": 2,
+        "burst_noise": 29,
+        "electrodes_problems": 4,
+        "none": 1618,
+        "static_noise": 260,
+        "static_noise+burst_noise": 9
+      },
+      "context_only_not_used_for_Q": {
+        "extra_beats": {
+          "fraction_with_annotation": 0.08713886300093196,
+          "parse_status_counts": {
+            "missing": 1959,
+            "raw_string": 187
+          },
+          "records": 2146,
+          "records_with_annotation": 187,
+          "records_without_annotation": 1959,
+          "tokens": {
+            "1ES": 63,
+            "1ES,SVES": 3,
+            "1VES": 2,
+            "2,V1,V2": 1,
+            "2ES": 27,
+            "2ES,SVES": 2,
+            "2SVES": 1,
+            "2VES": 2,
+            "3ES": 13,
+            "3VES": 2,
+            "4ES": 6,
+            "4VES": 1,
+            "5ES": 2,
+            "5VES": 1,
+            "7VES": 1,
+            "ES": 3,
+            "SVES": 38,
+            "VES": 16,
+            "VES,SVES": 1,
+            "VES,SVES1,alles": 1,
+            "VES1,alles": 1
+          },
+          "top_raw_values": [
+            {
+              "count": 63,
+              "value": "1ES"
+            },
+            {
+              "count": 38,
+              "value": "SVES"
+            },
+            {
+              "count": 27,
+              "value": "2ES"
+            },
+            {
+              "count": 16,
+              "value": "VES"
+            },
+            {
+              "count": 13,
+              "value": "3ES"
+            },
+            {
+              "count": 6,
+              "value": "4ES"
+            },
+            {
+              "count": 3,
+              "value": "ES"
+            },
+            {
+              "count": 3,
+              "value": "1ES,SVES"
+            },
+            {
+              "count": 2,
+              "value": "2VES"
+            },
+            {
+              "count": 2,
+              "value": "1VES"
+            },
+            {
+              "count": 2,
+              "value": "3VES"
+            },
+            {
+              "count": 2,
+              "value": "2ES,SVES"
+            },
+            {
+              "count": 2,
+              "value": "5ES"
+            },
+            {
+              "count": 1,
+              "value": "VES,SVES"
+            },
+            {
+              "count": 1,
+              "value": "VES,SVES1,alles"
+            },
+            {
+              "count": 1,
+              "value": "VES1,alles"
+            },
+            {
+              "count": 1,
+              "value": "7VES"
+            },
+            {
+              "count": 1,
+              "value": "4VES"
+            },
+            {
+              "count": 1,
+              "value": "2SVES"
+            },
+            {
+              "count": 1,
+              "value": "5VES"
+            }
+          ]
+        },
+        "pacemaker": {
+          "fraction_with_annotation": 0.0009319664492078285,
+          "parse_status_counts": {
+            "missing": 2144,
+            "raw_string": 2
+          },
+          "records": 2146,
+          "records_with_annotation": 2,
+          "records_without_annotation": 2144,
+          "tokens": {
+            "ja, pacemaker": 2
+          },
+          "top_raw_values": [
+            {
+              "count": 2,
+              "value": "ja, pacemaker"
+            }
+          ]
+        }
+      },
+      "fraction_with_any_quality_artifact": 0.24603914259086673,
+      "number_of_quality_fields_present": {
+        "0": 1618,
+        "1": 460,
+        "2": 66,
+        "3": 2
+      },
+      "quality_fields": {
+        "baseline_drift": {
+          "fraction_with_annotation": 0.10531220876048462,
+          "parse_status_counts": {
+            "missing": 1920,
+            "raw_string": 226
+          },
+          "records": 2146,
+          "records_with_annotation": 226,
+          "records_without_annotation": 1920,
+          "tokens": {
+            ", AVF": 1,
+            ", AVL,AVR": 1,
+            ", AVL,V5": 1,
+            ", AVR,AVF,V3": 1,
+            ", I,II": 1,
+            ", I,II,AVL-AVF": 1,
+            ", I,II,AVR,AVF": 1,
+            ", I,III": 1,
+            ", I,III,AVF": 1,
+            ", I,III,AVL": 3,
+            ", I,III-AVF": 1,
+            ", I-AVF": 6,
+            ", I-AVF,V5,V6": 1,
+            ", I-AVL": 3,
+            ", I-AVL,AVF": 1,
+            ", I-AVR": 2,
+            ", I-AVR,V2": 1,
+            ", I-AVR,V3": 1,
+            ", I-V1": 1,
+            ", I-V2": 1,
+            ", II": 1,
+            ", II,AVF": 1,
+            ", II,III,AVF": 4,
+            ", II,III,AVF,V4": 1,
+            ", II,III,V5,V6": 1,
+            ", II,V3": 1,
+            ", II-AVF": 12,
+            ", II-AVF,V5": 1,
+            ", II-AVF,V6": 1,
+            ", II-AVL": 1,
+            ", II-AVL,AVF": 1,
+            ", II-AVR": 1,
+            ", II-V1": 1,
+            ", II-V2": 2,
+            ", II-V3": 2,
+            ", II-V6": 1,
+            ", III": 5,
+            ", III,AVF": 7,
+            ", III,AVF,V1": 1,
+            ", III,AVL": 4,
+            ", III,AVL,V5": 1,
+            ", III,V1": 1,
+            ", III,V2": 1,
+            ", III,V3": 1,
+            ", III,V4,V5": 1,
+            ", III,V5,V6": 1,
+            ", III,V6": 1,
+            ", III-AVF": 1,
+            ", V 4": 1,
+            ", V1": 16,
+            ", V1,V2": 2,
+            ", V1,V5,V6": 1,
+            ", V1,V6": 1,
+            ", V1-V3": 1,
+            ", V2": 9,
+            ", V2,V3": 1,
+            ", V2,V6": 1,
+            ", V2-V6": 2,
+            ", V3": 7,
+            ", V3,V6": 1,
+            ", V3-V6": 1,
+            ", V4": 3,
+            ", V4,V6": 1,
+            ", V4-V6": 3,
+            ", V5": 7,
+            ", V5,V6": 8,
+            ", V6": 30,
+            ", alles": 6,
+            ", i-avr": 1,
+            ", starke drift": 1,
+            ", v1, 4": 1,
+            ", v1,2": 1,
+            ", v1-6": 4,
+            ", v1-v6": 1,
+            ", v2": 1,
+            ", v2-5": 1,
+            ", v3": 1,
+            ", v4": 2,
+            ", v5, v6": 1,
+            ", v5-6": 1,
+            ", v6": 7,
+            "II,avl,avr,": 1,
+            "V1-V3,": 1,
+            "V5, II-AVF,V5": 1,
+            "alle, alle": 1,
+            "v1,": 1,
+            "v1, 3,": 1,
+            "v1, v2,": 1,
+            "v3,": 3,
+            "v4-6,": 1,
+            "v5,": 1,
+            "v6,": 2
+          },
+          "top_raw_values": [
+            {
+              "count": 30,
+              "value": ", V6"
+            },
+            {
+              "count": 16,
+              "value": ", V1"
+            },
+            {
+              "count": 12,
+              "value": ", II-AVF"
+            },
+            {
+              "count": 9,
+              "value": ", V2"
+            },
+            {
+              "count": 8,
+              "value": ", V5,V6"
+            },
+            {
+              "count": 7,
+              "value": ", III,AVF"
+            },
+            {
+              "count": 7,
+              "value": ", V5"
+            },
+            {
+              "count": 7,
+              "value": ", V3"
+            },
+            {
+              "count": 7,
+              "value": ", v6"
+            },
+            {
+              "count": 6,
+              "value": ", I-AVF"
+            },
+            {
+              "count": 6,
+              "value": ", alles"
+            },
+            {
+              "count": 5,
+              "value": ", III"
+            },
+            {
+              "count": 4,
+              "value": ", III,AVL"
+            },
+            {
+              "count": 4,
+              "value": ", v1-6"
+            },
+            {
+              "count": 4,
+              "value": ", II,III,AVF"
+            },
+            {
+              "count": 3,
+              "value": ", V4"
+            },
+            {
+              "count": 3,
+              "value": ", I-AVL"
+            },
+            {
+              "count": 3,
+              "value": "v3,"
+            },
+            {
+              "count": 3,
+              "value": ", V4-V6"
+            },
+            {
+              "count": 3,
+              "value": ", I,III,AVL"
+            }
+          ]
+        },
+        "burst_noise": {
+          "fraction_with_annotation": 0.02190121155638397,
+          "parse_status_counts": {
+            "missing": 2099,
+            "raw_string": 47
+          },
+          "records": 2146,
+          "records_with_annotation": 47,
+          "records_without_annotation": 2099,
+          "tokens": {
+            "I,II": 1,
+            "I,III,AVL": 3,
+            "I,III,V5,V6": 1,
+            "I,III-AVR": 1,
+            "I-AVF": 4,
+            "I-AVR": 2,
+            "I-V1": 1,
+            "I-V2": 1,
+            "II": 2,
+            "II,AVR-V3": 1,
+            "III": 1,
+            "III,AVL": 1,
+            "V1": 3,
+            "V3": 1,
+            "V4": 1,
+            "alle": 2,
+            "alles": 11,
+            "v2": 2,
+            "v3": 3,
+            "v3,4": 1,
+            "v4-5": 1,
+            "v5": 1,
+            "v6": 2
+          },
+          "top_raw_values": [
+            {
+              "count": 11,
+              "value": "alles"
+            },
+            {
+              "count": 4,
+              "value": "I-AVF"
+            },
+            {
+              "count": 3,
+              "value": "v3"
+            },
+            {
+              "count": 3,
+              "value": "V1"
+            },
+            {
+              "count": 3,
+              "value": "I,III,AVL"
+            },
+            {
+              "count": 2,
+              "value": "I-AVR"
+            },
+            {
+              "count": 2,
+              "value": "II"
+            },
+            {
+              "count": 2,
+              "value": "alle"
+            },
+            {
+              "count": 2,
+              "value": "v6"
+            },
+            {
+              "count": 2,
+              "value": "v2"
+            },
+            {
+              "count": 1,
+              "value": "III,AVL"
+            },
+            {
+              "count": 1,
+              "value": "III"
+            },
+            {
+              "count": 1,
+              "value": "V3"
+            },
+            {
+              "count": 1,
+              "value": "v3,4"
+            },
+            {
+              "count": 1,
+              "value": "I,II"
+            },
+            {
+              "count": 1,
+              "value": "v5"
+            },
+            {
+              "count": 1,
+              "value": "V4"
+            },
+            {
+              "count": 1,
+              "value": "I,III,V5,V6"
+            },
+            {
+              "count": 1,
+              "value": "II,AVR-V3"
+            },
+            {
+              "count": 1,
+              "value": "I-V2"
+            }
+          ]
+        },
+        "electrodes_problems": {
+          "fraction_with_annotation": 0.001863932898415657,
+          "parse_status_counts": {
+            "missing": 2142,
+            "raw_string": 4
+          },
+          "records": 2146,
+          "records_with_annotation": 4,
+          "records_without_annotation": 2142,
+          "tokens": {
+            "V1???": 1,
+            "V3": 1,
+            "V4": 1,
+            "V6": 1
+          },
+          "top_raw_values": [
+            {
+              "count": 1,
+              "value": "V6"
+            },
+            {
+              "count": 1,
+              "value": "V3"
+            },
+            {
+              "count": 1,
+              "value": "V4"
+            },
+            {
+              "count": 1,
+              "value": "V1???"
+            }
+          ]
+        },
+        "static_noise": {
+          "fraction_with_annotation": 0.14958061509785647,
+          "parse_status_counts": {
+            "missing": 1825,
+            "raw_string": 321
+          },
+          "records": 2146,
+          "records_with_annotation": 321,
+          "records_without_annotation": 1825,
+          "tokens": {
+            ", 2,": 1,
+            ", Alles,": 1,
+            ", I - AVF,": 2,
+            ", I - AVR,": 1,
+            ", I - V1,": 1,
+            ", I -AVF,": 1,
+            ", I,AVL,": 1,
+            ", I,AVL,AVR,": 1,
+            ", I,II,": 6,
+            ", I,II,AVL,": 1,
+            ", I,II,AVL,AVF,": 1,
+            ", I,II,AVL,AVR,": 2,
+            ", I,II,AVL,V5;V6,": 1,
+            ", I,II,AVR,": 1,
+            ", I,II,III,AVL,": 1,
+            ", I,III,AVL,": 3,
+            ", I,III,AVL,AVR,": 1,
+            ", I,III,AVL,V1-V6,": 1,
+            ", I,V2,": 1,
+            ", I-AVF,": 44,
+            ", I-AVF, noisy recording,": 1,
+            ", I-AVL,": 16,
+            ", I-AVR,": 86,
+            ", I-AVR,V5,V6,": 2,
+            ", I-AVR,V6,": 1,
+            ", I-Avr,": 1,
+            ", I-V!,V5,V6,": 1,
+            ", I-V1,": 18,
+            ", I-V2,": 22,
+            ", II,AVL,": 1,
+            ", V1,": 1,
+            ", V1,V2,": 1,
+            ", V2,": 1,
+            ", V3,": 1,
+            ", V4,": 1,
+            ", V6,": 2,
+            ", alles,": 71,
+            ", alles, noisy recording,": 1,
+            ", leicht,": 4,
+            ", mittel,": 7,
+            ", mittel, noisy recording,": 1,
+            ", noisy recording,": 2,
+            ", stark,": 2,
+            "alle,  ,": 1,
+            "leicht,  ,": 4
+          },
+          "top_raw_values": [
+            {
+              "count": 86,
+              "value": ", I-AVR,"
+            },
+            {
+              "count": 71,
+              "value": ", alles,"
+            },
+            {
+              "count": 44,
+              "value": ", I-AVF,"
+            },
+            {
+              "count": 22,
+              "value": ", I-V2,"
+            },
+            {
+              "count": 18,
+              "value": ", I-V1,"
+            },
+            {
+              "count": 16,
+              "value": ", I-AVL,"
+            },
+            {
+              "count": 7,
+              "value": ", mittel,"
+            },
+            {
+              "count": 6,
+              "value": ", I,II,"
+            },
+            {
+              "count": 4,
+              "value": ", leicht,"
+            },
+            {
+              "count": 4,
+              "value": "leicht,  ,"
+            },
+            {
+              "count": 3,
+              "value": ", I,III,AVL,"
+            },
+            {
+              "count": 2,
+              "value": ", stark,"
+            },
+            {
+              "count": 2,
+              "value": ", noisy recording,"
+            },
+            {
+              "count": 2,
+              "value": ", I,II,AVL,AVR,"
+            },
+            {
+              "count": 2,
+              "value": ", I-AVR,V5,V6,"
+            },
+            {
+              "count": 2,
+              "value": ", V6,"
+            },
+            {
+              "count": 2,
+              "value": ", I - AVF,"
+            },
+            {
+              "count": 1,
+              "value": ", I,II,AVL,"
+            },
+            {
+              "count": 1,
+              "value": ", V1,"
+            },
+            {
+              "count": 1,
+              "value": ", V1,V2,"
+            }
+          ]
+        }
+      },
+      "records": 2146,
+      "records_with_any_quality_artifact": 528
+    }
+  },
+  "status": "PASS"
+}
