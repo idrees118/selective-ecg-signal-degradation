@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🫀 Selective ECG Classification Under Signal Degradation
+# Selective ECG Classification Under Signal Degradation
 ### Reliability-Aware ECG Prediction Under Controlled Signal Corruption
 
 [![Domain](https://img.shields.io/badge/Domain-Medical_AI-007EC6?style=for-the-badge&logo=heart)](https://physionet.org/content/ptb-xl/1.0.3/)
@@ -16,7 +16,7 @@
 
 ---
 
-## 📌 Executive Summary
+## Executive Summary
 
 Modern ECG classifiers can achieve strong predictive performance, but in real clinical settings the important question is not only:
 
@@ -47,7 +47,7 @@ Model uncertainty increased consistently as ECG corruption became more severe, s
 
 ---
 
-## 🎯 Research Question
+## Research Question
 
 Selective prediction allows a classifier to **defer unreliable cases for manual review** instead of forcing a decision on every ECG.
 
@@ -63,7 +63,7 @@ The analysis focuses on a key distinction:
 
 ---
 
-## 🧪 Study Design
+## Study Design
 
 | Component | Setting |
 |------|------|
@@ -86,7 +86,7 @@ The analysis focuses on a key distinction:
 
 ---
 
-## 🗂️ Dataset & Patient-Disjoint Splitting
+##  Dataset & Patient-Disjoint Splitting
 
 The study uses **PTB-XL v1.0.3**, a large 12-lead ECG dataset.
 
@@ -108,7 +108,7 @@ The held-out test set contains:
 
 ---
 
-## 🧠 ECG Classification Model
+##  ECG Classification Model
 
 The classifier is a **ResNet1DWang** architecture designed for one-dimensional physiological time-series signals.
 
