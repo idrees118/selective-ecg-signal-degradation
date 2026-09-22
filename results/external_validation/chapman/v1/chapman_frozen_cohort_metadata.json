@@ -1,0 +1,13 @@
+{
+  "status": "FROZEN",
+  "dataset": "Chapman-Shaoxing ECG",
+  "split_seed": 20260922,
+  "targets": [
+    "SB",
+    "AFIB",
+    "ST",
+    "TWC",
+    "LVHV"
+  ],
+  "manifest_sha256": "f1d520c508df4cae06c4a1aa6426c92388fd7db7e2c5d8fb60969ad18b2c6979"
+}

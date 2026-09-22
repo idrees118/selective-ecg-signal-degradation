@@ -1,0 +1,27 @@
+{
+  "status": "FROZEN",
+  "dataset": "Chapman-Shaoxing ECG",
+  "test_records": 1065,
+  "test_tuning_allowed": false,
+  "labels": ["SB", "AFIB", "ST", "TWC", "LVHV"],
+  "risk": "five-label per-record Hamming error",
+  "primary_metric": "grouped AURC",
+  "selectors": ["confidence", "Q", "U", "Q+U"],
+  "primary_comparisons": [
+    "U_vs_confidence",
+    "Q+U_vs_confidence"
+  ],
+  "descriptive_selector": "Q",
+  "mc_dropout_passes": 30,
+  "corruptions": "reuse exact frozen PTB-XL corruption_v1 protocol",
+  "combination_scaling": "frozen clean-validation empirical midrank ECDF",
+  "post_test_changes_forbidden": [
+    "thresholds",
+    "labels",
+    "normalization",
+    "Q definition",
+    "uncertainty definition",
+    "combination weights",
+    "corruption severities"
+  ]
+}

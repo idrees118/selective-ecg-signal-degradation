@@ -1,0 +1,48 @@
+{
+  "status": "FROZEN",
+  "dataset": "Chapman-Shaoxing ECG",
+  "seed": 20260826,
+  "best_epoch": 31,
+  "best_validation_macro_auroc": 0.976542718999705,
+  "validation_macro_average_precision": 0.9010959868753329,
+  "validation_macro_f1": 0.8680350195668346,
+  "labels": [
+    "SB",
+    "AFIB",
+    "ST",
+    "TWC",
+    "LVHV"
+  ],
+  "class_metrics": {
+    "SB": {
+      "auroc": 0.9966459287202811,
+      "average_precision": 0.9890176748123138,
+      "f1": 0.979381443298969,
+      "threshold": 0.27743473649024963
+    },
+    "AFIB": {
+      "auroc": 0.9972578510714103,
+      "average_precision": 0.9766758286071975,
+      "f1": 0.953757225433526,
+      "threshold": 0.9262818694114685
+    },
+    "ST": {
+      "auroc": 0.9911169106666852,
+      "average_precision": 0.9802606683772118,
+      "f1": 0.9316770186335404,
+      "threshold": 0.2826629877090454
+    },
+    "TWC": {
+      "auroc": 0.9257263157894737,
+      "average_precision": 0.7428559946598703,
+      "f1": 0.6946902654867256,
+      "threshold": 0.3014447093009949
+    },
+    "LVHV": {
+      "auroc": 0.9719665887506743,
+      "average_precision": 0.8166697679200706,
+      "f1": 0.7806691449814126,
+      "threshold": 0.3936189115047455
+    }
+  }
+}

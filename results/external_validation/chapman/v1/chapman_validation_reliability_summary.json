@@ -1,0 +1,15 @@
+{
+  "status": "FROZEN",
+  "training_q_reference_records": 8516,
+  "validation_reference_records": 1065,
+  "mc_passes": 30,
+  "mean_validation_Q": 0.5030702632107031,
+  "mean_validation_U": 0.013469893535269449,
+  "validation_full_hamming_risk": 0.04713615023474179,
+  "validation_aurc": {
+    "confidence": 0.014147862323680462,
+    "Q": 0.056377755347177975,
+    "U": 0.018234545782583322,
+    "Q+U": 0.029334245082690346
+  }
+}

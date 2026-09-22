@@ -1,0 +1,22 @@
+{
+  "status": "FROZEN",
+  "dataset": "Chapman-Shaoxing ECG",
+  "test_records": 1065,
+  "bootstrap_unit": "held-out ECG record",
+  "paired": true,
+  "replicates": 5000,
+  "confidence_interval": "95% percentile interval",
+  "random_seed": 20260826,
+  "primary_comparisons": [
+    "U_vs_confidence",
+    "Q+U_vs_confidence"
+  ],
+  "conditions": 13,
+  "total_contrasts": 26,
+  "positive_point_estimates_favoring_confidence": 26,
+  "intervals_entirely_above_zero": 26,
+  "intervals_containing_zero": 0,
+  "intervals_entirely_below_zero": 0,
+  "multiple_comparison_adjustment": "none",
+  "interpretation": "Delta AURC = alternative - confidence; positive values favor confidence because lower AURC is better."
+}

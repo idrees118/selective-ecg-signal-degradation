@@ -1,0 +1,13 @@
+{
+  "status": "FROZEN",
+  "fit_split": "train",
+  "train_records": 8516,
+  "sampling_rate_hz": 100,
+  "input_unit": "mV",
+  "mean_mV": 0.0015984754754578495,
+  "std_mV": 0.2515534436140531,
+  "source_sampling_rate_hz": 500,
+  "source_samples": 5000,
+  "output_samples": 1000,
+  "resampling": "scipy.signal.resample_poly(up=1, down=5)"
+}
