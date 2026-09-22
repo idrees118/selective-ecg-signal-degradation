@@ -76,13 +76,13 @@ The result supports an important distinction:
 ```mermaid
 flowchart LR
 
-    A["12-lead ECG"] --> B["Frozen Train / Validation / Test Split"]
+    A["12-lead ECG"] --> B["Frozen Data Split"]
     B --> C["ResNet1D Classifier"]
-    C --> D["Frozen Validation Thresholds"]
+    C --> D["Validation Thresholds"]
+    D --> E["Reliability Signals: C, L, Q, U"]
 
-    D --> E["Reliability Signals<br/>C · L · Q · U"]
     E --> F["Clean ECG"]
-    E --> G["12 Controlled Corruptions"]
+    E --> G["12 Corruption Conditions"]
 
     F --> H["Selective Ranking"]
     G --> H
@@ -91,20 +91,18 @@ flowchart LR
     I --> J["AURC"]
     J --> K["Paired Bootstrap Inference"]
 
-    style A fill:#D6EAF8,stroke:#2471A3,stroke-width:2px
-    style B fill:#E8DAEF,stroke:#7D3C98,stroke-width:2px
-    style C fill:#D5F5E3,stroke:#239B56,stroke-width:2px
-    style D fill:#D5F5E3,stroke:#239B56,stroke-width:2px
-    style E fill:#FCF3CF,stroke:#B7950B,stroke-width:2px
-    style F fill:#FDEBD0,stroke:#CA6F1E,stroke-width:2px
-    style G fill:#FADBD8,stroke:#C0392B,stroke-width:2px
-    style H fill:#D6EAF8,stroke:#2471A3,stroke-width:2px
-    style I fill:#D6EAF8,stroke:#2471A3,stroke-width:2px
-    style J fill:#E8DAEF,stroke:#7D3C98,stroke-width:2px
-    style K fill:#D5F5E3,stroke:#239B56,stroke-width:2px
-```
+    classDef data fill:#D6EAF8,stroke:#2471A3,stroke-width:2px,color:#111111
+    classDef model fill:#D5F5E3,stroke:#239B56,stroke-width:2px,color:#111111
+    classDef reliability fill:#FCF3CF,stroke:#B7950B,stroke-width:2px,color:#111111
+    classDef corruption fill:#FADBD8,stroke:#C0392B,stroke-width:2px,color:#111111
+    classDef evaluation fill:#E8DAEF,stroke:#7D3C98,stroke-width:2px,color:#111111
 
----
+    class A,B data
+    class C,D model
+    class E reliability
+    class F,G corruption
+    class H,I,J,K evaluation
+```
 
 # Research Question
 
