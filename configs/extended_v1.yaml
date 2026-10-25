@@ -33,6 +33,6 @@ posthoc:
   bootstrap_seed: 20261025
   coverage_targets: [0.7, 0.8, 0.9]
   comparator: confidence
-  multiplicity: holm
+  multiplicity: holm_within_condition_and_metric
 
 status: FROZEN

@@ -361,10 +361,10 @@ def main() -> None:
 
     contrasts = pd.DataFrame(contrast_rows)
     contrasts["p_holm"] = np.nan
-    for metric in ("aurc", "augrc"):
-        mask = contrasts["metric"].eq(metric)
-        contrasts.loc[mask, "p_holm"] = holm_adjust(
-            contrasts.loc[mask, "p_bootstrap"].to_numpy()
+    # Holm within each condition and metric (one family per stress test).
+    for _, index in contrasts.groupby(["condition", "metric"]).groups.items():
+        contrasts.loc[index, "p_holm"] = holm_adjust(
+            contrasts.loc[index, "p_bootstrap"].to_numpy()
         )
     contrasts["direction"] = np.where(
         contrasts["ci_high"] < 0.0, "better_than_confidence",
