@@ -8,7 +8,8 @@ run_posthoc_selectors.py. Everything fitted is fitted on clean validation.
 2. stacker_hamming: least-squares selector fitted to per-record Hamming
    error (the logistic stacker targets any-error)
 3. bootstrap intervals for selective risk at 70/80/90% coverage
-4. label-level AURC (loss = that label wrong)
+4. label-level AURC (loss = that label wrong), with paired intervals
+   against record-level confidence and the label's threshold margin
 5. Q components: mean value per condition and AURC as single selectors
 6. --ensemble (PTB-XL): three-seed ensemble; C_E vs ensemble disagreement
 
@@ -36,6 +37,7 @@ from ptbxl_reliability.selective_metrics import (
     cluster_weight_matrix,
     holm_adjust,
     percentile_selector,
+    tie_groups,
 )
 from ptbxl_reliability.selective_prediction import (
     mean_bernoulli_confidence,
@@ -90,26 +92,33 @@ class HammingStacker:
 
 
 def weighted_risk_at_coverage(selector, losses, weights, targets, chunk=500):
-    """(B, len(targets)) risk among the highest-ranked records.
+    """(B, len(targets)) risk at the first tie group reaching each coverage.
 
-    Ties are broken by input order, so this is used for intervals only;
-    point estimates come from the tie-grouped curves in the posthoc run.
+    Same tie-grouped rule as the point estimates; with unit weights it
+    reproduces risk_at_coverages.
     """
-    order = np.argsort(-np.asarray(selector, float), kind="stable")
+    order, starts = tie_groups(selector)
     loss = np.asarray(losses, float)[order]
     out = []
     for start in range(0, len(weights), chunk):
         w = weights[start:start + chunk][:, order]
-        cum_w = np.cumsum(w, axis=1)
-        cum_l = np.cumsum(w * loss, axis=1)
+        cum_w = np.cumsum(np.add.reduceat(w, starts, axis=1), axis=1)
+        cum_l = np.cumsum(np.add.reduceat(w * loss, starts, axis=1), axis=1)
         total = cum_w[:, -1:]
+        rows = np.arange(len(w))
         cols = []
         for target in targets:
-            idx = np.argmax(cum_w >= target * total, axis=1)
-            rows = np.arange(len(w))
+            idx = np.argmax(cum_w >= target * total - 1e-9, axis=1)
             cols.append(cum_l[rows, idx] / cum_w[rows, idx])
         out.append(np.column_stack(cols))
     return np.vstack(out)
+
+
+def label_margin(probabilities, thresholds):
+    """|logit(p_k) - logit(tau_k)| per record and label."""
+    p = np.clip(probabilities, 1e-7, 1 - 1e-7)
+    t = np.clip(thresholds, 1e-7, 1 - 1e-7)
+    return np.abs(np.log(p / (1 - p)) - np.log(t / (1 - t))[None, :])
 
 
 def binary_entropy(p):
@@ -189,6 +198,7 @@ def single_model_checks(args, posthoc, inference, helpers, config):
     metric_rows = {"hamming": [], "any_error": []}
     contrast_rows = {"hamming": [], "any_error": []}
     coverage_rows, label_rows, component_rows = [], [], []
+    label_contrast_rows = []
     weights = reference_ids = None
 
     for name in names:
@@ -226,27 +236,51 @@ def single_model_checks(args, posthoc, inference, helpers, config):
             risks = weighted_risk_at_coverage(
                 selectors[selector_name], hamming, weights, targets,
             )
+            point = weighted_risk_at_coverage(
+                selectors[selector_name], hamming,
+                np.ones((1, len(hamming))), targets,
+            )[0]
             for j, target in enumerate(targets):
                 low, high = np.percentile(risks[:, j], [2.5, 97.5])
                 coverage_rows.append({
                     "condition": name, "selector": selector_name,
-                    "coverage": target, "ci_low": float(low), "ci_high": float(high),
+                    "coverage": target, "risk": float(point[j]),
+                    "ci_low": float(low), "ci_high": float(high),
                 })
 
         # Label level: loss is whether that label is wrong.
         y = arrays["targets"].astype(np.int64)
         pred = arrays["predictions"].astype(np.int64)
         p = arrays["probabilities"].astype(float)
+        margins = label_margin(p, thresholds)
         for k in range(y.shape[1]):
             loss_k = (pred[:, k] != y[:, k]).astype(float)
             label_selectors = {s: selectors[s] for s in LABEL_SELECTORS if s in selectors}
             label_selectors["label_confidence"] = np.abs(p[:, k] - 0.5)
+            label_selectors["label_margin"] = margins[:, k]
+            replicates = posthoc.bootstrap(label_selectors, loss_k, weights)
+            point = {}
             for selector_name, selector in label_selectors.items():
                 aurc, augrc = aurc_augrc(selector, loss_k)
+                point[selector_name] = aurc
                 label_rows.append({
                     "condition": name, "label_index": k, "selector": selector_name,
                     "error_rate": float(loss_k.mean()), "aurc": aurc, "augrc": augrc,
                 })
+            for reference in ("confidence", "label_margin"):
+                for selector_name in label_selectors:
+                    if selector_name == reference:
+                        continue
+                    deltas = (replicates[selector_name]["aurc"]
+                              - replicates[reference]["aurc"])
+                    low, high = np.percentile(deltas, [2.5, 97.5])
+                    label_contrast_rows.append({
+                        "condition": name, "label_index": k,
+                        "reference": reference, "selector": selector_name,
+                        "delta": point[selector_name] - point[reference],
+                        "ci_low": float(low), "ci_high": float(high),
+                        "p_bootstrap": bootstrap_two_sided_p(deltas),
+                    })
 
         for feature in Q_FEATURES:
             if feature not in arrays:
@@ -265,6 +299,13 @@ def single_model_checks(args, posthoc, inference, helpers, config):
             out_dir / f"contrasts_{endpoint}.csv", index=False)
     pd.DataFrame(coverage_rows).to_csv(out_dir / "risk_at_coverage_ci.csv", index=False)
     pd.DataFrame(label_rows).to_csv(out_dir / "label_level.csv", index=False)
+    label_contrasts = pd.DataFrame(label_contrast_rows)
+    label_contrasts["p_holm"] = np.nan
+    for _, index in label_contrasts.groupby(
+            ["condition", "label_index", "reference"]).groups.items():
+        label_contrasts.loc[index, "p_holm"] = holm_adjust(
+            label_contrasts.loc[index, "p_bootstrap"].to_numpy())
+    label_contrasts.to_csv(out_dir / "label_level_contrasts.csv", index=False)
     pd.DataFrame(component_rows).to_csv(out_dir / "q_components.csv", index=False)
     (out_dir / "summary.json").write_text(json.dumps({
         "dataset": args.dataset, "seed": args.seed, "conditions": names,
