@@ -114,3 +114,17 @@ intervals for risk at coverage, label-level AURC, Q components) and
 `results/extended/v1/ptbxl/ensemble/` (three-seed ensemble confidence
 against ensemble disagreement, with thresholds refitted on the averaged
 clean-validation probabilities).
+
+`run_decision_confidence.py` compares confidence with decision
+confidence, the mean probability of the class actually predicted at the
+frozen thresholds, on the Hamming and any-error losses:
+
+```
+python scripts/extended/run_decision_confidence.py --dataset ptbxl \
+    --conditions frozen nested recorded
+python scripts/extended/run_decision_confidence.py --dataset chapman \
+    --conditions frozen nested recorded
+```
+
+It writes `metrics_decision_confidence.csv` and
+`contrasts_decision_confidence.csv` to the same `supplementary/` folder.
