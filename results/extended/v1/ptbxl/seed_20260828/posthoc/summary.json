@@ -1,0 +1,73 @@
+{
+  "dataset": "ptbxl",
+  "seed": 20260828,
+  "conditions": [
+    "clean",
+    "baseline_wander_mild",
+    "baseline_wander_moderate",
+    "baseline_wander_severe",
+    "additive_white_noise_mild",
+    "additive_white_noise_moderate",
+    "additive_white_noise_severe",
+    "amplitude_clipping_mild",
+    "amplitude_clipping_moderate",
+    "amplitude_clipping_severe",
+    "lead_masking_mild",
+    "lead_masking_moderate",
+    "lead_masking_severe",
+    "lead_masking_nested_mild",
+    "lead_masking_nested_moderate",
+    "lead_masking_nested_severe",
+    "nstdb_bw_mild",
+    "nstdb_bw_moderate",
+    "nstdb_bw_severe",
+    "nstdb_em_mild",
+    "nstdb_em_moderate",
+    "nstdb_em_severe",
+    "nstdb_ma_mild",
+    "nstdb_ma_moderate",
+    "nstdb_ma_severe"
+  ],
+  "n_bootstrap": 5000,
+  "bootstrap_seed": 20261025,
+  "coverage_targets": [
+    0.7,
+    0.8,
+    0.9
+  ],
+  "thresholds": [
+    0.5367102026939392,
+    0.25402235984802246,
+    0.3424699604511261,
+    0.5345807075500488,
+    0.2621716260910034
+  ],
+  "temperatures": [
+    1.1428705784615756,
+    1.2866712445606132,
+    1.0648148844045975,
+    0.9584027742105266,
+    1.011084482836478
+  ],
+  "stacker_coefficients": {
+    "intercept": -0.6908806302672554,
+    "confidence": -1.0448421689043874,
+    "U": 0.28061476840663774,
+    "Q_badness": -0.005187967294122679,
+    "bSQI_badness": 0.035834463353251376
+  },
+  "bsqi_included": true,
+  "frozen_v1_q_u_references": false,
+  "counts_by_direction": {
+    "aurc": {
+      "worse_than_confidence": 220,
+      "inconclusive": 54,
+      "better_than_confidence": 1
+    },
+    "augrc": {
+      "worse_than_confidence": 235,
+      "inconclusive": 38,
+      "better_than_confidence": 2
+    }
+  }
+}
