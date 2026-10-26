@@ -18,7 +18,15 @@ CORRUPTION_CODES = {
     "baseline_wander": 101,
     "additive_white_noise": 202,
     "lead_masking": 303,
+    # Extended conditions (extended_v1.yaml).
+    "lead_masking_nested": 404,
+    "nstdb_bw": 505,
+    "nstdb_em": 506,
+    "nstdb_ma": 507,
 }
+
+# NSTDB channel 0 -> limb leads, channel 1 -> precordial leads.
+LIMB_LEADS = 6
 
 
 def _validate(
@@ -515,3 +523,180 @@ def mask_leads(
             np.int64
         ),
     )
+
+
+def mask_leads_nested(
+    signal: np.ndarray,
+    *,
+    ecg_id: int,
+    number_of_leads: int,
+    fs: float = EXPECTED_FS,
+) -> tuple[
+    np.ndarray,
+    np.ndarray,
+]:
+    """Zero the first k leads of a fixed per-ECG permutation (nested masks)."""
+    x = _validate(
+        signal,
+        fs,
+    )
+
+    if (
+        number_of_leads < 1
+        or number_of_leads
+        > x.shape[0]
+    ):
+        raise ValueError(
+            "Invalid number_of_leads"
+        )
+
+    rng = _rng(
+        ecg_id,
+        "lead_masking_nested",
+        0,
+    )
+
+    order = rng.permutation(
+        x.shape[0]
+    )
+
+    selected = np.sort(
+        order[
+            :number_of_leads
+        ]
+    )
+
+    corrupted = x.copy()
+    corrupted[
+        selected,
+        :,
+    ] = 0.0
+
+    return (
+        corrupted,
+        selected.astype(
+            np.int64
+        ),
+    )
+
+
+def add_recorded_noise(
+    signal: np.ndarray,
+    *,
+    ecg_id: int,
+    noise: np.ndarray,
+    noise_name: str,
+    snr_db: float,
+    severity_index: int,
+    fs: float = EXPECTED_FS,
+) -> np.ndarray:
+    """Add a recorded NSTDB noise segment, shape (2, M) at fs, at leadwise SNR."""
+    x = _validate(
+        signal,
+        fs,
+    )
+
+    code = f"nstdb_{noise_name}"
+
+    noise = np.asarray(
+        noise,
+        dtype=np.float64,
+    )
+
+    if (
+        noise.ndim != 2
+        or noise.shape[0] != 2
+        or noise.shape[1] <= x.shape[1]
+    ):
+        raise ValueError(
+            "noise must have shape (2, M) with M > signal length"
+        )
+
+    rng = _rng(
+        ecg_id,
+        code,
+        severity_index,
+    )
+
+    start = int(
+        rng.integers(
+            0,
+            noise.shape[1]
+            - x.shape[1],
+        )
+    )
+
+    segment = noise[
+        :,
+        start:start
+        + x.shape[1],
+    ]
+
+    channel = np.where(
+        np.arange(
+            x.shape[0]
+        )
+        < LIMB_LEADS,
+        0,
+        1,
+    )
+
+    lead_noise = segment[
+        channel
+    ]
+
+    lead_noise = (
+        lead_noise
+        - np.mean(
+            lead_noise,
+            axis=1,
+            keepdims=True,
+            dtype=np.float64,
+        )
+    )
+
+    noise_rms = np.sqrt(
+        np.mean(
+            lead_noise**2,
+            axis=1,
+            dtype=np.float64,
+        )
+    )
+
+    if (
+        noise_rms <= 0.0
+    ).any():
+        raise ValueError(
+            "Recorded noise segment has zero RMS"
+        )
+
+    signal_rms = _ac_rms_per_lead(
+        x
+    )
+
+    target_rms = _target_noise_rms(
+        signal_rms,
+        snr_db,
+    )
+
+    scale = np.where(
+        signal_rms > 0.0,
+        target_rms
+        / noise_rms,
+        0.0,
+    )
+
+    corrupted = (
+        x
+        + lead_noise
+        * scale[:, None]
+    )
+
+    if not np.isfinite(
+        corrupted
+    ).all():
+        raise ValueError(
+            "Recorded-noise corruption produced NaN/Inf"
+        )
+
+    return corrupted

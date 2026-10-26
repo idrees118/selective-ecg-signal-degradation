@@ -1,0 +1,38 @@
+extended_id: extended_v1
+
+# Additional stress-test conditions and post-hoc settings.
+# corruption_v1.yaml is unchanged.
+
+lead_masking_nested:
+  type: flat_zero_mV_leads_nested
+  description: one fixed per-ECG lead permutation; the first k leads are zeroed
+  severity:
+    mild:
+      number_of_leads: 1
+    moderate:
+      number_of_leads: 3
+    severe:
+      number_of_leads: 6
+
+recorded_noise:
+  source: MIT-BIH Noise Stress Test Database (PhysioNet nstdb 1.0.0)
+  records: [bw, em, ma]
+  resampling: 360 Hz to 100 Hz, scipy.signal.resample_poly(up=5, down=18)
+  lead_assignment: channel 0 to limb leads I-aVF, channel 1 to V1-V6
+  snr_reference: per-lead AC RMS, as for additive_white_noise
+  severity:
+    mild:
+      snr_db: 18.0
+    moderate:
+      snr_db: 12.0
+    severe:
+      snr_db: 6.0
+
+posthoc:
+  bootstrap_replicates: 5000
+  bootstrap_seed: 20261025
+  coverage_targets: [0.7, 0.8, 0.9]
+  comparator: confidence
+  multiplicity: holm_within_condition_and_metric
+
+status: FROZEN
