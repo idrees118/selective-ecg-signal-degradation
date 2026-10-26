@@ -95,3 +95,22 @@ Each holds `selector_metrics.csv` (AURC, AUGRC, risk at coverage per
 selector and condition), `contrasts.csv` (paired-bootstrap deltas against
 confidence with Holm-adjusted p-values), `classification.csv` and
 `summary.json` (temperatures, stacker coefficients, thresholds).
+
+## Supplementary checks
+
+`run_supplementary_checks.py` reuses the saved artifacts (no inference)
+and runs after step 5:
+
+```
+python scripts/extended/run_supplementary_checks.py --dataset ptbxl \
+    --conditions frozen nested recorded --ensemble
+python scripts/extended/run_supplementary_checks.py --dataset chapman \
+    --conditions frozen nested recorded
+```
+
+It writes `results/extended/v1/<dataset>/seed_20260826/supplementary/`
+(any-error endpoint, a stacker fitted to Hamming error, bootstrap
+intervals for risk at coverage, label-level AURC, Q components) and
+`results/extended/v1/ptbxl/ensemble/` (three-seed ensemble confidence
+against ensemble disagreement, with thresholds refitted on the averaged
+clean-validation probabilities).
