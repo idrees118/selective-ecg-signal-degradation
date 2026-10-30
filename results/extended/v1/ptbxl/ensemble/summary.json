@@ -1,0 +1,16 @@
+{
+  "seeds": [
+    20260826,
+    20260827,
+    20260828
+  ],
+  "thresholds": [
+    0.42127183079719543,
+    0.33991993467013043,
+    0.4277925690015157,
+    0.4660507142543793,
+    0.23871573557456335
+  ],
+  "threshold_source": "max F1 per class on averaged clean validation probabilities",
+  "n_bootstrap": 5000
+}
